@@ -1,0 +1,64 @@
+# Secrets / local config
+.mcp.json
+.env
+.env.local
+*.pem
+*.key
+*.crt
+
+# Claude Code runtime (per-user state, not for the repo)
+# Note: .claude/memory-templates/ IS tracked (templates for vibecoders)
+# Only the per-user memory directory and settings.local.json are excluded.
+.claude/settings.local.json
+.claude/projects/
+.claude/cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Node (Storybook + Vitest)
+node_modules/
+storybook-static/
+.vitest-cache/
+test-results/
+playwright-report/
+coverage/
+.nyc_output/
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Runtime / logs
+*.log
+*.pid
+/tmp/
+
+# Build
+dist/
+build/
+
+# Exception: design tokens dist/ is checked in (regenerable artifact,
+# but useful as a stable reference for downstream consumers)
+!design/tokens/dist/
+!design/tokens/dist/*
+!design/tokens/dist/**
+
+# Penpot / Figma exports — local-only
+*.penpot.exported
+*.fig
+*.sketch

@@ -1,0 +1,202 @@
+[
+  {
+    "name": "dimension/05",
+    "resolvedType": "FLOAT",
+    "description": "2px. Fine border, micro-radius. (px)",
+    "valuesByMode": {
+      "default": 2.0
+    }
+  },
+  {
+    "name": "dimension/10",
+    "resolvedType": "FLOAT",
+    "description": "4px. Base unit. Border-radius small. (px)",
+    "valuesByMode": {
+      "default": 4.0
+    }
+  },
+  {
+    "name": "dimension/15",
+    "resolvedType": "FLOAT",
+    "description": "6px. Compact density variant of `default`. (px)",
+    "valuesByMode": {
+      "default": 6.0
+    }
+  },
+  {
+    "name": "dimension/20",
+    "resolvedType": "FLOAT",
+    "description": "8px. Snug gap. Inner padding of small controls. (px)",
+    "valuesByMode": {
+      "default": 8.0
+    }
+  },
+  {
+    "name": "dimension/25",
+    "resolvedType": "FLOAT",
+    "description": "10px. Border-radius round (cards, panels). Compact-spacious knob. (px)",
+    "valuesByMode": {
+      "default": 10.0
+    }
+  },
+  {
+    "name": "dimension/30",
+    "resolvedType": "FLOAT",
+    "description": "12px. Caption font-size. Compact `default` step. (px)",
+    "valuesByMode": {
+      "default": 12.0
+    }
+  },
+  {
+    "name": "dimension/35",
+    "resolvedType": "FLOAT",
+    "description": "14px. Small body font-size. Compact-spacious knob. (px)",
+    "valuesByMode": {
+      "default": 14.0
+    }
+  },
+  {
+    "name": "dimension/40",
+    "resolvedType": "FLOAT",
+    "description": "16px. One rem. Typography base; default body padding. (px)",
+    "valuesByMode": {
+      "default": 16.0
+    }
+  },
+  {
+    "name": "dimension/45",
+    "resolvedType": "FLOAT",
+    "description": "18px. Large body font-size. (px)",
+    "valuesByMode": {
+      "default": 18.0
+    }
+  },
+  {
+    "name": "dimension/50",
+    "resolvedType": "FLOAT",
+    "description": "20px. Subheading font-size. Spacious `snug` variant. (px)",
+    "valuesByMode": {
+      "default": 20.0
+    }
+  },
+  {
+    "name": "dimension/55",
+    "resolvedType": "FLOAT",
+    "description": "22px. Reserved for fine-grained tuning between 50 and 60. (px)",
+    "valuesByMode": {
+      "default": 22.0
+    }
+  },
+  {
+    "name": "dimension/60",
+    "resolvedType": "FLOAT",
+    "description": "24px. Heading-3 font-size. Loose gap (compact). (px)",
+    "valuesByMode": {
+      "default": 24.0
+    }
+  },
+  {
+    "name": "dimension/70",
+    "resolvedType": "FLOAT",
+    "description": "28px. Reserved tuning step between 60 and 80. (px)",
+    "valuesByMode": {
+      "default": 28.0
+    }
+  },
+  {
+    "name": "dimension/80",
+    "resolvedType": "FLOAT",
+    "description": "32px. Heading-2 font-size. Loose gap (default). (px)",
+    "valuesByMode": {
+      "default": 32.0
+    }
+  },
+  {
+    "name": "dimension/90",
+    "resolvedType": "FLOAT",
+    "description": "36px. Reserved tuning step between 80 and 100. (px)",
+    "valuesByMode": {
+      "default": 36.0
+    }
+  },
+  {
+    "name": "dimension/100",
+    "resolvedType": "FLOAT",
+    "description": "40px. Minimum tap target (WCAG AA 2.2). (px)",
+    "valuesByMode": {
+      "default": 40.0
+    }
+  },
+  {
+    "name": "dimension/120",
+    "resolvedType": "FLOAT",
+    "description": "48px. Spacious `loose` step. Display-small font-size. (px)",
+    "valuesByMode": {
+      "default": 48.0
+    }
+  },
+  {
+    "name": "dimension/160",
+    "resolvedType": "FLOAT",
+    "description": "64px. Display-large font-size. (px)",
+    "valuesByMode": {
+      "default": 64.0
+    }
+  },
+  {
+    "name": "dimension/200",
+    "resolvedType": "FLOAT",
+    "description": "80px. Major hero spacing. (px)",
+    "valuesByMode": {
+      "default": 80.0
+    }
+  },
+  {
+    "name": "dimension/240",
+    "resolvedType": "FLOAT",
+    "description": "96px. Pill radius (always larger than tallest pill control). (px)",
+    "valuesByMode": {
+      "default": 96.0
+    }
+  },
+  {
+    "name": "dimension/320",
+    "resolvedType": "FLOAT",
+    "description": "128px. Hero dimensions. (px)",
+    "valuesByMode": {
+      "default": 128.0
+    }
+  },
+  {
+    "name": "opacity/000",
+    "resolvedType": "FLOAT",
+    "description": "0%. Fully transparent.",
+    "valuesByMode": {
+      "default": 0.0
+    }
+  },
+  {
+    "name": "opacity/004",
+    "resolvedType": "FLOAT",
+    "description": "4%. Faintest tint \u2014 cell hover on dense surfaces.",
+    "valuesByMode": {
+      "default": 0.04
+    }
+  },
+  {
+    "name": "opacity/008",
+    "resolvedType": "FLOAT",
+    "description": "8%. Subtle tint \u2014 `:hover` mix amount on filled buttons.",
+    "valuesByMode": {
+      "default": 0.08
+    }
+  },
+  {
+    "name": "opacity/016",
+    "resolvedType": "FLOAT",
+    "description": "16%. Soft overlay \u2014 disabled-on-light reduction.",
+    "valuesByMode": {
+      "default": 0.16
+    }
+  }
+]

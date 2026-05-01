@@ -1,0 +1,227 @@
+[
+  {
+    "name": "color/accent/0",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000000"
+    },
+    "aliasOf": "palette/gold/0"
+  },
+  {
+    "name": "color/accent/10",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#130b00"
+    },
+    "aliasOf": "palette/gold/10"
+  },
+  {
+    "name": "color/accent/25",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#342400"
+    },
+    "aliasOf": "palette/gold/25"
+  },
+  {
+    "name": "color/accent/50",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#563f00"
+    },
+    "aliasOf": "palette/gold/50"
+  },
+  {
+    "name": "color/accent/75",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#755700"
+    },
+    "aliasOf": "palette/gold/75"
+  },
+  {
+    "name": "color/accent/100",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#957000"
+    },
+    "aliasOf": "palette/gold/100"
+  },
+  {
+    "name": "color/accent/125",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 125 \u2014 primary fill on dark surfaces.",
+    "valuesByMode": {
+      "default": "#b78c23"
+    },
+    "aliasOf": "palette/gold/125"
+  },
+  {
+    "name": "color/accent/150",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 150 \u2014 soft border, disabled text.",
+    "valuesByMode": {
+      "default": "#d1aa56"
+    },
+    "aliasOf": "palette/gold/150"
+  },
+  {
+    "name": "color/accent/175",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 175 \u2014 near-light tint.",
+    "valuesByMode": {
+      "default": "#f4d38f"
+    },
+    "aliasOf": "palette/gold/175"
+  },
+  {
+    "name": "color/accent/190",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#ffefd0"
+    },
+    "aliasOf": "palette/gold/190"
+  },
+  {
+    "name": "color/accent/200",
+    "resolvedType": "COLOR",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/gold/200"
+  },
+  {
+    "name": "color/neutral/0",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000000"
+    },
+    "aliasOf": "palette/neutral/0"
+  },
+  {
+    "name": "color/neutral/10",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#0d0d0d"
+    },
+    "aliasOf": "palette/neutral/10"
+  },
+  {
+    "name": "color/neutral/25",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#272727"
+    },
+    "aliasOf": "palette/neutral/25"
+  },
+  {
+    "name": "color/neutral/50",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#424242"
+    },
+    "aliasOf": "palette/neutral/50"
+  },
+  {
+    "name": "color/neutral/75",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#5b5b5b"
+    },
+    "aliasOf": "palette/neutral/75"
+  },
+  {
+    "name": "color/neutral/100",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#757575"
+    },
+    "aliasOf": "palette/neutral/100"
+  },
+  {
+    "name": "color/neutral/125",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 125 \u2014 primary fill on dark surfaces.",
+    "valuesByMode": {
+      "default": "#929292"
+    },
+    "aliasOf": "palette/neutral/125"
+  },
+  {
+    "name": "color/neutral/150",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 150 \u2014 soft border, disabled text.",
+    "valuesByMode": {
+      "default": "#b0b0b0"
+    },
+    "aliasOf": "palette/neutral/150"
+  },
+  {
+    "name": "color/neutral/175",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 175 \u2014 near-light tint.",
+    "valuesByMode": {
+      "default": "#d8d8d8"
+    },
+    "aliasOf": "palette/neutral/175"
+  },
+  {
+    "name": "color/neutral/190",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#f2f2f2"
+    },
+    "aliasOf": "palette/neutral/190"
+  },
+  {
+    "name": "color/neutral/200",
+    "resolvedType": "COLOR",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/neutral/200"
+  },
+  {
+    "name": "color/success/0",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000000"
+    },
+    "aliasOf": "palette/green/0"
+  },
+  {
+    "name": "color/success/10",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#001001"
+    },
+    "aliasOf": "palette/green/10"
+  },
+  {
+    "name": "color/success/25",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#002f06"
+    },
+    "aliasOf": "palette/green/25"
+  }
+]

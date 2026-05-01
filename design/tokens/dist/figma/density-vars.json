@@ -1,0 +1,59 @@
+{
+  "modesOrder": [
+    "default",
+    "compact",
+    "spacious"
+  ],
+  "variables": [
+    {
+      "name": "spacing/tight",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "default": 4.0,
+        "compact": 2.0,
+        "spacious": 6.0
+      },
+      "description": "Tight gap. Between adjacent visual elements sharing a conceptual unit. (px)"
+    },
+    {
+      "name": "spacing/snug",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "default": 8.0,
+        "compact": 6.0,
+        "spacious": 10.0
+      },
+      "description": "Snug gap. Inner padding of controls (buttons, inputs). (px)"
+    },
+    {
+      "name": "spacing/default",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "default": 16.0,
+        "compact": 12.0,
+        "spacious": 20.0
+      },
+      "description": "Default gap. Between distinct elements on a surface. (px)"
+    },
+    {
+      "name": "spacing/loose",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "default": 24.0,
+        "compact": 20.0,
+        "spacious": 32.0
+      },
+      "description": "Loose gap. Between grouped sections. (px)"
+    },
+    {
+      "name": "spacing/airy",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "default": 40.0,
+        "compact": 32.0,
+        "spacious": 48.0
+      },
+      "description": "Airy gap. Major section breaks. (px)"
+    }
+  ]
+}

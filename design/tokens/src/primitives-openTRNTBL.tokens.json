@@ -1,0 +1,1127 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "primitives/openTRNTBL": {
+    "color": {
+      "accent": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.gold.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.gold.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.gold.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.gold.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.gold.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.gold.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.gold.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.gold.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.gold.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.gold.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.gold.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "neutral": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "success": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.green.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.green.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.green.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.green.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.green.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.green.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.green.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.green.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.green.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.green.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.green.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "warning": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.orange.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.orange.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.orange.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.orange.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.orange.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.orange.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.orange.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.orange.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.orange.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.orange.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.orange.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "danger": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.red.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.red.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.red.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.red.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.red.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.red.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.red.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.red.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.red.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.red.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.red.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "info": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.blue.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.blue.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.blue.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.blue.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.blue.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.blue.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.blue.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.blue.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.blue.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.blue.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.blue.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "cyan": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "yellow": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "violet": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.violet.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.violet.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.violet.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.violet.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.violet.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.violet.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.violet.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.violet.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.violet.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.violet.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.violet.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 200 \u2014 lightest extreme."
+        }
+      }
+    },
+    "font-family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": [
+          "Inter",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif"
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "UI sans-serif stack (Inter first). Body, headings, controls."
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": [
+          "SF Mono",
+          "Menlo",
+          "monospace"
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Monospace stack (SF Mono first). Code, stream URLs, technical output."
+      }
+    },
+    "shadow": {
+      "elevation-0": {
+        "$type": "shadow",
+        "$value": [],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Flat surface — no shadow. No-op slot for marques sans élévation (Notion-like, glassmorphisme)."
+      },
+      "elevation-1": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "#0000000f",
+            "offsetX": { "value": 0, "unit": "px" },
+            "offsetY": { "value": 1, "unit": "px" },
+            "blur":    { "value": 2, "unit": "px" },
+            "spread":  { "value": 0, "unit": "px" }
+          }
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Subtle elevation — cards, panels, raised surfaces. Sonos-like = 1 layer discret. Multi-layer-ready : Neuphoisme remplira avec 2 layers (light/dark complémentaires) sans changer le slot."
+      },
+      "elevation-2": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "#0000001a",
+            "offsetX": { "value": 0, "unit": "px" },
+            "offsetY": { "value": 4, "unit": "px" },
+            "blur":    { "value": 8, "unit": "px" },
+            "spread":  { "value": -2, "unit": "px" }
+          },
+          {
+            "color": "#0000000a",
+            "offsetX": { "value": 0, "unit": "px" },
+            "offsetY": { "value": 1, "unit": "px" },
+            "blur":    { "value": 2, "unit": "px" },
+            "spread":  { "value": 0, "unit": "px" }
+          }
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Medium elevation — popovers, dropdowns, floating panels. 2 layers : ambient (Y4 blur8) + key (Y1 blur2) — pattern Material classique."
+      },
+      "elevation-3": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "#00000024",
+            "offsetX": { "value": 0, "unit": "px" },
+            "offsetY": { "value": 8, "unit": "px" },
+            "blur":    { "value": 16, "unit": "px" },
+            "spread":  { "value": -4, "unit": "px" }
+          },
+          {
+            "color": "#00000014",
+            "offsetX": { "value": 0, "unit": "px" },
+            "offsetY": { "value": 2, "unit": "px" },
+            "blur":    { "value": 4, "unit": "px" },
+            "spread":  { "value": 0, "unit": "px" }
+          }
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "High elevation — modals, dialogs full-screen, sheets. 2 layers : ambient profond (Y8 blur16) + key (Y2 blur4)."
+      }
+    }
+  }
+}

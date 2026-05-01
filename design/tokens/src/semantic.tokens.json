@@ -1,0 +1,1293 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "semantic": {
+    "surface": {
+      "canvas": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.190}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.0}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.175}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Page background. Bottom-most surface. HC light n.175 (gris moyen) creuse l'écart avec base/raised pour différencier les 4 surfaces sans recourir à des borders."
+        }
+      },
+      "base": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.10}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.200}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.25}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Default card / panel surface. HC dark n.25 distingue base de canvas (pur black) sans border."
+        }
+      },
+      "raised": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.25}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.190}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.75}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Elevated surface (modal, popover, tonal button bg, segmented track). Vague 8 — HC vraie hiérarchie : light n.190 (off-white) au-dessus de canvas n.175 ; dark n.75 (gris moyen-clair) au-dessus de base n.25. Pas de texte primaire posé dessus en components.css (vérifié) ; les stories de doc Surfaces affichent du text dessus → ratio AAA limite (6.79) accepté self-référent."
+        },
+        "elevation": {
+          "$type": "shadow",
+          "$value": "{primitives/openTRNTBL.shadow.elevation-1}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Subtle elevation pour cards / panels. Sonos-like = 1 layer discret. Marques sans élévation (Notion-like) pointeront ce slot vers shadow.elevation-0 (no-op)."
+        }
+      },
+      "sunken": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.190}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.0}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.150}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.10}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Recessed surface (input background, well, code block). Vague 8 — HC vraie hiérarchie : light n.150 (gris foncé creusé) sous canvas n.175 ; dark n.10 (presque-black) sous canvas n.0 (pure black)."
+        }
+      },
+      "overlay": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Scrim / backdrop for modals. Apply via CSS with 0.6 alpha."
+        },
+        "elevation": {
+          "$type": "shadow",
+          "$value": "{primitives/openTRNTBL.shadow.elevation-3}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "High elevation pour modals / dialogs full-screen. 2 layers (ambient + key). Marques flat (Notion-like) pointeront ce slot vers shadow.elevation-0."
+        }
+      },
+      "dim": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.50}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Surface sombre fixe — track HC SegmentedControl, input HC, etc. Volontairement constante peu importe light/dark/HC : un fond opaque sombre qui distingue par luminance."
+      },
+      "bright": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.200}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Surface claire fixe — tile actif HC SegmentedControl. Volontairement constante. Pendant de surface.dim."
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 86%, {semantic.text.color.primary})",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "color-mix(in oklch, {semantic.surface.base.background} 92%, {semantic.text.color.primary})"
+          },
+          "com.opntrntbl.fallback": {
+            "$value": "{primitives/openTRNTBL.color.neutral.190}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Surface.base hover — Donnie pattern. Light = 86%/14% (visible sur fond blanc). Dark = 92%/8% (subtil pour ne pas réduire le contraste avec text-primary clair). Consommé par btn-2:hover, btn-toggle:hover (off)."
+      },
+      "base-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 74%, {semantic.text.color.primary})",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "color-mix(in oklch, {semantic.surface.base.background} 84%, {semantic.text.color.primary})"
+          },
+          "com.opntrntbl.fallback": {
+            "$value": "{primitives/openTRNTBL.color.neutral.175}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Surface.base pressed — Donnie pattern. Light = 74%/26% (très marqué). Dark = 84%/16% (modéré, pour ne pas chuter le contraste). Consommé par btn-2:active."
+      },
+      "sunken-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 86%, {semantic.text.color.primary})",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "color-mix(in oklch, {semantic.surface.sunken.background} 92%, {semantic.text.color.primary})"
+          },
+          "com.opntrntbl.fallback": {
+            "$value": "{primitives/openTRNTBL.color.neutral.175}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Surface.sunken hover — Donnie pattern. Light 86%/14%, Dark 92%/8% (subtil). Consommé par inp:hover."
+      },
+      "sunken-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 66%, {semantic.text.color.primary})",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "color-mix(in oklch, {semantic.surface.sunken.background} 76%, {semantic.text.color.primary})"
+          },
+          "com.opntrntbl.fallback": {
+            "$value": "{primitives/openTRNTBL.color.neutral.150}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Surface.sunken pressed — Donnie pattern. Light 66%/34%, Dark 76%/24%."
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.175}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "{primitives/openTRNTBL.color.neutral.25}",
+            "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.100}",
+            "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.100}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Low-emphasis divider (row separators, group dividers)."
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.100}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "{primitives/openTRNTBL.color.neutral.100}",
+            "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.50}",
+            "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.150}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Standard border (inputs, outlined buttons, segmented track). WCAG 2.4.11 ≥3:1 on base/sunken/raised in light + dark."
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.100}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "{primitives/openTRNTBL.color.neutral.100}",
+            "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.0}",
+            "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.200}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Emphasis border (hover, selected, active)."
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.accent.100}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "{primitives/openTRNTBL.color.accent.125}",
+            "contrast:enhanced": "{primitives/openTRNTBL.color.accent.50}",
+            "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.accent.150}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Focus ring color. Always visible (accessibility baseline)."
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.accent.125}",
+        "$description": "Brand accent (gold) — decorative fill (idle). Light = accent.125 (mid-tone). Dark = accent.150 (plus clair, lift sur fond sombre). Vision daltonisme : tritanopia mappe sur orange (jaune indistinguable), achromatopsia mappe sur text-primary (luminance-only). Deutéranopie/protanopie : pas d'override (gold OK).",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "{primitives/openTRNTBL.color.accent.150}",
+            "vision:tritanopia": "{primitives/openTRNTBL.color.warning.125}",
+            "color:dark|vision:tritanopia": "{primitives/openTRNTBL.color.warning.150}",
+            "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.25}",
+            "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.190}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand",
+            "mode"
+          ]
+        }
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {primitives/openTRNTBL.color.accent.125} 88%, #ffffff)",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "color:dark": "color-mix(in oklch, {primitives/openTRNTBL.color.accent.125} 88%, #ffffff)"
+          },
+          "com.opntrntbl.fallback": {
+            "$value": "{primitives/openTRNTBL.color.accent.150}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Brand accent (gold) — hover (lightened)."
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.accent.default} 80%, #000000)",
+        "$extensions": {
+          "com.opntrntbl.fallback": {
+            "$value": "{primitives/openTRNTBL.color.accent.100}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "mode"
+          ]
+        },
+        "$description": "Brand accent (gold) — pressed (darkened). Fallback Penpot: accent.100. Consommé par btn-toggle.active:active."
+      }
+    },
+    "text": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.25}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.190}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.0}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.200}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Primary text. Body copy, headings."
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.75}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.150}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.10}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Secondary text. Labels, metadata, captions."
+        },
+        "placeholder": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.75}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.125}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.10}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Placeholder text. Empty-state hints in inputs. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark)."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.75}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.125}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.neutral.10}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Disabled text. Controls that can't be interacted with. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark). Distinguishable from primary via opacity 0.5 in components.css."
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Text on solid/colored surfaces (e.g. white on primary)."
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.accent.75}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.accent.150}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Accent text. Inline links, brand emphasis."
+        },
+        "on-accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.200}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.25}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Text on top of the accent (gold) surface — e.g. .btn-toggle.active. Default = neutral.0 (black) sur gold. Vision achromatopsia : accent bascule en grayscale, donc on-accent doit s'inverser pour conserver le contraste. Light ach : accent=neutral.25 (sombre) → on-accent=neutral.200 (clair). Dark ach : accent=neutral.190 (clair) → on-accent=neutral.25 (sombre)."
+        },
+        "on-dim": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Text on surface.dim — white fixe. Pendant de on-accent pour la surface sombre fixe (HC SegCtrl track, input HC)."
+        },
+        "on-bright": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Text on surface.bright — black fixe. Pendant de on-dim pour la surface claire fixe (HC SegCtrl tile active)."
+        }
+      },
+      "caption": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.10}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Caption. Metadata, legal text.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "small": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.20}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Small body. Secondary copy, dense UI.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "body": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.30}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Body. Default reading size.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "body.emphasis": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.30}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 600,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Body emphasis. Same size as body, heavier weight for emphasis.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "subheading": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.50}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 600,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Subheading. Section labels inside a page.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "heading-3": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.60}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 700,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Tertiary heading. Within-section titles.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "heading-2": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.80}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 700,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Secondary heading. Major-section titles.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "heading-1": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.100}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Primary heading. Page titles.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "display-small": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.120}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Small display. Marketing or hero subtitles.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "display-large": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.160}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Large display. Hero titles.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "code": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.20}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.mono}"
+        },
+        "$description": "Monospace code / stream URLs / log output.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      }
+    },
+    "status": {
+      "success": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.success.190}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.success.10}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.success.50}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.success.150}",
+              "vision:deuteranopia": "{primitives/openTRNTBL.color.cyan.190}",
+              "color:dark|vision:deuteranopia": "{primitives/openTRNTBL.color.cyan.10}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.info.190}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.info.10}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.190}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Success state (completed action, OK) — background tint. Vague 8.5 — HC : bg saturé (light n.50, dark n.150) inversé pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.success.50}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.success.175}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.success.190}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.success.0}",
+              "vision:deuteranopia": "{primitives/openTRNTBL.color.cyan.50}",
+              "color:dark|vision:deuteranopia": "{primitives/openTRNTBL.color.cyan.175}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.info.50}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.info.175}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.25}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.175}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Success state (completed action, OK) — text on the tint. Vague 8.5 — HC : text inversé (light n.190, dark n.0) pour AAA contre le bg HC saturé."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 14%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 8%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 14%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.success.175}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.success.bg hover — Donnie pattern (currentColor 8%). Fallback: success.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 26%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 18%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 26%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.success.150}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.success.bg pressed — Donnie pattern (currentColor 18%). Fallback: success.150."
+        }
+      },
+      "warning": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.warning.190}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.warning.10}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.warning.50}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.warning.150}",
+              "vision:deuteranopia": "{primitives/openTRNTBL.color.yellow.190}",
+              "color:dark|vision:deuteranopia": "{primitives/openTRNTBL.color.yellow.10}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.yellow.190}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.yellow.10}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.175}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.25}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Warning state (caution, non-blocking issue) — background tint. Vague 8.5 — HC : bg saturé (light n.50, dark n.150) inversé pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.warning.50}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.warning.175}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.warning.190}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.warning.0}",
+              "vision:deuteranopia": "{primitives/openTRNTBL.color.yellow.50}",
+              "color:dark|vision:deuteranopia": "{primitives/openTRNTBL.color.yellow.175}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.yellow.50}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.yellow.175}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.25}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Warning state (caution, non-blocking issue) — text on the tint. Vague 8.5 — HC : text inversé (light n.190, dark n.0) pour AAA contre le bg HC saturé."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 14%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 8%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 14%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.warning.175}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.warning.bg hover — Donnie pattern (currentColor 8%). Fallback: warning.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 26%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 18%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 26%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.warning.150}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.warning.bg pressed — Donnie pattern (currentColor 18%). Fallback: warning.150."
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.danger.190}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.danger.10}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.danger.50}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.danger.150}",
+              "vision:deuteranopia": "{primitives/openTRNTBL.color.warning.190}",
+              "color:dark|vision:deuteranopia": "{primitives/openTRNTBL.color.warning.10}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.violet.190}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.violet.10}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.100}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.100}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Danger state (error, destructive action) — background tint. Vague 8.5 — HC : bg saturé (light n.50, dark n.150) inversé pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.danger.50}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.danger.175}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.danger.190}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.danger.0}",
+              "vision:deuteranopia": "{primitives/openTRNTBL.color.warning.50}",
+              "color:dark|vision:deuteranopia": "{primitives/openTRNTBL.color.warning.175}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.violet.50}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.violet.175}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.200}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Danger state (error, destructive action) — text on the tint. Vague 8.5 — HC : text inversé (light n.190, dark n.0) pour AAA contre le bg HC saturé."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 14%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 8%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 14%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.danger.175}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.danger.bg hover — Donnie pattern (currentColor 8%). Fallback: danger.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 26%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 18%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 26%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.danger.150}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.danger.bg pressed — Donnie pattern (currentColor 18%). Fallback: danger.150."
+        }
+      },
+      "info": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.info.190}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.info.10}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.info.50}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.info.150}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.cyan.190}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.cyan.10}",
+              "vision:tritanopia": "{primitives/openTRNTBL.color.violet.190}",
+              "color:dark|vision:tritanopia": "{primitives/openTRNTBL.color.violet.10}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.150}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.50}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Info state (neutral notice, informational) — background tint. Vague 8.5 — HC : bg saturé (light n.50, dark n.150) inversé pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.info.50}",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "{primitives/openTRNTBL.color.info.175}",
+              "contrast:enhanced": "{primitives/openTRNTBL.color.info.190}",
+              "color:dark|contrast:enhanced": "{primitives/openTRNTBL.color.info.0}",
+              "vision:protanopia": "{primitives/openTRNTBL.color.cyan.50}",
+              "color:dark|vision:protanopia": "{primitives/openTRNTBL.color.cyan.175}",
+              "vision:tritanopia": "{primitives/openTRNTBL.color.violet.50}",
+              "color:dark|vision:tritanopia": "{primitives/openTRNTBL.color.violet.175}",
+              "vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.0}",
+              "color:dark|vision:achromatopsia": "{primitives/openTRNTBL.color.neutral.200}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Info state (neutral notice, informational) — text on the tint. Vague 8.5 — HC : text inversé (light n.190, dark n.0) pour AAA contre le bg HC saturé."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 14%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 8%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 14%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.info.175}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.info.bg hover — Donnie pattern (currentColor 8%). Fallback: info.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 26%)",
+          "$extensions": {
+            "com.opntrntbl.modes": {
+              "color:dark": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 18%)",
+              "contrast:enhanced": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 26%)",
+              "color:dark|contrast:enhanced": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "com.opntrntbl.fallback": {
+              "$value": "{primitives/openTRNTBL.color.info.150}"
+            },
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode"
+            ]
+          },
+          "$description": "Status.info.bg pressed — Donnie pattern (currentColor 18%). Fallback: info.150."
+        }
+      }
+    },
+    "spacing": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "{core.dimension.10}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "density:compact": "{core.dimension.05}",
+            "density:spacious": "{core.dimension.15}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "density"
+          ]
+        },
+        "$description": "Tight gap. Between adjacent visual elements sharing a conceptual unit."
+      },
+      "snug": {
+        "$type": "dimension",
+        "$value": "{core.dimension.20}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "density:compact": "{core.dimension.15}",
+            "density:spacious": "{core.dimension.25}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "density"
+          ]
+        },
+        "$description": "Snug gap. Inner padding of controls (buttons, inputs)."
+      },
+      "default": {
+        "$type": "dimension",
+        "$value": "{core.dimension.40}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "density:compact": "{core.dimension.30}",
+            "density:spacious": "{core.dimension.50}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "density"
+          ]
+        },
+        "$description": "Default gap. Between distinct elements on a surface."
+      },
+      "loose": {
+        "$type": "dimension",
+        "$value": "{core.dimension.60}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "density:compact": "{core.dimension.50}",
+            "density:spacious": "{core.dimension.80}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "density"
+          ]
+        },
+        "$description": "Loose gap. Between grouped sections."
+      },
+      "airy": {
+        "$type": "dimension",
+        "$value": "{core.dimension.100}",
+        "$extensions": {
+          "com.opntrntbl.modes": {
+            "density:compact": "{core.dimension.80}",
+            "density:spacious": "{core.dimension.120}"
+          },
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "density"
+          ]
+        },
+        "$description": "Airy gap. Major section breaks."
+      }
+    },
+    "radius": {
+      "sharp": {
+        "$type": "dimension",
+        "$value": "{core.dimension.01}",
+        "$description": "Hairline rounding. Almost-square.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "soft": {
+        "$type": "dimension",
+        "$value": "{core.dimension.10}",
+        "$description": "Soft rounding. Inputs, small cards.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "round": {
+        "$type": "dimension",
+        "$value": "{core.dimension.25}",
+        "$description": "Rounded. Main surfaces (cards, panels, modals).",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "{core.dimension.240}",
+        "$description": "Pill. Full-pill controls, segmented toggles.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "circle": {
+        "$type": "dimension",
+        "$value": "50%",
+        "$description": "Circle. Avatars, round buttons. Applied as raw percentage.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      }
+    },
+    "motion": {
+      "feedback": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.fast}",
+          "timingFunction": "{core.easing.out}"
+        },
+        "$description": "Hover, focus ring, micro-feedback.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "state-change": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.moderate}",
+          "timingFunction": "{core.easing.in-out}"
+        },
+        "$description": "Toggle, switch, tab change.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "enter": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.slow}",
+          "timingFunction": "{core.easing.out}"
+        },
+        "$description": "Element entering (modal, drawer, toast).",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      },
+      "exit": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.moderate}",
+          "timingFunction": "{core.easing.in}"
+        },
+        "$description": "Element leaving (close modal, dismiss toast).",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "varies",
+          "com.opntrntbl.scope": [
+            "brand"
+          ]
+        }
+      }
+    },
+    "icon": {
+      "size": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{core.dimension.40}",
+          "$description": "Small icon. Inline with body text.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{core.dimension.60}",
+          "$description": "Medium icon. Default control icon.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{core.dimension.80}",
+          "$description": "Large icon. Feature blocks, empty states.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{core.dimension.05}",
+          "$description": "Focus ring stroke width.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "offset": {
+          "$type": "dimension",
+          "$value": "{core.dimension.05}",
+          "$description": "Focus ring offset from the element edge.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.border.focus}",
+          "$description": "Focus ring color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "varies",
+            "com.opntrntbl.scope": [
+              "mode",
+              "brand"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

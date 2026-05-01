@@ -1,0 +1,9 @@
+{
+  "output_mode": "sonos",
+  "bitrate": 320,
+  "vinyl_priority": false,
+  "rca_enabled": false
+}
+
+# rca_enabled: set to true if hardware mod (PAM8403 soldered) is present
+# This enables RCA output even without USB ADC connected

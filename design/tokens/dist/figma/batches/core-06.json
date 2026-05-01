@@ -1,0 +1,50 @@
+[
+  {
+    "name": "duration/slower",
+    "resolvedType": "FLOAT",
+    "description": "Expressive transitions, rare. (ms)",
+    "valuesByMode": {
+      "default": 800.0
+    }
+  },
+  {
+    "name": "easing/linear",
+    "resolvedType": "STRING",
+    "description": "Constant rate. Use sparingly.",
+    "valuesByMode": {
+      "default": "0,0,1,1"
+    }
+  },
+  {
+    "name": "easing/in",
+    "resolvedType": "STRING",
+    "description": "Accelerate. Exiting elements.",
+    "valuesByMode": {
+      "default": "0.4,0,1,1"
+    }
+  },
+  {
+    "name": "easing/out",
+    "resolvedType": "STRING",
+    "description": "Decelerate. Entering elements.",
+    "valuesByMode": {
+      "default": "0,0,0.2,1"
+    }
+  },
+  {
+    "name": "easing/in-out",
+    "resolvedType": "STRING",
+    "description": "Standard two-way transition.",
+    "valuesByMode": {
+      "default": "0.4,0,0.2,1"
+    }
+  },
+  {
+    "name": "easing/emphasized",
+    "resolvedType": "STRING",
+    "description": "Punchy. Expressive entrances.",
+    "valuesByMode": {
+      "default": "0.2,0,0,1"
+    }
+  }
+]

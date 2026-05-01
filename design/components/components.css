@@ -1,0 +1,593 @@
+/* openTRNTBL — Component styles
+ * Consumes semantic-tier CSS custom properties from design/tokens/dist/tokens.css.
+ * Imported by Storybook stories. Mode overrides (color/density) come via
+ * the [data-color="dark"] / [data-density="compact"] selectors set by
+ * .storybook/preview.js on <body>.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Visually-hidden but available to screen readers (a11y utility) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body {
+  font-family: var(--text-body-family);
+  background: var(--surface-canvas-background);
+  color: var(--text-color-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--text-body-family);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== FOCUS RING (a11y baseline) =====
+ * `:focus-visible` only — pas de ring au clic souris sur les boutons.
+ * Input garde son `:focus` (cf. .inp:focus plus bas — ring attendu au clic
+ * souris, cohérent iOS/macOS pour les champs texte).
+ * Row + SegmentedControl utilisent outline-offset négatif (inset) car ils
+ * remplissent leur container et un ring extérieur clipperait.
+ */
+.btn:focus-visible,
+.btn-toggle:focus-visible,
+.btn-ghost:focus-visible,
+.btn-tonal:focus-visible,
+.row:focus-visible,
+.seg-segment:focus-visible,
+.inp-action:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+.row:focus-visible       { outline-offset: -2px; }
+.seg-segment:focus-visible {
+  outline-offset: -2px;
+  border-radius: calc(var(--radius-round) - 4px);
+}
+
+/* ===== LAYOUT ===== */
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-default) var(--spacing-airy);
+}
+
+/* Default block paddings — utilisés par les écrans non-dash (s-wifi, s-lost) */
+.brand { text-align: center; padding: var(--spacing-airy) 0 var(--spacing-snug); }
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+}
+.brand-name em { font-style: normal; color: var(--accent-default); }
+
+.title {
+  font-size: var(--text-heading-1-size);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  padding: var(--spacing-loose) 0 var(--spacing-tight);
+}
+.subtitle {
+  font-size: var(--text-small-size);
+  color: var(--text-color-secondary);
+  line-height: 1.5;
+  padding-bottom: var(--spacing-loose);
+}
+.section {
+  font-size: var(--text-subheading-size);
+  font-weight: 700;
+  padding: var(--spacing-loose) 0 var(--spacing-snug);
+}
+
+/* Dashboard : 3 niveaux d'espacement (Gestalt de proximité) appliqués
+ * via flex+gap plutôt que margin/padding hardcodés.
+ *
+ *   inter-zone   → loose    (.dash-page > .dash-zone)
+ *   intra-zone   → default  (.dash-zone > *)
+ *   intra-élément → snug    (.zone-actions, .set-section, etc.)
+ *
+ * Les paddings par défaut de .brand/.title/.section sont mis à 0 ici :
+ * les gaps sont owned by the flex parent.
+ */
+.dash-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-loose);
+  padding-top: var(--spacing-airy);
+}
+.dash-zone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-default);
+}
+.zone-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-snug);
+}
+.dash-page .brand,
+.dash-page .title,
+.dash-page .subtitle,
+.dash-page .section { padding: 0; }
+.status-wrap { text-align: center; }
+
+/* ===== CARD + ROW ===== */
+.card {
+  background: var(--surface-base-background);
+  border-radius: var(--radius-round);
+  overflow: hidden;
+  /* Spacing owned by the parent via flex+gap. */
+}
+.row {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-default);
+  gap: 14px;
+  cursor: pointer;
+  transition:
+    background var(--motion-feedback-duration) var(--motion-feedback-easing),
+    opacity var(--motion-state-change-duration) var(--motion-state-change-easing);
+  background: transparent;
+  width: 100%;
+  border: none;
+  color: var(--text-color-primary);
+  font-family: var(--text-body-family);
+  text-align: left;
+}
+/* Hover Donnie : tint depuis la surface de base. Le pourcentage 80% est
+   calibré pour rester distinct de --border-subtle en dark
+   (collision dev-icon background résolue), tout en restant lisible en light
+   où surface-base = surface-raised (= white). Cf. PSEUDOSTATES-AUDIT R1/R2. */
+.row:hover  { background: color-mix(in oklch, var(--surface-base-background) 80%, var(--text-color-primary)); }
+.row:active { background: color-mix(in oklch, var(--surface-base-background) 70%, var(--text-color-primary)); }
+.row + .row { border-top: 0.5px solid var(--border-subtle); }
+.row.loading { opacity: 0.5; pointer-events: none; }
+.row-content { flex: 1; min-width: 0; }
+.row-title { font-size: var(--text-body-size); font-weight: 500; }
+.row-sub { font-size: var(--text-small-size); color: var(--text-color-secondary); margin-top: 1px; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  width: 100%;
+  padding: var(--spacing-default);
+  border-radius: var(--radius-round);
+  font-size: var(--text-body-size);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--motion-feedback-duration) var(--motion-feedback-easing);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-snug);
+}
+.btn-1 { background: var(--text-color-primary); color: var(--surface-canvas-background); }
+.btn-1:hover { opacity: 0.85; }
+/* Pressed : assombrit la surface inversée (Donnie pattern). */
+.btn-1:active { background: color-mix(in oklch, var(--text-color-primary) 80%, black); }
+.btn-1:disabled { opacity: 0.25; cursor: not-allowed; }
+
+.btn-2 { background: var(--surface-base-background); color: var(--text-color-primary); font-size: 15px; }
+/* Hover Donnie : tint depuis la surface de base — visible aussi en light
+   où surface-base = surface-raised (= white). */
+.btn-2:hover  { background: var(--surface-base-hover); }
+.btn-2:active { background: var(--surface-base-pressed); }
+
+.btn-disconnect {
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+  font-size: 15px;
+  font-weight: 600;
+}
+/* Donnie-style hover : tint un peu plus prononcée que le bg de base. */
+.btn-disconnect:hover  { background: var(--status-danger-bg-hover); }
+.btn-disconnect:active { background: var(--status-danger-bg-pressed); }
+
+.btn-toggle {
+  width: 100%;
+  padding: var(--spacing-default);
+  border-radius: var(--radius-round);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid var(--border-default);
+  background: var(--surface-base-background);
+  color: var(--text-color-secondary);
+  transition: all var(--motion-feedback-duration) var(--motion-feedback-easing);
+}
+/* Off hover : Donnie tint + bord renforcé — visible en light malgré
+   surface-base = surface-raised. */
+.btn-toggle:hover { background: var(--surface-base-hover); border-color: var(--border-strong); }
+.btn-toggle:active { background: color-mix(in oklch, var(--surface-base-background) 76%, var(--text-color-primary)); }
+.btn-toggle.active { background: var(--accent-default); border-color: var(--accent-default); color: var(--text-color-on-accent); }
+.btn-toggle.active:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+/* On + pressed : assombrit l'accent. */
+.btn-toggle.active:active { background: var(--accent-pressed); border-color: var(--accent-pressed); }
+
+/* Ghost : secondary mais fond transparent. Même size que btn-2/btn-disconnect
+   (padding default, radius round, font 15px) — pour cohérence visuelle dans
+   les listes verticales d'actions. Hover/pressed dérivent via color-mix()
+   depuis currentColor (Donnie pattern, cf. project_donnie_hover_pattern.md). */
+.btn-ghost {
+  width: 100%;
+  padding: var(--spacing-default);
+  border-radius: var(--radius-round);
+  background: transparent;
+  border: none;
+  color: var(--text-color-primary);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--motion-feedback-duration) var(--motion-feedback-easing);
+}
+.btn-ghost:hover  { background: color-mix(in oklch, transparent, currentColor 10%); }
+.btn-ghost:active { background: color-mix(in oklch, transparent, currentColor 20%); }
+.btn-tonal {
+  width: auto;
+  padding: var(--spacing-snug) var(--spacing-default);
+  /* Donnie overlay du text-primary : voile 8% qui assombrit en light /
+     éclaircit en dark / ressort en HC, sans dépendre d'un token surface
+     fixe → visible quel que soit le contexte (canvas, card, raised). */
+  background: color-mix(in oklch, transparent, var(--text-color-primary) 8%);
+  color: var(--text-color-primary);
+  border: none;
+  border-radius: var(--radius-round);
+  font-size: var(--text-caption-size);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--motion-feedback-duration) var(--motion-feedback-easing);
+}
+.btn-tonal:hover  { background: color-mix(in oklch, transparent, var(--text-color-primary) 16%); }
+.btn-tonal:active { background: color-mix(in oklch, transparent, var(--text-color-primary) 24%); }
+
+/* Disabled générique pour tous les variants sauf .btn-1 (qui garde son
+   opacity 0.25 historique — décision Ismail). */
+.btn-2:disabled,
+.btn-disconnect:disabled,
+.btn-toggle:disabled,
+.btn-ghost:disabled,
+.btn-tonal:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== SEGMENTED CONTROL (Apple HIG style) =====
+ * Métaphore d'interaction (Vague 6) : le segment actif **émerge du track grisé**
+ * en blanc raised. Hover/pressed sur un segment inactif **blanchit progressivement**
+ * via color-mix() vers --surface-base-background (Donnie pattern, cf.
+ * project_donnie_hover_pattern.md). Cohérent iOS HIG.
+ *
+ * Track  = --surface-canvas-background  (gris très clair en light, n.0 en dark)
+ * Tile   = --surface-base-background    (white en light, n.10 en dark) + box-shadow
+ * Hover  = blanchiment partiel vers surface-base
+ * Press  = blanchiment plein vers surface-base
+ *
+ * En contrast:enhanced, surface-canvas et surface-base se confondent
+ * (n.200/n.200 en HC light, n.0/n.0 en HC dark) — patch via outline visible
+ * uniquement dans ce mode (cf. bloc HC plus bas).
+ */
+.seg-track {
+  display: inline-flex;
+  align-self: flex-start;          /* don't stretch when parent is flex column */
+  padding: var(--spacing-tight);
+  background: var(--surface-canvas-background);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-round);
+  gap: var(--spacing-tight);
+}
+.seg-segment {
+  padding: var(--spacing-snug) var(--spacing-default);
+  background: transparent;
+  border: none;
+  color: var(--text-color-secondary);
+  font-family: var(--text-body-family);
+  font-size: var(--text-caption-size);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: calc(var(--radius-round) - 4px);
+  transition:
+    background var(--motion-feedback-duration) var(--motion-feedback-easing),
+    color var(--motion-feedback-duration) var(--motion-feedback-easing);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Hover sur inactif uniquement : blanchiment partiel vers surface-base
+   (Donnie pattern). Sur l'actif on ne change rien (déjà à la cible). */
+.seg-segment:hover:not(.active) {
+  background: color-mix(in oklch, transparent, var(--surface-base-background) 50%);
+  color: var(--text-color-primary);
+}
+/* Pressed sur inactif : blanchiment plein — la tile "se forme" sous le doigt.
+   Pas de scale, le shift de bg fait office de feedback tactile. */
+.seg-segment:active:not(.active) {
+  background: var(--surface-base-background);
+  color: var(--text-color-primary);
+}
+.seg-segment.active {
+  background: var(--surface-base-background);
+  color: var(--text-color-primary);
+  /* Box-shadow iOS-like — la "tile flottante" plane au-dessus du track grisé.
+     Pattern Apple HIG natif, n'introduit pas de nouveau token. */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 0 0 0.5px rgba(0, 0, 0, 0.04);
+}
+/* HC SegmentedControl (Ismail) : pas de border outline.
+   Pattern : le **track global** devient sombre fixe (peu importe light/dark),
+   les segments inactifs restent transparents (leur text blanc lit sur le track),
+   l'actif est une tile blanche flottante avec text noir. Distinction radicale
+   par luminance, pas de border.
+
+   Consomme les tokens fixes surface.dim / surface.bright + text-color.on-dim /
+   on-bright (créés pour ce usage HC, stables peu importe light/dark). */
+[data-contrast="enhanced"] .seg-track {
+  background: var(--surface-dim);
+  border-color: var(--surface-dim); /* match track, pas de border-subtle visible */
+}
+[data-contrast="enhanced"] .seg-segment:not(.active) {
+  background: transparent;
+  color: var(--text-color-on-dim);
+}
+[data-contrast="enhanced"] .seg-segment:hover:not(.active) {
+  background: color-mix(in oklch, transparent, var(--surface-bright) 25%);
+  color: var(--text-color-on-dim);
+}
+[data-contrast="enhanced"] .seg-segment:active:not(.active) {
+  background: var(--surface-bright);
+  color: var(--text-color-on-bright);
+}
+[data-contrast="enhanced"] .seg-segment.active {
+  background: var(--surface-bright);
+  color: var(--text-color-on-bright);
+}
+.seg-track[aria-disabled="true"] { opacity: 0.4; pointer-events: none; cursor: not-allowed; }
+.seg-track[data-loading="true"]  { opacity: 0.6; pointer-events: none; cursor: wait; }
+/* Wrap variant — for compact/dense settings panels with many segments
+   (Vision = 5, Lang = 4) that may need to wrap on narrow screens. Stays
+   inline-flex (content-fit, NOT full-width) and items align to start
+   (left LTR / right RTL via logical layout). */
+.seg-track[data-wrap="true"] {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* ===== INPUTS ===== */
+.inp-group { padding: var(--spacing-default); }
+.inp-label {
+  font-size: var(--text-caption-size);
+  color: var(--text-color-secondary);
+  margin-bottom: var(--spacing-snug);
+  font-weight: 500;
+  display: block;
+}
+.inp-wrap { position: relative; }
+.inp {
+  width: 100%;
+  padding: var(--spacing-snug) var(--spacing-default);
+  background: var(--surface-sunken-background);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-round);
+  color: var(--text-color-primary);
+  font-family: var(--text-body-family);
+  font-size: var(--text-body-size);
+  outline: none;
+  transition: border-color var(--motion-feedback-duration) var(--motion-feedback-easing);
+}
+.inp::placeholder { color: var(--text-color-placeholder); }
+/* Hover subtil — aligné avec .btn-tonal:hover (même formule Donnie sur surface-sunken,
+   les deux partagent le même token de fond pour cohérence "encastré dans Card").
+   Bord shift en plus pour matérialiser l'affordance "cliquable/éditable" propre à l'input.
+   Ne se déclenche pas si l'input a déjà un état plus fort (focus, disabled). */
+.inp:hover:not(:focus):not(:disabled) {
+  background: var(--surface-sunken-hover);
+  border-color: var(--border-strong);
+}
+.inp:focus { border-color: var(--border-focus); }
+.inp:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: var(--text-color-disabled);
+}
+.inp:disabled::placeholder { color: var(--text-color-disabled); }
+
+/* HC Input (Ismail, test à valider visuellement — revertable) :
+   Pattern cohérent avec SegmentedControl HC — bg sombre fixe + text blanc, peu
+   importe light/dark. L'input devient une "bande sombre" contrastée vs son
+   contexte (Card en HC light = white, Card en HC dark = n.25).
+   Si pattern KO visuellement → revert ce bloc, le mode standard non touché. */
+[data-contrast="enhanced"] .inp {
+  background: var(--surface-dim);
+  color: var(--text-color-on-dim);
+}
+[data-contrast="enhanced"] .inp::placeholder {
+  color: var(--text-color-on-dim);
+  opacity: 0.6;
+}
+[data-contrast="enhanced"] .inp:hover:not(:focus):not(:disabled) {
+  background: color-mix(in oklch, var(--surface-dim) 88%, var(--surface-bright));
+  border-color: var(--border-strong);
+}
+[data-contrast="enhanced"] .inp:disabled {
+  color: var(--text-color-on-dim);
+}
+[data-contrast="enhanced"] .inp:disabled::placeholder {
+  color: var(--text-color-on-dim);
+}
+
+.inp-pw { padding-right: 80px; }
+.inp-action {
+  position: absolute;
+  right: var(--spacing-snug);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--accent-default);
+  font-size: var(--text-small-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Hover Donnie : tint l'accent vers le primary text. Pressed : opacity. */
+.inp-action:hover  { color: color-mix(in oklch, var(--accent-default) 80%, var(--text-color-primary)); }
+.inp-action:active { opacity: 0.6; }
+
+/* ===== STATUS BADGES ===== */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-snug);
+  padding: var(--spacing-snug) var(--spacing-default);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-small-size);
+  font-weight: 600;
+}
+.status-play { background: var(--status-success-bg); color: var(--status-success-text); }
+.status-idle { background: var(--surface-base-background); color: var(--text-color-secondary); }
+.status-err  { background: var(--status-danger-bg); color: var(--status-danger-text); }
+.status-warn { background: var(--status-warning-bg); color: var(--status-warning-text); }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.status-play .status-dot { animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ===== AUXILIARES ===== */
+.signal { display: flex; align-items: flex-end; gap: 1.5px; height: 14px; }
+.signal b { width: 3px; border-radius: 1px; background: var(--text-color-primary); }
+.signal b:nth-child(1) { height: 3px; }
+.signal b:nth-child(2) { height: 6px; }
+.signal b:nth-child(3) { height: 9px; }
+.signal b:nth-child(4) { height: 12px; }
+.signal b.off { background: var(--text-color-placeholder); opacity: 0.3; }
+
+.check {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid var(--text-color-placeholder);
+  transition: all 0.2s;
+}
+.check.on { background: var(--accent-default); border-color: var(--accent-default); }
+.check.on::after { content: '\2713'; color: var(--text-color-on-accent); font-size: 12px; font-weight: 800; }
+
+.dev-icon {
+  width: 40px; height: 40px;
+  border-radius: var(--radius-round);
+  background: var(--border-subtle);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.dev-icon svg {
+  width: 22px; height: 22px;
+  stroke: var(--text-color-secondary);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* ===== ALERT ===== */
+.alert {
+  background: var(--surface-base-background);
+  border-radius: var(--radius-round);
+  padding: var(--spacing-loose);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-default);
+  /* Spacing owned by parent via flex+gap. */
+  --alert-icon-bg: var(--status-warning-bg);
+  --alert-icon-color: var(--status-warning-text);
+}
+.alert.info    { --alert-icon-bg: var(--status-info-bg);    --alert-icon-color: var(--status-info-text); }
+.alert.warning { --alert-icon-bg: var(--status-warning-bg); --alert-icon-color: var(--status-warning-text); }
+.alert.error   { --alert-icon-bg: var(--status-danger-bg);  --alert-icon-color: var(--status-danger-text); }
+.alert.success { --alert-icon-bg: var(--status-success-bg); --alert-icon-color: var(--status-success-text); }
+
+.alert-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--alert-icon-bg);
+  color: var(--alert-icon-color);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.alert-icon svg {
+  width: 18px; height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.alert-content { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.alert-title   { font-size: 15px; font-weight: 600; color: var(--text-color-primary); }
+.alert-body    { font-size: var(--text-small-size); line-height: 1.5; color: var(--text-color-secondary); }
+.alert-body strong { color: var(--text-color-primary); font-weight: 600; }
+
+.wifi-bar {
+  display: flex; align-items: center; gap: var(--spacing-snug);
+  padding: 10px var(--spacing-default);
+  background: var(--surface-base-background);
+  border-radius: var(--radius-round);
+  font-size: var(--text-caption-size);
+  color: var(--text-color-secondary);
+  margin-bottom: var(--spacing-default);
+}
+
+.spin {
+  width: 18px; height: 18px;
+  border: 2px solid var(--text-color-placeholder);
+  border-top-color: var(--text-color-primary);
+  border-radius: 50%;
+  animation: sp 0.7s linear infinite;
+  flex-shrink: 0;
+}
+.spin-sm { width: 14px; height: 14px; }
+@keyframes sp { to { transform: rotate(360deg); } }
+
+/* ===== HIGH CONTRAST — overrides scopés (Vague 8) =====
+ * Décision Ismail : en HC on augmente TOUT les contrastes entre TOUT les
+ * éléments. Les 4 surfaces canvas/base/raised/sunken sont déjà distinctes
+ * par leurs valeurs (cf. semantic.tokens.json) ; cette section corrige les
+ * composants dont le bg est par défaut le même que celui de leur parent
+ * naturel — en CHANGEANT le token consommé, pas en ajoutant une border.
+ *
+ * Audit composants × parent en HC :
+ *   .btn-2 dans .card  : bg=base / parent=base    → CONFONDU       → fix
+ *   .alert sur canvas  : bg=base / parent=canvas  → 1.43 distinct  → ok
+ *   .card sur canvas   : bg=base / parent=canvas  → 1.43 distinct  → ok
+ *   .wifi-bar canvas   : idem .alert              → ok
+ *   .seg-track .card   : bg=canvas/parent=base    → 1.43 distinct  → ok
+ *   .seg-segment.active : bg=base / parent=canvas → 1.43 + outline → ok
+ *   .inp .card         : bg=sunken/parent=base    → distinct       → ok
+ *   .btn-tonal .card   : bg=sunken/parent=base    → distinct       → ok
+ *   .btn-toggle .card  : bg=base + border native  → border ≥7:1    → ok
+ *   .btn-disconnect    : bg=danger.bg coloré      → ok
+ *   .btn-1             : bg=primary inversé       → max contrast   → ok
+ *   .btn-ghost         : transparent              → ok
+ *   .status (variants colorés) : bg=status-bg     → ok
+ *   .status-idle (centered)    : bg=base/canvas   → 1.43 distinct  → ok
+ *
+ * Un seul composant nécessite l'override. Pas de border pansement. */
+[data-contrast="enhanced"] .btn-2 {
+  background: var(--surface-sunken-background);
+}
+/* Donnie hovers recalculés sur la nouvelle base sunken (cohérent avec
+   .inp:hover et .btn-tonal:hover qui partagent le même pattern). */
+[data-contrast="enhanced"] .btn-2:hover  { background: var(--surface-sunken-hover); }
+[data-contrast="enhanced"] .btn-2:active { background: var(--surface-sunken-pressed); }

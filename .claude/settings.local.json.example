@@ -1,0 +1,53 @@
+{
+  "_comment_": "Template — copy to .claude/settings.local.json and customize. This file is gitignored on purpose (it's per-user). The 'permissions.allow' list pre-authorizes commands and MCP tools so sub-agents can run without prompts. See docs/VIBECODING-WITH-CLAUDE.md for the rationale.",
+
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git commit *)",
+      "Bash(git add *)",
+      "Bash(gh pr *)",
+      "Bash(gh repo *)",
+      "Bash(gh release *)",
+      "Bash(gh auth *)",
+
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "Bash(npx storybook *)",
+      "Bash(npx playwright *)",
+      "Bash(python3 *)",
+
+      "Bash(ssh root@trntbl.local *)",
+      "Bash(scp firmware/* root@trntbl.local:*)",
+      "Bash(ping -c 1 -W 1 trntbl.local)",
+
+      "mcp__ssh",
+      "mcp__github",
+      "mcp__figma-console",
+      "mcp__penpot",
+
+      "WebFetch(domain:designtokens.org)",
+      "WebFetch(domain:tr.designtokens.org)",
+      "WebFetch(domain:github.com)",
+      "WebSearch"
+    ],
+
+    "additionalDirectories": [
+      "~/.ssh"
+    ]
+  },
+
+  "enableAllProjectMcpServers": true,
+
+  "_notes_": {
+    "mcp_wildcards": "Entries like 'mcp__figma-console' (without explicit __* suffix) are interpreted as wildcards covering ALL tools of that MCP server. This is required for sub-agents in background to use the server (they can't show interactive permission prompts). For MCP servers with destructive operations, prefer listing tools explicitly instead.",
+
+    "ssh_host": "Replace 'trntbl.local' with your CHIP IP if mDNS isn't working. The 'additionalDirectories' entry for ~/.ssh lets Claude read your SSH config to use known hosts.",
+
+    "regenerate": "If permission prompts pile up during a session, run the /fewer-permission-prompts skill — it scans your conversation transcripts and suggests new entries to add here."
+  }
+}

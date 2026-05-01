@@ -1,0 +1,938 @@
+[
+  {
+    "name": "palette/neutral/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/neutral/10",
+    "resolvedType": "COLOR",
+    "value": "#0d0d0d",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/neutral/25",
+    "resolvedType": "COLOR",
+    "value": "#272727",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/neutral/50",
+    "resolvedType": "COLOR",
+    "value": "#424242",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/neutral/75",
+    "resolvedType": "COLOR",
+    "value": "#5b5b5b",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/neutral/100",
+    "resolvedType": "COLOR",
+    "value": "#757575",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/neutral/125",
+    "resolvedType": "COLOR",
+    "value": "#929292",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/neutral/150",
+    "resolvedType": "COLOR",
+    "value": "#b0b0b0",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/neutral/175",
+    "resolvedType": "COLOR",
+    "value": "#d8d8d8",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/neutral/190",
+    "resolvedType": "COLOR",
+    "value": "#f2f2f2",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/neutral/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/red/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/red/10",
+    "resolvedType": "COLOR",
+    "value": "#250000",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/red/25",
+    "resolvedType": "COLOR",
+    "value": "#560000",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/red/50",
+    "resolvedType": "COLOR",
+    "value": "#880c08",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/red/75",
+    "resolvedType": "COLOR",
+    "value": "#ae261d",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/red/100",
+    "resolvedType": "COLOR",
+    "value": "#d14437",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/red/125",
+    "resolvedType": "COLOR",
+    "value": "#f16657",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/red/150",
+    "resolvedType": "COLOR",
+    "value": "#ff9181",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/red/175",
+    "resolvedType": "COLOR",
+    "value": "#ffcbc3",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/red/190",
+    "resolvedType": "COLOR",
+    "value": "#ffedeb",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/red/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/orange/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/orange/10",
+    "resolvedType": "COLOR",
+    "value": "#1a0800",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/orange/25",
+    "resolvedType": "COLOR",
+    "value": "#411d00",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/orange/50",
+    "resolvedType": "COLOR",
+    "value": "#6a3400",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/orange/75",
+    "resolvedType": "COLOR",
+    "value": "#8f4800",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/orange/100",
+    "resolvedType": "COLOR",
+    "value": "#b75e00",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/orange/125",
+    "resolvedType": "COLOR",
+    "value": "#e2760f",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/orange/150",
+    "resolvedType": "COLOR",
+    "value": "#fa974e",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/orange/175",
+    "resolvedType": "COLOR",
+    "value": "#ffcead",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/orange/190",
+    "resolvedType": "COLOR",
+    "value": "#ffeee4",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/orange/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/gold/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/gold/10",
+    "resolvedType": "COLOR",
+    "value": "#130b00",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/gold/25",
+    "resolvedType": "COLOR",
+    "value": "#342400",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/gold/50",
+    "resolvedType": "COLOR",
+    "value": "#563f00",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/gold/75",
+    "resolvedType": "COLOR",
+    "value": "#755700",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/gold/100",
+    "resolvedType": "COLOR",
+    "value": "#957000",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/gold/125",
+    "resolvedType": "COLOR",
+    "value": "#b78c23",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/gold/150",
+    "resolvedType": "COLOR",
+    "value": "#d1aa56",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/gold/175",
+    "resolvedType": "COLOR",
+    "value": "#f4d38f",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/gold/190",
+    "resolvedType": "COLOR",
+    "value": "#ffefd0",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/gold/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/yellow/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/yellow/10",
+    "resolvedType": "COLOR",
+    "value": "#110d00",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/yellow/25",
+    "resolvedType": "COLOR",
+    "value": "#2d2700",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/yellow/50",
+    "resolvedType": "COLOR",
+    "value": "#4c4200",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/yellow/75",
+    "resolvedType": "COLOR",
+    "value": "#685c00",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/yellow/100",
+    "resolvedType": "COLOR",
+    "value": "#867600",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/yellow/125",
+    "resolvedType": "COLOR",
+    "value": "#a79300",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/yellow/150",
+    "resolvedType": "COLOR",
+    "value": "#c4b025",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/yellow/175",
+    "resolvedType": "COLOR",
+    "value": "#e9d974",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/yellow/190",
+    "resolvedType": "COLOR",
+    "value": "#fff2a6",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/yellow/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/green/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/green/10",
+    "resolvedType": "COLOR",
+    "value": "#001001",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/green/25",
+    "resolvedType": "COLOR",
+    "value": "#002f06",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/green/50",
+    "resolvedType": "COLOR",
+    "value": "#004e10",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/green/75",
+    "resolvedType": "COLOR",
+    "value": "#006a19",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/green/100",
+    "resolvedType": "COLOR",
+    "value": "#068924",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/green/125",
+    "resolvedType": "COLOR",
+    "value": "#3ea748",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/green/150",
+    "resolvedType": "COLOR",
+    "value": "#69c26e",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/green/175",
+    "resolvedType": "COLOR",
+    "value": "#9ee9a0",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/green/190",
+    "resolvedType": "COLOR",
+    "value": "#c8ffc9",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/green/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/cyan/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/cyan/10",
+    "resolvedType": "COLOR",
+    "value": "#000f10",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/cyan/25",
+    "resolvedType": "COLOR",
+    "value": "#002c2d",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/cyan/50",
+    "resolvedType": "COLOR",
+    "value": "#004b4b",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/cyan/75",
+    "resolvedType": "COLOR",
+    "value": "#006667",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/cyan/100",
+    "resolvedType": "COLOR",
+    "value": "#008484",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/cyan/125",
+    "resolvedType": "COLOR",
+    "value": "#00a4a4",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/cyan/150",
+    "resolvedType": "COLOR",
+    "value": "#3bc1c1",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/cyan/175",
+    "resolvedType": "COLOR",
+    "value": "#83e7e7",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/cyan/190",
+    "resolvedType": "COLOR",
+    "value": "#b1fffe",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/cyan/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/blue/0",
+    "resolvedType": "COLOR",
+    "value": "#000002",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/blue/10",
+    "resolvedType": "COLOR",
+    "value": "#000c24",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/blue/25",
+    "resolvedType": "COLOR",
+    "value": "#002652",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/blue/50",
+    "resolvedType": "COLOR",
+    "value": "#004184",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/blue/75",
+    "resolvedType": "COLOR",
+    "value": "#005ab2",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/blue/100",
+    "resolvedType": "COLOR",
+    "value": "#0075e2",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/blue/125",
+    "resolvedType": "COLOR",
+    "value": "#3893ff",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/blue/150",
+    "resolvedType": "COLOR",
+    "value": "#76b3ff",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/blue/175",
+    "resolvedType": "COLOR",
+    "value": "#bddaff",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/blue/190",
+    "resolvedType": "COLOR",
+    "value": "#e9f2ff",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/blue/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "palette/violet/0",
+    "resolvedType": "COLOR",
+    "value": "#000002",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues."
+  },
+  {
+    "name": "palette/violet/10",
+    "resolvedType": "COLOR",
+    "value": "#170030",
+    "description": "Near-dark. Avoids OLED banding from absolute #000."
+  },
+  {
+    "name": "palette/violet/25",
+    "resolvedType": "COLOR",
+    "value": "#371060",
+    "description": "Deep. Text high-emphasis on light surfaces."
+  },
+  {
+    "name": "palette/violet/50",
+    "resolvedType": "COLOR",
+    "value": "#56298d",
+    "description": "Strong. Body text on light; solid idle on bright themes."
+  },
+  {
+    "name": "palette/violet/75",
+    "resolvedType": "COLOR",
+    "value": "#7240b2",
+    "description": "Mid-dark. Border strong on light; solid idle."
+  },
+  {
+    "name": "palette/violet/100",
+    "resolvedType": "COLOR",
+    "value": "#8e5cd4",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color."
+  },
+  {
+    "name": "palette/violet/125",
+    "resolvedType": "COLOR",
+    "value": "#a97bf1",
+    "description": "Mid-light. Interactive hover on dark themes."
+  },
+  {
+    "name": "palette/violet/150",
+    "resolvedType": "COLOR",
+    "value": "#c19eff",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes."
+  },
+  {
+    "name": "palette/violet/175",
+    "resolvedType": "COLOR",
+    "value": "#dfd0ff",
+    "description": "Very light. Base surface on light themes; body text on dark themes."
+  },
+  {
+    "name": "palette/violet/190",
+    "resolvedType": "COLOR",
+    "value": "#f4eeff",
+    "description": "Near-light. Avoids banding from absolute #fff."
+  },
+  {
+    "name": "palette/violet/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues."
+  },
+  {
+    "name": "dimension/01",
+    "resolvedType": "FLOAT",
+    "value": 0.4,
+    "description": "Hairline. Sub-rem exception for 1px borders/dividers. (px)"
+  },
+  {
+    "name": "dimension/05",
+    "resolvedType": "FLOAT",
+    "value": 2.0,
+    "description": "2px. Fine border, micro-radius. (px)"
+  },
+  {
+    "name": "dimension/10",
+    "resolvedType": "FLOAT",
+    "value": 4.0,
+    "description": "4px. Base unit. Border-radius small. (px)"
+  },
+  {
+    "name": "dimension/15",
+    "resolvedType": "FLOAT",
+    "value": 6.0,
+    "description": "6px. Compact density variant of `default`. (px)"
+  },
+  {
+    "name": "dimension/20",
+    "resolvedType": "FLOAT",
+    "value": 8.0,
+    "description": "8px. Snug gap. Inner padding of small controls. (px)"
+  },
+  {
+    "name": "dimension/25",
+    "resolvedType": "FLOAT",
+    "value": 10.0,
+    "description": "10px. Border-radius round (cards, panels). Compact-spacious knob. (px)"
+  },
+  {
+    "name": "dimension/30",
+    "resolvedType": "FLOAT",
+    "value": 12.0,
+    "description": "12px. Caption font-size. Compact `default` step. (px)"
+  },
+  {
+    "name": "dimension/35",
+    "resolvedType": "FLOAT",
+    "value": 14.0,
+    "description": "14px. Small body font-size. Compact-spacious knob. (px)"
+  },
+  {
+    "name": "dimension/40",
+    "resolvedType": "FLOAT",
+    "value": 16.0,
+    "description": "16px. One rem. Typography base; default body padding. (px)"
+  },
+  {
+    "name": "dimension/45",
+    "resolvedType": "FLOAT",
+    "value": 18.0,
+    "description": "18px. Large body font-size. (px)"
+  },
+  {
+    "name": "dimension/50",
+    "resolvedType": "FLOAT",
+    "value": 20.0,
+    "description": "20px. Subheading font-size. Spacious `snug` variant. (px)"
+  },
+  {
+    "name": "dimension/55",
+    "resolvedType": "FLOAT",
+    "value": 22.0,
+    "description": "22px. Reserved for fine-grained tuning between 50 and 60. (px)"
+  },
+  {
+    "name": "dimension/60",
+    "resolvedType": "FLOAT",
+    "value": 24.0,
+    "description": "24px. Heading-3 font-size. Loose gap (compact). (px)"
+  },
+  {
+    "name": "dimension/70",
+    "resolvedType": "FLOAT",
+    "value": 28.0,
+    "description": "28px. Reserved tuning step between 60 and 80. (px)"
+  },
+  {
+    "name": "dimension/80",
+    "resolvedType": "FLOAT",
+    "value": 32.0,
+    "description": "32px. Heading-2 font-size. Loose gap (default). (px)"
+  },
+  {
+    "name": "dimension/90",
+    "resolvedType": "FLOAT",
+    "value": 36.0,
+    "description": "36px. Reserved tuning step between 80 and 100. (px)"
+  },
+  {
+    "name": "dimension/100",
+    "resolvedType": "FLOAT",
+    "value": 40.0,
+    "description": "40px. Minimum tap target (WCAG AA 2.2). (px)"
+  },
+  {
+    "name": "dimension/120",
+    "resolvedType": "FLOAT",
+    "value": 48.0,
+    "description": "48px. Spacious `loose` step. Display-small font-size. (px)"
+  },
+  {
+    "name": "dimension/160",
+    "resolvedType": "FLOAT",
+    "value": 64.0,
+    "description": "64px. Display-large font-size. (px)"
+  },
+  {
+    "name": "dimension/200",
+    "resolvedType": "FLOAT",
+    "value": 80.0,
+    "description": "80px. Major hero spacing. (px)"
+  },
+  {
+    "name": "dimension/240",
+    "resolvedType": "FLOAT",
+    "value": 96.0,
+    "description": "96px. Pill radius (always larger than tallest pill control). (px)"
+  },
+  {
+    "name": "dimension/320",
+    "resolvedType": "FLOAT",
+    "value": 128.0,
+    "description": "128px. Hero dimensions. (px)"
+  },
+  {
+    "name": "opacity/000",
+    "resolvedType": "FLOAT",
+    "value": 0.0,
+    "description": "0%. Fully transparent."
+  },
+  {
+    "name": "opacity/004",
+    "resolvedType": "FLOAT",
+    "value": 0.04,
+    "description": "4%. Faintest tint \u2014 cell hover on dense surfaces."
+  },
+  {
+    "name": "opacity/008",
+    "resolvedType": "FLOAT",
+    "value": 0.08,
+    "description": "8%. Subtle tint \u2014 `:hover` mix amount on filled buttons."
+  },
+  {
+    "name": "opacity/016",
+    "resolvedType": "FLOAT",
+    "value": 0.16,
+    "description": "16%. Soft overlay \u2014 disabled-on-light reduction."
+  },
+  {
+    "name": "opacity/024",
+    "resolvedType": "FLOAT",
+    "value": 0.24,
+    "description": "24%. Light scrim."
+  },
+  {
+    "name": "opacity/040",
+    "resolvedType": "FLOAT",
+    "value": 0.4,
+    "description": "40%. Medium scrim \u2014 disabled control body."
+  },
+  {
+    "name": "opacity/060",
+    "resolvedType": "FLOAT",
+    "value": 0.6,
+    "description": "60%. Standard backdrop scrim (modals, drawers)."
+  },
+  {
+    "name": "opacity/080",
+    "resolvedType": "FLOAT",
+    "value": 0.8,
+    "description": "80%. Strong dimming."
+  },
+  {
+    "name": "opacity/100",
+    "resolvedType": "FLOAT",
+    "value": 1.0,
+    "description": "100%. Fully opaque (ergonomic shortcut)."
+  },
+  {
+    "name": "font-size/10",
+    "resolvedType": "FLOAT",
+    "value": 12.0,
+    "description": "12px. Caption: metadata, legal text, table headers. (px)"
+  },
+  {
+    "name": "font-size/20",
+    "resolvedType": "FLOAT",
+    "value": 14.0,
+    "description": "14px. Small body: secondary copy, dense UI, inputs. (px)"
+  },
+  {
+    "name": "font-size/30",
+    "resolvedType": "FLOAT",
+    "value": 16.0,
+    "description": "16px. Default body: reading size. (px)"
+  },
+  {
+    "name": "font-size/40",
+    "resolvedType": "FLOAT",
+    "value": 18.0,
+    "description": "18px. Large body: emphasized paragraphs. (px)"
+  },
+  {
+    "name": "font-size/50",
+    "resolvedType": "FLOAT",
+    "value": 20.0,
+    "description": "20px. Subheading: in-page section labels. (px)"
+  },
+  {
+    "name": "font-size/60",
+    "resolvedType": "FLOAT",
+    "value": 24.0,
+    "description": "24px. Heading-3: within-section titles. (px)"
+  },
+  {
+    "name": "font-size/80",
+    "resolvedType": "FLOAT",
+    "value": 32.0,
+    "description": "32px. Heading-2: major-section titles. (px)"
+  },
+  {
+    "name": "font-size/90",
+    "resolvedType": "FLOAT",
+    "value": 36.0,
+    "description": "36px. Reserved tuning step. (px)"
+  },
+  {
+    "name": "font-size/100",
+    "resolvedType": "FLOAT",
+    "value": 40.0,
+    "description": "40px. Heading-1: page titles. (px)"
+  },
+  {
+    "name": "font-size/120",
+    "resolvedType": "FLOAT",
+    "value": 48.0,
+    "description": "48px. Display-small: hero subtitles. (px)"
+  },
+  {
+    "name": "font-size/160",
+    "resolvedType": "FLOAT",
+    "value": 64.0,
+    "description": "64px. Display-large: hero titles. (px)"
+  },
+  {
+    "name": "line-height/10",
+    "resolvedType": "FLOAT",
+    "value": 1.0,
+    "description": "Tight. Display typography, uppercase, monospace blocks."
+  },
+  {
+    "name": "line-height/20",
+    "resolvedType": "FLOAT",
+    "value": 1.2,
+    "description": "Snug. Headings, condensed UI."
+  },
+  {
+    "name": "line-height/30",
+    "resolvedType": "FLOAT",
+    "value": 1.4,
+    "description": "Default. Body text, controls."
+  },
+  {
+    "name": "line-height/40",
+    "resolvedType": "FLOAT",
+    "value": 1.6,
+    "description": "Loose. Long-form reading, prose."
+  },
+  {
+    "name": "line-height/50",
+    "resolvedType": "FLOAT",
+    "value": 1.8,
+    "description": "Airy. Captions on dense layouts."
+  },
+  {
+    "name": "duration/instant",
+    "resolvedType": "FLOAT",
+    "value": 0.0,
+    "description": "Immediate, no transition. (ms)"
+  },
+  {
+    "name": "duration/fast",
+    "resolvedType": "FLOAT",
+    "value": 100.0,
+    "description": "Micro-interactions: hover, focus. (ms)"
+  },
+  {
+    "name": "duration/moderate",
+    "resolvedType": "FLOAT",
+    "value": 200.0,
+    "description": "Standard UI transitions. (ms)"
+  },
+  {
+    "name": "duration/slow",
+    "resolvedType": "FLOAT",
+    "value": 400.0,
+    "description": "Enter/exit: modals, drawers. (ms)"
+  },
+  {
+    "name": "duration/slower",
+    "resolvedType": "FLOAT",
+    "value": 800.0,
+    "description": "Expressive transitions, rare. (ms)"
+  },
+  {
+    "name": "easing/linear",
+    "resolvedType": "STRING",
+    "value": "0,0,1,1",
+    "description": "Constant rate. Use sparingly."
+  },
+  {
+    "name": "easing/in",
+    "resolvedType": "STRING",
+    "value": "0.4,0,1,1",
+    "description": "Accelerate. Exiting elements."
+  },
+  {
+    "name": "easing/out",
+    "resolvedType": "STRING",
+    "value": "0,0,0.2,1",
+    "description": "Decelerate. Entering elements."
+  },
+  {
+    "name": "easing/in-out",
+    "resolvedType": "STRING",
+    "value": "0.4,0,0.2,1",
+    "description": "Standard two-way transition."
+  },
+  {
+    "name": "easing/emphasized",
+    "resolvedType": "STRING",
+    "value": "0.2,0,0,1",
+    "description": "Punchy. Expressive entrances."
+  }
+]

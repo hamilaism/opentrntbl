@@ -1,0 +1,47 @@
+{
+  "semantic.spacing.tight": {
+    "type": "dimension",
+    "values": {
+      "default": "0.25rem",
+      "compact": "0.125rem",
+      "spacious": "0.375rem"
+    },
+    "description": "Tight gap. Between adjacent visual elements sharing a conceptual unit."
+  },
+  "semantic.spacing.snug": {
+    "type": "dimension",
+    "values": {
+      "default": "0.5rem",
+      "compact": "0.375rem",
+      "spacious": "0.625rem"
+    },
+    "description": "Snug gap. Inner padding of controls (buttons, inputs)."
+  },
+  "semantic.spacing.default": {
+    "type": "dimension",
+    "values": {
+      "default": "1rem",
+      "compact": "0.75rem",
+      "spacious": "1.25rem"
+    },
+    "description": "Default gap. Between distinct elements on a surface."
+  },
+  "semantic.spacing.loose": {
+    "type": "dimension",
+    "values": {
+      "default": "1.5rem",
+      "compact": "1.25rem",
+      "spacious": "2rem"
+    },
+    "description": "Loose gap. Between grouped sections."
+  },
+  "semantic.spacing.airy": {
+    "type": "dimension",
+    "values": {
+      "default": "2.5rem",
+      "compact": "2rem",
+      "spacious": "3rem"
+    },
+    "description": "Airy gap. Major section breaks."
+  }
+}

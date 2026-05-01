@@ -1,0 +1,226 @@
+[
+  {
+    "name": "color/cyan/190",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#b1fffe"
+    },
+    "aliasOf": "palette/cyan/190"
+  },
+  {
+    "name": "color/cyan/200",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/cyan/200"
+  },
+  {
+    "name": "color/yellow/0",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000000"
+    },
+    "aliasOf": "palette/yellow/0"
+  },
+  {
+    "name": "color/yellow/10",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#110d00"
+    },
+    "aliasOf": "palette/yellow/10"
+  },
+  {
+    "name": "color/yellow/25",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#2d2700"
+    },
+    "aliasOf": "palette/yellow/25"
+  },
+  {
+    "name": "color/yellow/50",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#4c4200"
+    },
+    "aliasOf": "palette/yellow/50"
+  },
+  {
+    "name": "color/yellow/75",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#685c00"
+    },
+    "aliasOf": "palette/yellow/75"
+  },
+  {
+    "name": "color/yellow/100",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#867600"
+    },
+    "aliasOf": "palette/yellow/100"
+  },
+  {
+    "name": "color/yellow/125",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 125 \u2014 primary fill on dark surfaces.",
+    "valuesByMode": {
+      "default": "#a79300"
+    },
+    "aliasOf": "palette/yellow/125"
+  },
+  {
+    "name": "color/yellow/150",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 150 \u2014 soft border, disabled text.",
+    "valuesByMode": {
+      "default": "#c4b025"
+    },
+    "aliasOf": "palette/yellow/150"
+  },
+  {
+    "name": "color/yellow/175",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 175 \u2014 near-light tint.",
+    "valuesByMode": {
+      "default": "#e9d974"
+    },
+    "aliasOf": "palette/yellow/175"
+  },
+  {
+    "name": "color/yellow/190",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#fff2a6"
+    },
+    "aliasOf": "palette/yellow/190"
+  },
+  {
+    "name": "color/yellow/200",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/yellow/200"
+  },
+  {
+    "name": "color/violet/0",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000002"
+    },
+    "aliasOf": "palette/violet/0"
+  },
+  {
+    "name": "color/violet/10",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#170030"
+    },
+    "aliasOf": "palette/violet/10"
+  },
+  {
+    "name": "color/violet/25",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#371060"
+    },
+    "aliasOf": "palette/violet/25"
+  },
+  {
+    "name": "color/violet/50",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#56298d"
+    },
+    "aliasOf": "palette/violet/50"
+  },
+  {
+    "name": "color/violet/75",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#7240b2"
+    },
+    "aliasOf": "palette/violet/75"
+  },
+  {
+    "name": "color/violet/100",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#8e5cd4"
+    },
+    "aliasOf": "palette/violet/100"
+  },
+  {
+    "name": "color/violet/125",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 125 \u2014 primary fill on dark surfaces.",
+    "valuesByMode": {
+      "default": "#a97bf1"
+    },
+    "aliasOf": "palette/violet/125"
+  },
+  {
+    "name": "color/violet/150",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 150 \u2014 soft border, disabled text.",
+    "valuesByMode": {
+      "default": "#c19eff"
+    },
+    "aliasOf": "palette/violet/150"
+  },
+  {
+    "name": "color/violet/175",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 175 \u2014 near-light tint.",
+    "valuesByMode": {
+      "default": "#dfd0ff"
+    },
+    "aliasOf": "palette/violet/175"
+  },
+  {
+    "name": "color/violet/190",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#f4eeff"
+    },
+    "aliasOf": "palette/violet/190"
+  },
+  {
+    "name": "color/violet/200",
+    "resolvedType": "COLOR",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/violet/200"
+  },
+  {
+    "name": "font-family/sans",
+    "resolvedType": "STRING",
+    "description": "UI sans-serif stack (Inter first). Body, headings, controls.",
+    "valuesByMode": {
+      "default": "Inter"
+    }
+  }
+]

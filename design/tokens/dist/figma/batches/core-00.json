@@ -1,0 +1,202 @@
+[
+  {
+    "name": "palette/neutral/0",
+    "resolvedType": "COLOR",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+    "valuesByMode": {
+      "default": "#000000"
+    }
+  },
+  {
+    "name": "palette/neutral/10",
+    "resolvedType": "COLOR",
+    "description": "Near-dark. Avoids OLED banding from absolute #000.",
+    "valuesByMode": {
+      "default": "#0d0d0d"
+    }
+  },
+  {
+    "name": "palette/neutral/25",
+    "resolvedType": "COLOR",
+    "description": "Deep. Text high-emphasis on light surfaces.",
+    "valuesByMode": {
+      "default": "#272727"
+    }
+  },
+  {
+    "name": "palette/neutral/50",
+    "resolvedType": "COLOR",
+    "description": "Strong. Body text on light; solid idle on bright themes.",
+    "valuesByMode": {
+      "default": "#424242"
+    }
+  },
+  {
+    "name": "palette/neutral/75",
+    "resolvedType": "COLOR",
+    "description": "Mid-dark. Border strong on light; solid idle.",
+    "valuesByMode": {
+      "default": "#5b5b5b"
+    }
+  },
+  {
+    "name": "palette/neutral/100",
+    "resolvedType": "COLOR",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+    "valuesByMode": {
+      "default": "#757575"
+    }
+  },
+  {
+    "name": "palette/neutral/125",
+    "resolvedType": "COLOR",
+    "description": "Mid-light. Interactive hover on dark themes.",
+    "valuesByMode": {
+      "default": "#929292"
+    }
+  },
+  {
+    "name": "palette/neutral/150",
+    "resolvedType": "COLOR",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+    "valuesByMode": {
+      "default": "#b0b0b0"
+    }
+  },
+  {
+    "name": "palette/neutral/175",
+    "resolvedType": "COLOR",
+    "description": "Very light. Base surface on light themes; body text on dark themes.",
+    "valuesByMode": {
+      "default": "#d8d8d8"
+    }
+  },
+  {
+    "name": "palette/neutral/190",
+    "resolvedType": "COLOR",
+    "description": "Near-light. Avoids banding from absolute #fff.",
+    "valuesByMode": {
+      "default": "#f2f2f2"
+    }
+  },
+  {
+    "name": "palette/neutral/200",
+    "resolvedType": "COLOR",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    }
+  },
+  {
+    "name": "palette/red/0",
+    "resolvedType": "COLOR",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+    "valuesByMode": {
+      "default": "#000000"
+    }
+  },
+  {
+    "name": "palette/red/10",
+    "resolvedType": "COLOR",
+    "description": "Near-dark. Avoids OLED banding from absolute #000.",
+    "valuesByMode": {
+      "default": "#250000"
+    }
+  },
+  {
+    "name": "palette/red/25",
+    "resolvedType": "COLOR",
+    "description": "Deep. Text high-emphasis on light surfaces.",
+    "valuesByMode": {
+      "default": "#560000"
+    }
+  },
+  {
+    "name": "palette/red/50",
+    "resolvedType": "COLOR",
+    "description": "Strong. Body text on light; solid idle on bright themes.",
+    "valuesByMode": {
+      "default": "#880c08"
+    }
+  },
+  {
+    "name": "palette/red/75",
+    "resolvedType": "COLOR",
+    "description": "Mid-dark. Border strong on light; solid idle.",
+    "valuesByMode": {
+      "default": "#ae261d"
+    }
+  },
+  {
+    "name": "palette/red/100",
+    "resolvedType": "COLOR",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+    "valuesByMode": {
+      "default": "#d14437"
+    }
+  },
+  {
+    "name": "palette/red/125",
+    "resolvedType": "COLOR",
+    "description": "Mid-light. Interactive hover on dark themes.",
+    "valuesByMode": {
+      "default": "#f16657"
+    }
+  },
+  {
+    "name": "palette/red/150",
+    "resolvedType": "COLOR",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+    "valuesByMode": {
+      "default": "#ff9181"
+    }
+  },
+  {
+    "name": "palette/red/175",
+    "resolvedType": "COLOR",
+    "description": "Very light. Base surface on light themes; body text on dark themes.",
+    "valuesByMode": {
+      "default": "#ffcbc3"
+    }
+  },
+  {
+    "name": "palette/red/190",
+    "resolvedType": "COLOR",
+    "description": "Near-light. Avoids banding from absolute #fff.",
+    "valuesByMode": {
+      "default": "#ffedeb"
+    }
+  },
+  {
+    "name": "palette/red/200",
+    "resolvedType": "COLOR",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    }
+  },
+  {
+    "name": "palette/orange/0",
+    "resolvedType": "COLOR",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+    "valuesByMode": {
+      "default": "#000000"
+    }
+  },
+  {
+    "name": "palette/orange/10",
+    "resolvedType": "COLOR",
+    "description": "Near-dark. Avoids OLED banding from absolute #000.",
+    "valuesByMode": {
+      "default": "#1a0800"
+    }
+  },
+  {
+    "name": "palette/orange/25",
+    "resolvedType": "COLOR",
+    "description": "Deep. Text high-emphasis on light surfaces.",
+    "valuesByMode": {
+      "default": "#411d00"
+    }
+  }
+]

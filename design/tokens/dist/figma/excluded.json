@@ -1,0 +1,171 @@
+[
+  {
+    "name": "semantic.surface.raised.elevation",
+    "type": "shadow",
+    "value": "{primitives/openTRNTBL.shadow.elevation-1}",
+    "description": "Subtle elevation pour cards / panels. Sonos-like = 1 layer discret. Marques sans \u00e9l\u00e9vation (Notion-like) pointeront ce slot vers shadow.elevation-0 (no-op)."
+  },
+  {
+    "name": "semantic.surface.overlay.elevation",
+    "type": "shadow",
+    "value": "{primitives/openTRNTBL.shadow.elevation-3}",
+    "description": "High elevation pour modals / dialogs full-screen. 2 layers (ambient + key). Marques flat (Notion-like) pointeront ce slot vers shadow.elevation-0."
+  },
+  {
+    "name": "semantic.text.caption",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.10}",
+      "lineHeight": "{core.line-height.20}",
+      "fontWeight": 400,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Caption. Metadata, legal text."
+  },
+  {
+    "name": "semantic.text.small",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.20}",
+      "lineHeight": "{core.line-height.30}",
+      "fontWeight": 400,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Small body. Secondary copy, dense UI."
+  },
+  {
+    "name": "semantic.text.body",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.30}",
+      "lineHeight": "{core.line-height.30}",
+      "fontWeight": 400,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Body. Default reading size."
+  },
+  {
+    "name": "semantic.text.body.emphasis",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.30}",
+      "lineHeight": "{core.line-height.30}",
+      "fontWeight": 600,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Body emphasis. Same size as body, heavier weight for emphasis."
+  },
+  {
+    "name": "semantic.text.subheading",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.50}",
+      "lineHeight": "{core.line-height.20}",
+      "fontWeight": 600,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Subheading. Section labels inside a page."
+  },
+  {
+    "name": "semantic.text.heading-3",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.60}",
+      "lineHeight": "{core.line-height.20}",
+      "fontWeight": 700,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Tertiary heading. Within-section titles."
+  },
+  {
+    "name": "semantic.text.heading-2",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.80}",
+      "lineHeight": "{core.line-height.10}",
+      "fontWeight": 700,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Secondary heading. Major-section titles."
+  },
+  {
+    "name": "semantic.text.heading-1",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.100}",
+      "lineHeight": "{core.line-height.10}",
+      "fontWeight": 800,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Primary heading. Page titles."
+  },
+  {
+    "name": "semantic.text.display-small",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.120}",
+      "lineHeight": "{core.line-height.10}",
+      "fontWeight": 800,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Small display. Marketing or hero subtitles."
+  },
+  {
+    "name": "semantic.text.display-large",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.160}",
+      "lineHeight": "{core.line-height.10}",
+      "fontWeight": 800,
+      "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+    },
+    "description": "Large display. Hero titles."
+  },
+  {
+    "name": "semantic.text.code",
+    "type": "typography",
+    "value": {
+      "fontSize": "{core.font-size.20}",
+      "lineHeight": "{core.line-height.30}",
+      "fontWeight": 400,
+      "fontFamily": "{primitives/openTRNTBL.font-family.mono}"
+    },
+    "description": "Monospace code / stream URLs / log output."
+  },
+  {
+    "name": "semantic.motion.feedback",
+    "type": "transition",
+    "value": {
+      "duration": "{core.duration.fast}",
+      "timingFunction": "{core.easing.out}"
+    },
+    "description": "Hover, focus ring, micro-feedback."
+  },
+  {
+    "name": "semantic.motion.state-change",
+    "type": "transition",
+    "value": {
+      "duration": "{core.duration.moderate}",
+      "timingFunction": "{core.easing.in-out}"
+    },
+    "description": "Toggle, switch, tab change."
+  },
+  {
+    "name": "semantic.motion.enter",
+    "type": "transition",
+    "value": {
+      "duration": "{core.duration.slow}",
+      "timingFunction": "{core.easing.out}"
+    },
+    "description": "Element entering (modal, drawer, toast)."
+  },
+  {
+    "name": "semantic.motion.exit",
+    "type": "transition",
+    "value": {
+      "duration": "{core.duration.moderate}",
+      "timingFunction": "{core.easing.in}"
+    },
+    "description": "Element leaving (close modal, dismiss toast)."
+  }
+]

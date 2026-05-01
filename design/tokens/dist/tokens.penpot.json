@@ -1,0 +1,4410 @@
+{
+  "core": {
+    "palette": {
+      "neutral": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#0d0d0d",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#272727",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#424242",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#5b5b5b",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#757575",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#929292",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#b0b0b0",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#d8d8d8",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#f2f2f2",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "red": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#250000",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#560000",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#880c08",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#ae261d",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#d14437",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#f16657",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#ff9181",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#ffcbc3",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#ffedeb",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "orange": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#1a0800",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#411d00",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#6a3400",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#8f4800",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#b75e00",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#e2760f",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#fa974e",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#ffcead",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#ffeee4",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "gold": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#130b00",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#342400",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#563f00",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#755700",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#957000",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#b78c23",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#d1aa56",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#f4d38f",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#ffefd0",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "yellow": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#110d00",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#2d2700",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#4c4200",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#685c00",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#867600",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#a79300",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#c4b025",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#e9d974",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#fff2a6",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "green": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#001001",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#002f06",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#004e10",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#006a19",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#068924",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#3ea748",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#69c26e",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#9ee9a0",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#c8ffc9",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "cyan": {
+        "0": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#000f10",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#002c2d",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#004b4b",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#006667",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#008484",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#00a4a4",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#3bc1c1",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#83e7e7",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#b1fffe",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "blue": {
+        "0": {
+          "$type": "color",
+          "$value": "#000002",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#000c24",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#002652",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#004184",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#005ab2",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#0075e2",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#3893ff",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#76b3ff",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#bddaff",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#e9f2ff",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      },
+      "violet": {
+        "0": {
+          "$type": "color",
+          "$value": "#000002",
+          "$description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#170030",
+          "$description": "Near-dark. Avoids OLED banding from absolute #000.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "25": {
+          "$type": "color",
+          "$value": "#371060",
+          "$description": "Deep. Text high-emphasis on light surfaces.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#56298d",
+          "$description": "Strong. Body text on light; solid idle on bright themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "75": {
+          "$type": "color",
+          "$value": "#7240b2",
+          "$description": "Mid-dark. Border strong on light; solid idle.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#8e5cd4",
+          "$description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "125": {
+          "$type": "color",
+          "$value": "#a97bf1",
+          "$description": "Mid-light. Interactive hover on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "150": {
+          "$type": "color",
+          "$value": "#c19eff",
+          "$description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "175": {
+          "$type": "color",
+          "$value": "#dfd0ff",
+          "$description": "Very light. Base surface on light themes; body text on dark themes.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "190": {
+          "$type": "color",
+          "$value": "#f4eeff",
+          "$description": "Near-light. Avoids banding from absolute #fff.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#ffffff",
+          "$description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          }
+        }
+      }
+    },
+    "dimension": {
+      "01": {
+        "$type": "dimension",
+        "$value": "0.4px",
+        "$description": "Hairline. Sub-rem exception for 1px borders/dividers.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "05": {
+        "$type": "dimension",
+        "$value": "2px",
+        "$description": "2px. Fine border, micro-radius.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "10": {
+        "$type": "dimension",
+        "$value": "4px",
+        "$description": "4px. Base unit. Border-radius small.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "15": {
+        "$type": "dimension",
+        "$value": "6px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "6px. Compact density variant of `default`."
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "8px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "8px. Snug gap. Inner padding of small controls."
+      },
+      "25": {
+        "$type": "dimension",
+        "$value": "10px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "10px. Border-radius round (cards, panels). Compact-spacious knob."
+      },
+      "30": {
+        "$type": "dimension",
+        "$value": "12px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "12px. Caption font-size. Compact `default` step."
+      },
+      "35": {
+        "$type": "dimension",
+        "$value": "14px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "14px. Small body font-size. Compact-spacious knob."
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "16px",
+        "$description": "16px. One rem. Typography base; default body padding.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "45": {
+        "$type": "dimension",
+        "$value": "18px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "18px. Large body font-size."
+      },
+      "50": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "20px. Subheading font-size. Spacious `snug` variant."
+      },
+      "55": {
+        "$type": "dimension",
+        "$value": "22px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "22px. Reserved for fine-grained tuning between 50 and 60."
+      },
+      "60": {
+        "$type": "dimension",
+        "$value": "24px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "24px. Heading-3 font-size. Loose gap (compact)."
+      },
+      "70": {
+        "$type": "dimension",
+        "$value": "28px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "28px. Reserved tuning step between 60 and 80."
+      },
+      "80": {
+        "$type": "dimension",
+        "$value": "32px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "32px. Heading-2 font-size. Loose gap (default)."
+      },
+      "90": {
+        "$type": "dimension",
+        "$value": "36px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "36px. Reserved tuning step between 80 and 100."
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "40px",
+        "$description": "40px. Minimum tap target (WCAG AA 2.2).",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "120": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "48px. Spacious `loose` step. Display-small font-size."
+      },
+      "160": {
+        "$type": "dimension",
+        "$value": "64px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "64px. Display-large font-size."
+      },
+      "200": {
+        "$type": "dimension",
+        "$value": "80px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "80px. Major hero spacing."
+      },
+      "240": {
+        "$type": "dimension",
+        "$value": "96px",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "96px. Pill radius (always larger than tallest pill control)."
+      },
+      "320": {
+        "$type": "dimension",
+        "$value": "128px",
+        "$description": "128px. Hero dimensions.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      }
+    },
+    "opacity": {
+      "000": {
+        "$type": "number",
+        "$value": 0.0,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "0%. Fully transparent."
+      },
+      "004": {
+        "$type": "number",
+        "$value": 0.04,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "4%. Faintest tint \u2014 cell hover on dense surfaces."
+      },
+      "008": {
+        "$type": "number",
+        "$value": 0.08,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "8%. Subtle tint \u2014 `:hover` mix amount on filled buttons."
+      },
+      "016": {
+        "$type": "number",
+        "$value": 0.16,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "16%. Soft overlay \u2014 disabled-on-light reduction."
+      },
+      "024": {
+        "$type": "number",
+        "$value": 0.24,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "24%. Light scrim."
+      },
+      "040": {
+        "$type": "number",
+        "$value": 0.4,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "40%. Medium scrim \u2014 disabled control body."
+      },
+      "060": {
+        "$type": "number",
+        "$value": 0.6,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "60%. Standard backdrop scrim (modals, drawers)."
+      },
+      "080": {
+        "$type": "number",
+        "$value": 0.8,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "80%. Strong dimming."
+      },
+      "100": {
+        "$type": "number",
+        "$value": 1.0,
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "100%. Fully opaque (ergonomic shortcut)."
+      }
+    },
+    "font-size": {
+      "10": {
+        "$type": "dimension",
+        "$value": "{core.dimension.30}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "12px. Caption: metadata, legal text, table headers."
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "{core.dimension.35}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "14px. Small body: secondary copy, dense UI, inputs."
+      },
+      "30": {
+        "$type": "dimension",
+        "$value": "{core.dimension.40}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "16px. Default body: reading size."
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "{core.dimension.45}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "18px. Large body: emphasized paragraphs."
+      },
+      "50": {
+        "$type": "dimension",
+        "$value": "{core.dimension.50}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "20px. Subheading: in-page section labels."
+      },
+      "60": {
+        "$type": "dimension",
+        "$value": "{core.dimension.60}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "24px. Heading-3: within-section titles."
+      },
+      "80": {
+        "$type": "dimension",
+        "$value": "{core.dimension.80}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "32px. Heading-2: major-section titles."
+      },
+      "90": {
+        "$type": "dimension",
+        "$value": "{core.dimension.90}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "36px. Reserved tuning step."
+      },
+      "100": {
+        "$type": "dimension",
+        "$value": "{core.dimension.100}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "40px. Heading-1: page titles."
+      },
+      "120": {
+        "$type": "dimension",
+        "$value": "{core.dimension.120}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "48px. Display-small: hero subtitles."
+      },
+      "160": {
+        "$type": "dimension",
+        "$value": "{core.dimension.160}",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "64px. Display-large: hero titles."
+      }
+    },
+    "line-height": {
+      "10": {
+        "$type": "number",
+        "$value": 1.0,
+        "$description": "Tight. Display typography, uppercase, monospace blocks.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "20": {
+        "$type": "number",
+        "$value": 1.2,
+        "$description": "Snug. Headings, condensed UI.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "30": {
+        "$type": "number",
+        "$value": 1.4,
+        "$description": "Default. Body text, controls.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "40": {
+        "$type": "number",
+        "$value": 1.6,
+        "$description": "Loose. Long-form reading, prose.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      },
+      "50": {
+        "$type": "number",
+        "$value": 1.8,
+        "$description": "Airy. Captions on dense layouts.",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        }
+      }
+    }
+  },
+  "primitives/openTRNTBL": {
+    "color": {
+      "accent": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.gold.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.gold.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.gold.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.gold.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.gold.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.gold.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.gold.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.gold.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.gold.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.gold.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.gold.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "neutral": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.neutral.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Neutral grayscale. Surfaces, borders, body text. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "success": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.green.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.green.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.green.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.green.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.green.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.green.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.green.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.green.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.green.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.green.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.green.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Positive feedback (green). Connection OK, action complete. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "warning": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.orange.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.orange.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.orange.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.orange.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.orange.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.orange.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.orange.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.orange.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.orange.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.orange.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.orange.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "danger": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.red.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.red.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.red.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.red.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.red.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.red.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.red.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.red.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.red.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.red.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.red.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "info": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.blue.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.blue.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.blue.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.blue.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.blue.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.blue.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.blue.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.blue.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.blue.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.blue.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.blue.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Informational notice (blue). Neutral context, hints. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "cyan": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.cyan.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "yellow": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.yellow.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 200 \u2014 lightest extreme."
+        }
+      },
+      "violet": {
+        "0": {
+          "$type": "color",
+          "$value": "{core.palette.violet.0}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 0 \u2014 darkest extreme."
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.palette.violet.10}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 10 \u2014 near-dark / OLED-safe deep."
+        },
+        "25": {
+          "$type": "color",
+          "$value": "{core.palette.violet.25}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.palette.violet.50}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+        },
+        "75": {
+          "$type": "color",
+          "$value": "{core.palette.violet.75}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 75 \u2014 secondary text on light."
+        },
+        "100": {
+          "$type": "color",
+          "$value": "{core.palette.violet.100}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+        },
+        "125": {
+          "$type": "color",
+          "$value": "{core.palette.violet.125}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 125 \u2014 primary fill on dark surfaces."
+        },
+        "150": {
+          "$type": "color",
+          "$value": "{core.palette.violet.150}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 150 \u2014 soft border, disabled text."
+        },
+        "175": {
+          "$type": "color",
+          "$value": "{core.palette.violet.175}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 175 \u2014 near-light tint."
+        },
+        "190": {
+          "$type": "color",
+          "$value": "{core.palette.violet.190}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 190 \u2014 tint \u2014 subtle background hue."
+        },
+        "200": {
+          "$type": "color",
+          "$value": "{core.palette.violet.200}",
+          "$extensions": {
+            "com.opntrntbl.deprecated": false,
+            "com.opntrntbl.varies": "stable",
+            "com.opntrntbl.scope": []
+          },
+          "$description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 200 \u2014 lightest extreme."
+        }
+      }
+    },
+    "font-family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "UI sans-serif stack (Inter first). Body, headings, controls."
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": "SF Mono, Menlo, monospace",
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Monospace stack (SF Mono first). Code, stream URLs, technical output."
+      }
+    },
+    "shadow": {
+      "elevation-0": {
+        "$type": "shadow",
+        "$value": [],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Flat surface \u2014 no shadow. No-op slot for marques sans \u00e9l\u00e9vation (Notion-like, glassmorphisme)."
+      },
+      "elevation-1": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "#0000000f",
+            "offsetX": {
+              "value": 0,
+              "unit": "px"
+            },
+            "offsetY": {
+              "value": 1,
+              "unit": "px"
+            },
+            "blur": {
+              "value": 2,
+              "unit": "px"
+            },
+            "spread": {
+              "value": 0,
+              "unit": "px"
+            }
+          }
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Subtle elevation \u2014 cards, panels, raised surfaces. Sonos-like = 1 layer discret. Multi-layer-ready : Neuphoisme remplira avec 2 layers (light/dark compl\u00e9mentaires) sans changer le slot."
+      },
+      "elevation-2": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "#0000001a",
+            "offsetX": {
+              "value": 0,
+              "unit": "px"
+            },
+            "offsetY": {
+              "value": 4,
+              "unit": "px"
+            },
+            "blur": {
+              "value": 8,
+              "unit": "px"
+            },
+            "spread": {
+              "value": -2,
+              "unit": "px"
+            }
+          },
+          {
+            "color": "#0000000a",
+            "offsetX": {
+              "value": 0,
+              "unit": "px"
+            },
+            "offsetY": {
+              "value": 1,
+              "unit": "px"
+            },
+            "blur": {
+              "value": 2,
+              "unit": "px"
+            },
+            "spread": {
+              "value": 0,
+              "unit": "px"
+            }
+          }
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "Medium elevation \u2014 popovers, dropdowns, floating panels. 2 layers : ambient (Y4 blur8) + key (Y1 blur2) \u2014 pattern Material classique."
+      },
+      "elevation-3": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "#00000024",
+            "offsetX": {
+              "value": 0,
+              "unit": "px"
+            },
+            "offsetY": {
+              "value": 8,
+              "unit": "px"
+            },
+            "blur": {
+              "value": 16,
+              "unit": "px"
+            },
+            "spread": {
+              "value": -4,
+              "unit": "px"
+            }
+          },
+          {
+            "color": "#00000014",
+            "offsetX": {
+              "value": 0,
+              "unit": "px"
+            },
+            "offsetY": {
+              "value": 2,
+              "unit": "px"
+            },
+            "blur": {
+              "value": 4,
+              "unit": "px"
+            },
+            "spread": {
+              "value": 0,
+              "unit": "px"
+            }
+          }
+        ],
+        "$extensions": {
+          "com.opntrntbl.deprecated": false,
+          "com.opntrntbl.varies": "stable",
+          "com.opntrntbl.scope": []
+        },
+        "$description": "High elevation \u2014 modals, dialogs full-screen, sheets. 2 layers : ambient profond (Y8 blur16) + key (Y2 blur4)."
+      }
+    }
+  },
+  "semantic-base": {
+    "color-aliases": {
+      "surface": {
+        "canvas": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            }
+          }
+        },
+        "base": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.200}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.10}"
+            }
+          }
+        },
+        "raised": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.200}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.25}"
+            }
+          }
+        },
+        "sunken": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            }
+          }
+        }
+      },
+      "border": {
+        "subtle": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.175}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.25}"
+          }
+        },
+        "default": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.100}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.100}"
+          }
+        },
+        "strong": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.100}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.100}"
+          }
+        },
+        "focus": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.accent.100}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.accent.125}"
+          }
+        }
+      },
+      "accent": {
+        "default": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.accent.125}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.accent.150}"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "primary": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.25}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            }
+          },
+          "secondary": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.75}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.150}"
+            }
+          },
+          "placeholder": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.75}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.125}"
+            }
+          },
+          "disabled": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.75}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.125}"
+            }
+          }
+        }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.175}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 8%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 18%)"
+            }
+          }
+        },
+        "warning": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.175}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 8%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 18%)"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.175}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 8%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 18%)"
+            }
+          }
+        },
+        "info": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.175}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 8%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 18%)"
+            }
+          }
+        }
+      }
+    },
+    "surface": {
+      "canvas": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.canvas.background.light}",
+          "$description": "Page background. Bottom-most surface. HC light n.175 (gris moyen) creuse l'\u00e9cart avec base/raised pour diff\u00e9rencier les 4 surfaces sans recourir \u00e0 des borders."
+        }
+      },
+      "base": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.base.background.light}",
+          "$description": "Default card / panel surface. HC dark n.25 distingue base de canvas (pur black) sans border."
+        }
+      },
+      "raised": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.raised.background.light}",
+          "$description": "Elevated surface (modal, popover, tonal button bg, segmented track). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.190 (off-white) au-dessus de canvas n.175 ; dark n.75 (gris moyen-clair) au-dessus de base n.25. Pas de texte primaire pos\u00e9 dessus en components.css (v\u00e9rifi\u00e9) ; les stories de doc Surfaces affichent du text dessus \u2192 ratio AAA limite (6.79) accept\u00e9 self-r\u00e9f\u00e9rent."
+        },
+        "elevation": {
+          "$type": "shadow",
+          "$value": "{primitives/openTRNTBL.shadow.elevation-1}",
+          "$description": "Subtle elevation pour cards / panels. Sonos-like = 1 layer discret. Marques sans \u00e9l\u00e9vation (Notion-like) pointeront ce slot vers shadow.elevation-0 (no-op)."
+        }
+      },
+      "sunken": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.sunken.background.light}",
+          "$description": "Recessed surface (input background, well, code block). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.150 (gris fonc\u00e9 creus\u00e9) sous canvas n.175 ; dark n.10 (presque-black) sous canvas n.0 (pure black)."
+        }
+      },
+      "overlay": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$description": "Scrim / backdrop for modals. Apply via CSS with 0.6 alpha."
+        },
+        "elevation": {
+          "$type": "shadow",
+          "$value": "{primitives/openTRNTBL.shadow.elevation-3}",
+          "$description": "High elevation pour modals / dialogs full-screen. 2 layers (ambient + key). Marques flat (Notion-like) pointeront ce slot vers shadow.elevation-0."
+        }
+      },
+      "dim": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.50}",
+        "$description": "Surface sombre fixe \u2014 track HC SegmentedControl, input HC, etc. Volontairement constante peu importe light/dark/HC : un fond opaque sombre qui distingue par luminance."
+      },
+      "bright": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.200}",
+        "$description": "Surface claire fixe \u2014 tile actif HC SegmentedControl. Volontairement constante. Pendant de surface.dim."
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 86%, {semantic.text.color.primary})",
+        "$description": "Surface.base hover \u2014 Donnie pattern. Light = 86%/14% (visible sur fond blanc). Dark = 92%/8% (subtil pour ne pas r\u00e9duire le contraste avec text-primary clair). Consomm\u00e9 par btn-2:hover, btn-toggle:hover (off)."
+      },
+      "base-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 74%, {semantic.text.color.primary})",
+        "$description": "Surface.base pressed \u2014 Donnie pattern. Light = 74%/26% (tr\u00e8s marqu\u00e9). Dark = 84%/16% (mod\u00e9r\u00e9, pour ne pas chuter le contraste). Consomm\u00e9 par btn-2:active."
+      },
+      "sunken-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 86%, {semantic.text.color.primary})",
+        "$description": "Surface.sunken hover \u2014 Donnie pattern. Light 86%/14%, Dark 92%/8% (subtil). Consomm\u00e9 par inp:hover."
+      },
+      "sunken-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 66%, {semantic.text.color.primary})",
+        "$description": "Surface.sunken pressed \u2014 Donnie pattern. Light 66%/34%, Dark 76%/24%."
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.subtle.light}",
+        "$description": "Low-emphasis divider (row separators, group dividers)."
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.default.light}",
+        "$description": "Standard border (inputs, outlined buttons, segmented track). WCAG 2.4.11 \u22653:1 on base/sunken/raised in light + dark."
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.strong.light}",
+        "$description": "Emphasis border (hover, selected, active)."
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.focus.light}",
+        "$description": "Focus ring color. Always visible (accessibility baseline)."
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.accent.default.light}",
+        "$description": "Brand accent (gold) \u2014 decorative fill (idle). Light = accent.125 (mid-tone). Dark = accent.150 (plus clair, lift sur fond sombre). Vision daltonisme : tritanopia mappe sur orange (jaune indistinguable), achromatopsia mappe sur text-primary (luminance-only). Deut\u00e9ranopie/protanopie : pas d'override (gold OK)."
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {primitives/openTRNTBL.color.accent.125} 88%, #ffffff)",
+        "$description": "Brand accent (gold) \u2014 hover (lightened)."
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.accent.default} 80%, #000000)",
+        "$description": "Brand accent (gold) \u2014 pressed (darkened). Fallback Penpot: accent.100. Consomm\u00e9 par btn-toggle.active:active."
+      }
+    },
+    "text": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.primary.light}",
+          "$description": "Primary text. Body copy, headings."
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.secondary.light}",
+          "$description": "Secondary text. Labels, metadata, captions."
+        },
+        "placeholder": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.placeholder.light}",
+          "$description": "Placeholder text. Empty-state hints in inputs. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark)."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.disabled.light}",
+          "$description": "Disabled text. Controls that can't be interacted with. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark). Distinguishable from primary via opacity 0.5 in components.css."
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$description": "Text on solid/colored surfaces (e.g. white on primary)."
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.accent.75}",
+          "$description": "Accent text. Inline links, brand emphasis."
+        },
+        "on-accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$description": "Text on top of the accent (gold) surface \u2014 e.g. .btn-toggle.active. Stays neutral.0 (black) across all modes since the gold accent stays luminous in light/dark/HC. Replaces the previous hardcoded color: #000 in components.css."
+        },
+        "on-dim": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$description": "Text on surface.dim \u2014 white fixe. Pendant de on-accent pour la surface sombre fixe (HC SegCtrl track, input HC)."
+        },
+        "on-bright": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$description": "Text on surface.bright \u2014 black fixe. Pendant de on-dim pour la surface claire fixe (HC SegCtrl tile active)."
+        }
+      },
+      "caption": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.10}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Caption. Metadata, legal text."
+      },
+      "small": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.20}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Small body. Secondary copy, dense UI."
+      },
+      "body": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.30}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Body. Default reading size.",
+        "emphasis": {
+          "$type": "typography",
+          "$value": {
+            "fontSize": "{core.font-size.30}",
+            "lineHeight": "{core.line-height.30}",
+            "fontWeight": 600,
+            "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+          },
+          "$description": "Body emphasis. Same size as body, heavier weight for emphasis."
+        }
+      },
+      "subheading": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.50}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 600,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Subheading. Section labels inside a page."
+      },
+      "heading-3": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.60}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 700,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Tertiary heading. Within-section titles."
+      },
+      "heading-2": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.80}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 700,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Secondary heading. Major-section titles."
+      },
+      "heading-1": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.100}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Primary heading. Page titles."
+      },
+      "display-small": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.120}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Small display. Marketing or hero subtitles."
+      },
+      "display-large": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.160}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Large display. Hero titles."
+      },
+      "code": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.20}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.mono}"
+        },
+        "$description": "Monospace code / stream URLs / log output."
+      }
+    },
+    "status": {
+      "success": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.bg.light}",
+          "$description": "Success state (completed action, OK) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.text.light}",
+          "$description": "Success state (completed action, OK) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.bg-hover.light}",
+          "$description": "Status.success.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: success.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.bg-pressed.light}",
+          "$description": "Status.success.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: success.150."
+        }
+      },
+      "warning": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.bg.light}",
+          "$description": "Warning state (caution, non-blocking issue) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.text.light}",
+          "$description": "Warning state (caution, non-blocking issue) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.bg-hover.light}",
+          "$description": "Status.warning.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: warning.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.bg-pressed.light}",
+          "$description": "Status.warning.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: warning.150."
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.bg.light}",
+          "$description": "Danger state (error, destructive action) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.text.light}",
+          "$description": "Danger state (error, destructive action) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.bg-hover.light}",
+          "$description": "Status.danger.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: danger.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.bg-pressed.light}",
+          "$description": "Status.danger.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: danger.150."
+        }
+      },
+      "info": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.bg.light}",
+          "$description": "Info state (neutral notice, informational) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.text.light}",
+          "$description": "Info state (neutral notice, informational) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.bg-hover.light}",
+          "$description": "Status.info.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: info.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.bg-pressed.light}",
+          "$description": "Status.info.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: info.150."
+        }
+      }
+    },
+    "spacing": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "{core.dimension.10}",
+        "$description": "Tight gap. Between adjacent visual elements sharing a conceptual unit."
+      },
+      "snug": {
+        "$type": "dimension",
+        "$value": "{core.dimension.20}",
+        "$description": "Snug gap. Inner padding of controls (buttons, inputs)."
+      },
+      "default": {
+        "$type": "dimension",
+        "$value": "{core.dimension.40}",
+        "$description": "Default gap. Between distinct elements on a surface."
+      },
+      "loose": {
+        "$type": "dimension",
+        "$value": "{core.dimension.60}",
+        "$description": "Loose gap. Between grouped sections."
+      },
+      "airy": {
+        "$type": "dimension",
+        "$value": "{core.dimension.100}",
+        "$description": "Airy gap. Major section breaks."
+      }
+    },
+    "radius": {
+      "sharp": {
+        "$type": "dimension",
+        "$value": "{core.dimension.01}",
+        "$description": "Hairline rounding. Almost-square."
+      },
+      "soft": {
+        "$type": "dimension",
+        "$value": "{core.dimension.10}",
+        "$description": "Soft rounding. Inputs, small cards."
+      },
+      "round": {
+        "$type": "dimension",
+        "$value": "{core.dimension.25}",
+        "$description": "Rounded. Main surfaces (cards, panels, modals)."
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "{core.dimension.240}",
+        "$description": "Pill. Full-pill controls, segmented toggles."
+      },
+      "circle": {
+        "$type": "dimension",
+        "$value": "50%",
+        "$description": "Circle. Avatars, round buttons. Applied as raw percentage."
+      }
+    },
+    "icon": {
+      "size": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{core.dimension.40}",
+          "$description": "Small icon. Inline with body text."
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{core.dimension.60}",
+          "$description": "Medium icon. Default control icon."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{core.dimension.80}",
+          "$description": "Large icon. Feature blocks, empty states."
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{core.dimension.05}",
+          "$description": "Focus ring stroke width."
+        },
+        "offset": {
+          "$type": "dimension",
+          "$value": "{core.dimension.05}",
+          "$description": "Focus ring offset from the element edge."
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.border.focus}",
+          "$description": "Focus ring color."
+        }
+      }
+    }
+  },
+  "mode/dark": {
+    "surface": {
+      "canvas": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.canvas.background.dark}"
+        }
+      },
+      "base": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.base.background.dark}"
+        }
+      },
+      "raised": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.raised.background.dark}"
+        }
+      },
+      "sunken": {
+        "background": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.surface.sunken.background.dark}"
+        }
+      },
+      "overlay": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}"
+        }
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 92%, {semantic.text.color.primary})"
+      },
+      "base-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 84%, {semantic.text.color.primary})"
+      },
+      "sunken-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 92%, {semantic.text.color.primary})"
+      },
+      "sunken-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 76%, {semantic.text.color.primary})"
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.subtle.dark}"
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.default.dark}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.strong.dark}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.border.focus.dark}"
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "{semantic-base.color-aliases.accent.default.dark}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {primitives/openTRNTBL.color.accent.125} 88%, #ffffff)"
+      }
+    },
+    "text": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.primary.dark}"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.secondary.dark}"
+        },
+        "placeholder": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.placeholder.dark}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.text.color.disabled.dark}"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.accent.150}"
+        }
+      }
+    },
+    "status": {
+      "success": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.bg.dark}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.text.dark}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.bg-hover.dark}"
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.success.bg-pressed.dark}"
+        }
+      },
+      "warning": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.bg.dark}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.text.dark}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.bg-hover.dark}"
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.warning.bg-pressed.dark}"
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.bg.dark}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.text.dark}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.bg-hover.dark}"
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.danger.bg-pressed.dark}"
+        }
+      },
+      "info": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.bg.dark}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.text.dark}"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.bg-hover.dark}"
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "{semantic-base.color-aliases.status.info.bg-pressed.dark}"
+        }
+      }
+    }
+  },
+  "hc/enabled": {
+    "color-aliases": {
+      "surface": {
+        "canvas": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.175}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            }
+          }
+        },
+        "base": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.200}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.25}"
+            }
+          }
+        },
+        "raised": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.75}"
+            }
+          }
+        },
+        "sunken": {
+          "background": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.150}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.10}"
+            }
+          }
+        }
+      },
+      "border": {
+        "subtle": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.100}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.100}"
+          }
+        },
+        "default": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.50}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.150}"
+          }
+        },
+        "strong": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.0}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.200}"
+          }
+        },
+        "focus": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.accent.50}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.accent.150}"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "primary": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.200}"
+            }
+          },
+          "secondary": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.10}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            }
+          },
+          "placeholder": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.10}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            }
+          },
+          "disabled": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.10}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            }
+          }
+        }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.150}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.success.0}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 14%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.text.color.primary} 26%)"
+            }
+          }
+        },
+        "warning": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.150}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.0}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 14%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.text.color.primary} 26%)"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.150}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.danger.0}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 14%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.text.color.primary} 26%)"
+            }
+          }
+        },
+        "info": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.150}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.0}"
+            }
+          },
+          "bg-hover": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 14%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 14%)"
+            }
+          },
+          "bg-pressed": {
+            "light": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 26%)"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.text.color.primary} 26%)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "vision/deuteranopia": {
+    "color-aliases": {
+      "status": {
+        "success": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.175}"
+            }
+          }
+        },
+        "warning": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.175}"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.warning.175}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "vision/protanopia": {
+    "color-aliases": {
+      "status": {
+        "success": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.info.175}"
+            }
+          }
+        },
+        "warning": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.yellow.175}"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.175}"
+            }
+          }
+        },
+        "info": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.cyan.175}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "vision/tritanopia": {
+    "color-aliases": {
+      "accent": {
+        "default": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.warning.125}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.warning.150}"
+          }
+        }
+      },
+      "status": {
+        "info": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.10}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.50}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.violet.175}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "vision/achromatopsia": {
+    "color-aliases": {
+      "accent": {
+        "default": {
+          "light": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.25}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{primitives/openTRNTBL.color.neutral.190}"
+          }
+        }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.25}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.175}"
+            }
+          }
+        },
+        "warning": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.175}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.25}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.25}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.190}"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.100}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.100}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.200}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            }
+          }
+        },
+        "info": {
+          "bg": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.150}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.50}"
+            }
+          },
+          "text": {
+            "light": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.0}"
+            },
+            "dark": {
+              "$type": "color",
+              "$value": "{primitives/openTRNTBL.color.neutral.200}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "density/compact": {
+    "spacing": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "{core.dimension.05}"
+      },
+      "snug": {
+        "$type": "dimension",
+        "$value": "{core.dimension.15}"
+      },
+      "default": {
+        "$type": "dimension",
+        "$value": "{core.dimension.30}"
+      },
+      "loose": {
+        "$type": "dimension",
+        "$value": "{core.dimension.50}"
+      },
+      "airy": {
+        "$type": "dimension",
+        "$value": "{core.dimension.80}"
+      }
+    }
+  },
+  "density/spacious": {
+    "spacing": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "{core.dimension.15}"
+      },
+      "snug": {
+        "$type": "dimension",
+        "$value": "{core.dimension.25}"
+      },
+      "default": {
+        "$type": "dimension",
+        "$value": "{core.dimension.50}"
+      },
+      "loose": {
+        "$type": "dimension",
+        "$value": "{core.dimension.80}"
+      },
+      "airy": {
+        "$type": "dimension",
+        "$value": "{core.dimension.120}"
+      }
+    }
+  },
+  "$metadata": {
+    "tokenSetOrder": [
+      "core",
+      "primitives/openTRNTBL",
+      "semantic-base",
+      "mode/dark",
+      "hc/enabled",
+      "vision/deuteranopia",
+      "vision/protanopia",
+      "vision/tritanopia",
+      "vision/achromatopsia",
+      "density/compact",
+      "density/spacious"
+    ]
+  },
+  "$themes": [
+    {
+      "id": "brand-sonos-like",
+      "name": "Sonos-like",
+      "group": "Brand",
+      "selectedTokenSets": {
+        "core": "enabled",
+        "primitives/openTRNTBL": "enabled",
+        "semantic-base": "enabled"
+      }
+    },
+    {
+      "id": "color-light",
+      "name": "Light",
+      "group": "Color",
+      "selectedTokenSets": {}
+    },
+    {
+      "id": "color-dark",
+      "name": "Dark",
+      "group": "Color",
+      "selectedTokenSets": {
+        "mode/dark": "enabled"
+      }
+    },
+    {
+      "id": "contrast-default",
+      "name": "Default",
+      "group": "Contrast",
+      "selectedTokenSets": {}
+    },
+    {
+      "id": "contrast-enhanced",
+      "name": "Enhanced",
+      "group": "Contrast",
+      "selectedTokenSets": {
+        "hc/enabled": "enabled"
+      }
+    },
+    {
+      "id": "vision-default",
+      "name": "Default",
+      "group": "Vision",
+      "selectedTokenSets": {}
+    },
+    {
+      "id": "vision-deuteranopia",
+      "name": "Deuteranopia",
+      "group": "Vision",
+      "selectedTokenSets": {
+        "vision/deuteranopia": "enabled"
+      }
+    },
+    {
+      "id": "vision-protanopia",
+      "name": "Protanopia",
+      "group": "Vision",
+      "selectedTokenSets": {
+        "vision/protanopia": "enabled"
+      }
+    },
+    {
+      "id": "vision-tritanopia",
+      "name": "Tritanopia",
+      "group": "Vision",
+      "selectedTokenSets": {
+        "vision/tritanopia": "enabled"
+      }
+    },
+    {
+      "id": "vision-achromatopsia",
+      "name": "Achromatopsia",
+      "group": "Vision",
+      "selectedTokenSets": {
+        "vision/achromatopsia": "enabled"
+      }
+    },
+    {
+      "id": "density-default",
+      "name": "Default",
+      "group": "Density",
+      "selectedTokenSets": {}
+    },
+    {
+      "id": "density-compact",
+      "name": "Compact",
+      "group": "Density",
+      "selectedTokenSets": {
+        "density/compact": "enabled"
+      }
+    },
+    {
+      "id": "density-spacious",
+      "name": "Spacious",
+      "group": "Density",
+      "selectedTokenSets": {
+        "density/spacious": "enabled"
+      }
+    }
+  ]
+}

@@ -1,0 +1,934 @@
+{
+  "modesOrder": [
+    "light",
+    "dark",
+    "light-hc",
+    "dark-hc",
+    "light-deutan",
+    "dark-deutan",
+    "light-protan",
+    "dark-protan",
+    "light-tritan",
+    "dark-tritan"
+  ],
+  "variables": [
+    {
+      "name": "surface/canvas/background",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#f1f1f1",
+        "dark": "#000000",
+        "light-hc": "#d7d7d7",
+        "dark-hc": "#000000",
+        "light-deutan": "#f1f1f1",
+        "dark-deutan": "#000000",
+        "light-protan": "#f1f1f1",
+        "dark-protan": "#000000",
+        "light-tritan": "#f1f1f1",
+        "dark-tritan": "#000000"
+      },
+      "description": "Page background. Bottom-most surface. HC light n.175 (gris moyen) creuse l'\u00e9cart avec base/raised pour diff\u00e9rencier les 4 surfaces sans recourir \u00e0 des borders."
+    },
+    {
+      "name": "surface/base/background",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffffff",
+        "dark": "#0c0c0c",
+        "light-hc": "#ffffff",
+        "dark-hc": "#272727",
+        "light-deutan": "#ffffff",
+        "dark-deutan": "#0c0c0c",
+        "light-protan": "#ffffff",
+        "dark-protan": "#0c0c0c",
+        "light-tritan": "#ffffff",
+        "dark-tritan": "#0c0c0c"
+      },
+      "description": "Default card / panel surface. HC dark n.25 distingue base de canvas (pur black) sans border."
+    },
+    {
+      "name": "surface/raised/background",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffffff",
+        "dark": "#272727",
+        "light-hc": "#f1f1f1",
+        "dark-hc": "#5c5c5c",
+        "light-deutan": "#ffffff",
+        "dark-deutan": "#272727",
+        "light-protan": "#ffffff",
+        "dark-protan": "#272727",
+        "light-tritan": "#ffffff",
+        "dark-tritan": "#272727"
+      },
+      "description": "Elevated surface (modal, popover, tonal button bg, segmented track). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.190 (off-white) au-dessus de canvas n.175 ; dark n.75 (gris moyen-clair) au-dessus de base n.25. Pas de texte primaire pos\u00e9 dessus en components.css (v\u00e9rifi\u00e9) ; les stories de doc Surfaces affichent du text dessus \u2192 ratio AAA limite (6.79) accept\u00e9 self-r\u00e9f\u00e9rent."
+    },
+    {
+      "name": "surface/sunken/background",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#f1f1f1",
+        "dark": "#000000",
+        "light-hc": "#afafaf",
+        "dark-hc": "#0c0c0c",
+        "light-deutan": "#f1f1f1",
+        "dark-deutan": "#000000",
+        "light-protan": "#f1f1f1",
+        "dark-protan": "#000000",
+        "light-tritan": "#f1f1f1",
+        "dark-tritan": "#000000"
+      },
+      "description": "Recessed surface (input background, well, code block). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.150 (gris fonc\u00e9 creus\u00e9) sous canvas n.175 ; dark n.10 (presque-black) sous canvas n.0 (pure black)."
+    },
+    {
+      "name": "surface/overlay/background",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#000000",
+        "dark": "#000000",
+        "light-hc": "#000000",
+        "dark-hc": "#000000",
+        "light-deutan": "#000000",
+        "dark-deutan": "#000000",
+        "light-protan": "#000000",
+        "dark-protan": "#000000",
+        "light-tritan": "#000000",
+        "dark-tritan": "#000000"
+      },
+      "description": "Scrim / backdrop for modals. Apply via CSS with 0.6 alpha."
+    },
+    {
+      "name": "surface/dim",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#434343",
+        "dark": "#434343",
+        "light-hc": "#434343",
+        "dark-hc": "#434343",
+        "light-deutan": "#434343",
+        "dark-deutan": "#434343",
+        "light-protan": "#434343",
+        "dark-protan": "#434343",
+        "light-tritan": "#434343",
+        "dark-tritan": "#434343"
+      },
+      "description": "Surface sombre fixe \u2014 track HC SegmentedControl, input HC, etc. Volontairement constante peu importe light/dark/HC : un fond opaque sombre qui distingue par luminance."
+    },
+    {
+      "name": "surface/bright",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffffff",
+        "dark": "#ffffff",
+        "light-hc": "#ffffff",
+        "dark-hc": "#ffffff",
+        "light-deutan": "#ffffff",
+        "dark-deutan": "#ffffff",
+        "light-protan": "#ffffff",
+        "dark-protan": "#ffffff",
+        "light-tritan": "#ffffff",
+        "dark-tritan": "#ffffff"
+      },
+      "description": "Surface claire fixe \u2014 tile actif HC SegmentedControl. Volontairement constante. Pendant de surface.dim."
+    },
+    {
+      "name": "surface/base-hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#e1e1e1",
+        "dark": "#1e1e1e",
+        "light-hc": "#dbdbdb",
+        "dark-hc": "#383838",
+        "light-deutan": "#e1e1e1",
+        "dark-deutan": "#1e1e1e",
+        "light-protan": "#e1e1e1",
+        "dark-protan": "#1e1e1e",
+        "light-tritan": "#e1e1e1",
+        "dark-tritan": "#1e1e1e"
+      },
+      "description": "Surface.base hover \u2014 Donnie pattern. Light = 86%/14% (visible sur fond blanc). Dark = 92%/8% (subtil pour ne pas r\u00e9duire le contraste avec text-primary clair). Consomm\u00e9 par btn-2:hover, btn-toggle:hover (off)."
+    },
+    {
+      "name": "surface/base-pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#c7c7c7",
+        "dark": "#313131",
+        "light-hc": "#bdbdbd",
+        "dark-hc": "#4a4a4a",
+        "light-deutan": "#c7c7c7",
+        "dark-deutan": "#313131",
+        "light-protan": "#c7c7c7",
+        "dark-protan": "#313131",
+        "light-tritan": "#c7c7c7",
+        "dark-tritan": "#313131"
+      },
+      "description": "Surface.base pressed \u2014 Donnie pattern. Light = 74%/26% (tr\u00e8s marqu\u00e9). Dark = 84%/16% (mod\u00e9r\u00e9, pour ne pas chuter le contraste). Consomm\u00e9 par btn-2:active."
+    },
+    {
+      "name": "surface/sunken-hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#d5d5d5",
+        "dark": "#131313",
+        "light-hc": "#969696",
+        "dark-hc": "#1f1f1f",
+        "light-deutan": "#d5d5d5",
+        "dark-deutan": "#131313",
+        "light-protan": "#d5d5d5",
+        "dark-protan": "#131313",
+        "light-tritan": "#d5d5d5",
+        "dark-tritan": "#131313"
+      },
+      "description": "Surface.sunken hover \u2014 Donnie pattern. Light 86%/14%, Dark 92%/8% (subtil). Consomm\u00e9 par inp:hover."
+    },
+    {
+      "name": "surface/sunken-pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#acacac",
+        "dark": "#3a3a3a",
+        "light-hc": "#747474",
+        "dark-hc": "#464646",
+        "light-deutan": "#acacac",
+        "dark-deutan": "#3a3a3a",
+        "light-protan": "#acacac",
+        "dark-protan": "#3a3a3a",
+        "light-tritan": "#acacac",
+        "dark-tritan": "#3a3a3a"
+      },
+      "description": "Surface.sunken pressed \u2014 Donnie pattern. Light 66%/34%, Dark 76%/24%."
+    },
+    {
+      "name": "border/subtle",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#d7d7d7",
+        "dark": "#272727",
+        "light-hc": "#757575",
+        "dark-hc": "#757575",
+        "light-deutan": "#d7d7d7",
+        "dark-deutan": "#272727",
+        "light-protan": "#d7d7d7",
+        "dark-protan": "#272727",
+        "light-tritan": "#d7d7d7",
+        "dark-tritan": "#272727"
+      },
+      "description": "Low-emphasis divider (row separators, group dividers)."
+    },
+    {
+      "name": "border/default",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#757575",
+        "dark": "#757575",
+        "light-hc": "#434343",
+        "dark-hc": "#afafaf",
+        "light-deutan": "#757575",
+        "dark-deutan": "#757575",
+        "light-protan": "#757575",
+        "dark-protan": "#757575",
+        "light-tritan": "#757575",
+        "dark-tritan": "#757575"
+      },
+      "description": "Standard border (inputs, outlined buttons, segmented track). WCAG 2.4.11 \u22653:1 on base/sunken/raised in light + dark."
+    },
+    {
+      "name": "border/strong",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#757575",
+        "dark": "#757575",
+        "light-hc": "#000000",
+        "dark-hc": "#ffffff",
+        "light-deutan": "#757575",
+        "dark-deutan": "#757575",
+        "light-protan": "#757575",
+        "dark-protan": "#757575",
+        "light-tritan": "#757575",
+        "dark-tritan": "#757575"
+      },
+      "description": "Emphasis border (hover, selected, active)."
+    },
+    {
+      "name": "border/focus",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#957000",
+        "dark": "#b78c23",
+        "light-hc": "#563f00",
+        "dark-hc": "#d1ab56",
+        "light-deutan": "#957000",
+        "dark-deutan": "#b78c23",
+        "light-protan": "#957000",
+        "dark-protan": "#b78c23",
+        "light-tritan": "#957000",
+        "dark-tritan": "#b78c23"
+      },
+      "description": "Focus ring color. Always visible (accessibility baseline)."
+    },
+    {
+      "name": "accent/default",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#b78c23",
+        "dark": "#d1ab56",
+        "light-hc": "#b78c23",
+        "dark-hc": "#d1ab56",
+        "light-deutan": "#b78c23",
+        "dark-deutan": "#d1ab56",
+        "light-protan": "#b78c23",
+        "dark-protan": "#d1ab56",
+        "light-tritan": "#e2760f",
+        "dark-tritan": "#f9974e"
+      },
+      "description": "Brand accent (gold) \u2014 decorative fill (idle). Light = accent.125 (mid-tone). Dark = accent.150 (plus clair, lift sur fond sombre). Vision daltonisme : tritanopia mappe sur orange (jaune indistinguable), achromatopsia mappe sur text-primary (luminance-only). Deut\u00e9ranopie/protanopie : pas d'override (gold OK)."
+    },
+    {
+      "name": "accent/hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#c09a3d",
+        "dark": "#c09a3d",
+        "light-hc": "#c09a3d",
+        "dark-hc": "#c09a3d",
+        "light-deutan": "#c09a3d",
+        "dark-deutan": "#c09a3d",
+        "light-protan": "#c09a3d",
+        "dark-protan": "#c09a3d",
+        "light-tritan": "#c09a3d",
+        "dark-tritan": "#c09a3d"
+      },
+      "description": "Brand accent (gold) \u2014 hover (lightened)."
+    },
+    {
+      "name": "accent/pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#92701c",
+        "dark": "#a78945",
+        "light-hc": "#92701c",
+        "dark-hc": "#a78945",
+        "light-deutan": "#92701c",
+        "dark-deutan": "#a78945",
+        "light-protan": "#92701c",
+        "dark-protan": "#a78945",
+        "light-tritan": "#b55e0c",
+        "dark-tritan": "#c7793e"
+      },
+      "description": "Brand accent (gold) \u2014 pressed (darkened). Fallback Penpot: accent.100. Consomm\u00e9 par btn-toggle.active:active."
+    },
+    {
+      "name": "text/color/primary",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#272727",
+        "dark": "#f1f1f1",
+        "light-hc": "#000000",
+        "dark-hc": "#ffffff",
+        "light-deutan": "#272727",
+        "dark-deutan": "#f1f1f1",
+        "light-protan": "#272727",
+        "dark-protan": "#f1f1f1",
+        "light-tritan": "#272727",
+        "dark-tritan": "#f1f1f1"
+      },
+      "description": "Primary text. Body copy, headings."
+    },
+    {
+      "name": "text/color/secondary",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#5c5c5c",
+        "dark": "#afafaf",
+        "light-hc": "#0c0c0c",
+        "dark-hc": "#f1f1f1",
+        "light-deutan": "#5c5c5c",
+        "dark-deutan": "#afafaf",
+        "light-protan": "#5c5c5c",
+        "dark-protan": "#afafaf",
+        "light-tritan": "#5c5c5c",
+        "dark-tritan": "#afafaf"
+      },
+      "description": "Secondary text. Labels, metadata, captions."
+    },
+    {
+      "name": "text/color/placeholder",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#5c5c5c",
+        "dark": "#929292",
+        "light-hc": "#0c0c0c",
+        "dark-hc": "#f1f1f1",
+        "light-deutan": "#5c5c5c",
+        "dark-deutan": "#929292",
+        "light-protan": "#5c5c5c",
+        "dark-protan": "#929292",
+        "light-tritan": "#5c5c5c",
+        "dark-tritan": "#929292"
+      },
+      "description": "Placeholder text. Empty-state hints in inputs. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark)."
+    },
+    {
+      "name": "text/color/disabled",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#5c5c5c",
+        "dark": "#929292",
+        "light-hc": "#0c0c0c",
+        "dark-hc": "#f1f1f1",
+        "light-deutan": "#5c5c5c",
+        "dark-deutan": "#929292",
+        "light-protan": "#5c5c5c",
+        "dark-protan": "#929292",
+        "light-tritan": "#5c5c5c",
+        "dark-tritan": "#929292"
+      },
+      "description": "Disabled text. Controls that can't be interacted with. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark). Distinguishable from primary via opacity 0.5 in components.css."
+    },
+    {
+      "name": "text/color/inverse",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffffff",
+        "dark": "#000000",
+        "light-hc": "#ffffff",
+        "dark-hc": "#000000",
+        "light-deutan": "#ffffff",
+        "dark-deutan": "#000000",
+        "light-protan": "#ffffff",
+        "dark-protan": "#000000",
+        "light-tritan": "#ffffff",
+        "dark-tritan": "#000000"
+      },
+      "description": "Text on solid/colored surfaces (e.g. white on primary)."
+    },
+    {
+      "name": "text/color/accent",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#755600",
+        "dark": "#d1ab56",
+        "light-hc": "#755600",
+        "dark-hc": "#d1ab56",
+        "light-deutan": "#755600",
+        "dark-deutan": "#d1ab56",
+        "light-protan": "#755600",
+        "dark-protan": "#d1ab56",
+        "light-tritan": "#755600",
+        "dark-tritan": "#d1ab56"
+      },
+      "description": "Accent text. Inline links, brand emphasis."
+    },
+    {
+      "name": "text/color/on-accent",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#000000",
+        "dark": "#000000",
+        "light-hc": "#000000",
+        "dark-hc": "#000000",
+        "light-deutan": "#000000",
+        "dark-deutan": "#000000",
+        "light-protan": "#000000",
+        "dark-protan": "#000000",
+        "light-tritan": "#000000",
+        "dark-tritan": "#000000"
+      },
+      "description": "Text on top of the accent (gold) surface \u2014 e.g. .btn-toggle.active. Default = neutral.0 (black) sur gold. Vision achromatopsia : accent bascule en grayscale, donc on-accent doit s'inverser pour conserver le contraste. Light ach : accent=neutral.25 (sombre) \u2192 on-accent=neutral.200 (clair). Dark ach : accent=neutral.190 (clair) \u2192 on-accent=neutral.25 (sombre)."
+    },
+    {
+      "name": "text/color/on-dim",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffffff",
+        "dark": "#ffffff",
+        "light-hc": "#ffffff",
+        "dark-hc": "#ffffff",
+        "light-deutan": "#ffffff",
+        "dark-deutan": "#ffffff",
+        "light-protan": "#ffffff",
+        "dark-protan": "#ffffff",
+        "light-tritan": "#ffffff",
+        "dark-tritan": "#ffffff"
+      },
+      "description": "Text on surface.dim \u2014 white fixe. Pendant de on-accent pour la surface sombre fixe (HC SegCtrl track, input HC)."
+    },
+    {
+      "name": "text/color/on-bright",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#000000",
+        "dark": "#000000",
+        "light-hc": "#000000",
+        "dark-hc": "#000000",
+        "light-deutan": "#000000",
+        "dark-deutan": "#000000",
+        "light-protan": "#000000",
+        "dark-protan": "#000000",
+        "light-tritan": "#000000",
+        "dark-tritan": "#000000"
+      },
+      "description": "Text on surface.bright \u2014 black fixe. Pendant de on-dim pour la surface claire fixe (HC SegCtrl tile active)."
+    },
+    {
+      "name": "status/success/bg",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#c8ffc8",
+        "dark": "#001001",
+        "light-hc": "#004f10",
+        "dark-hc": "#69c26e",
+        "light-deutan": "#b0fffe",
+        "dark-deutan": "#000f10",
+        "light-protan": "#e9f2ff",
+        "dark-protan": "#000c24",
+        "light-tritan": "#c8ffc8",
+        "dark-tritan": "#001001"
+      },
+      "description": "Success state (completed action, OK) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+    },
+    {
+      "name": "status/success/text",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#004f10",
+        "dark": "#9ee9a0",
+        "light-hc": "#c8ffc8",
+        "dark-hc": "#000000",
+        "light-deutan": "#004a4b",
+        "dark-deutan": "#83e7e7",
+        "light-protan": "#004284",
+        "dark-protan": "#bdd9ff",
+        "light-tritan": "#004f10",
+        "dark-tritan": "#9ee9a0"
+      },
+      "description": "Success state (completed action, OK) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+    },
+    {
+      "name": "status/success/bg-hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ace6ae",
+        "dark": "#0d210e",
+        "light-hc": "#00440e",
+        "dark-hc": "#7ecb82",
+        "light-deutan": "#97e6e5",
+        "dark-deutan": "#0a2021",
+        "light-protan": "#c8d9ee",
+        "dark-protan": "#0f1c36",
+        "light-tritan": "#ace6ae",
+        "dark-tritan": "#0d210e"
+      },
+      "description": "Status.success.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: success.175."
+    },
+    {
+      "name": "status/success/bg-pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#94d198",
+        "dark": "#1c371e",
+        "light-hc": "#003a0c",
+        "dark-hc": "#90d294",
+        "light-deutan": "#82d0cf",
+        "dark-deutan": "#183637",
+        "light-protan": "#acc4df",
+        "dark-protan": "#22314b",
+        "light-tritan": "#94d198",
+        "dark-tritan": "#1c371e"
+      },
+      "description": "Status.success.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: success.150."
+    },
+    {
+      "name": "status/warning/bg",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffeee3",
+        "dark": "#1a0800",
+        "light-hc": "#6a3400",
+        "dark-hc": "#f9974e",
+        "light-deutan": "#fff3a6",
+        "dark-deutan": "#100d00",
+        "light-protan": "#fff3a6",
+        "dark-protan": "#100d00",
+        "light-tritan": "#ffeee3",
+        "dark-tritan": "#1a0800"
+      },
+      "description": "Warning state (caution, non-blocking issue) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+    },
+    {
+      "name": "status/warning/text",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#6a3400",
+        "dark": "#ffcdad",
+        "light-hc": "#ffeee3",
+        "dark-hc": "#000000",
+        "light-deutan": "#4c4300",
+        "dark-deutan": "#e9d874",
+        "light-protan": "#4c4300",
+        "dark-protan": "#e9d874",
+        "light-tritan": "#6a3400",
+        "dark-tritan": "#ffcdad"
+      },
+      "description": "Warning state (caution, non-blocking issue) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+    },
+    {
+      "name": "status/warning/bg-hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ead4c3",
+        "dark": "#2c180e",
+        "light-hc": "#5b2d00",
+        "dark-hc": "#faa667",
+        "light-deutan": "#e6da8f",
+        "dark-deutan": "#211d09",
+        "light-protan": "#e6da8f",
+        "dark-protan": "#211d09",
+        "light-tritan": "#ead4c3",
+        "dark-tritan": "#2c180e"
+      },
+      "description": "Status.warning.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: warning.175."
+    },
+    {
+      "name": "status/warning/bg-pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#d8bea8",
+        "dark": "#432b1f",
+        "light-hc": "#4e2600",
+        "dark-hc": "#fbb27c",
+        "light-deutan": "#d0c57b",
+        "dark-deutan": "#373215",
+        "light-protan": "#d0c57b",
+        "dark-protan": "#373215",
+        "light-tritan": "#d8bea8",
+        "dark-tritan": "#432b1f"
+      },
+      "description": "Status.warning.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: warning.150."
+    },
+    {
+      "name": "status/danger/bg",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#ffeeeb",
+        "dark": "#250000",
+        "light-hc": "#880b08",
+        "dark-hc": "#ff9081",
+        "light-deutan": "#ffeee3",
+        "dark-deutan": "#1a0800",
+        "light-protan": "#f4efff",
+        "dark-protan": "#170031",
+        "light-tritan": "#ffeeeb",
+        "dark-tritan": "#250000"
+      },
+      "description": "Danger state (error, destructive action) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+    },
+    {
+      "name": "status/danger/text",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#880b08",
+        "dark": "#ffcbc3",
+        "light-hc": "#ffeeeb",
+        "dark-hc": "#000000",
+        "light-deutan": "#6a3400",
+        "dark-deutan": "#ffcdad",
+        "light-protan": "#56298d",
+        "dark-protan": "#dfd0ff",
+        "light-tritan": "#880b08",
+        "dark-tritan": "#ffcbc3"
+      },
+      "description": "Danger state (error, destructive action) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+    },
+    {
+      "name": "status/danger/bg-hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#eececb",
+        "dark": "#361010",
+        "light-hc": "#750907",
+        "dark-hc": "#ffa093",
+        "light-deutan": "#ead4c3",
+        "dark-deutan": "#2c180e",
+        "light-protan": "#ded3ef",
+        "dark-protan": "#271141",
+        "light-tritan": "#eececb",
+        "dark-tritan": "#361010"
+      },
+      "description": "Status.danger.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: danger.175."
+    },
+    {
+      "name": "status/danger/bg-pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#e0b3b0",
+        "dark": "#4c2523",
+        "light-hc": "#650806",
+        "dark-hc": "#ffada2",
+        "light-deutan": "#d8bea8",
+        "dark-deutan": "#432b1f",
+        "light-protan": "#cbbce1",
+        "dark-protan": "#3b2556",
+        "light-tritan": "#e0b3b0",
+        "dark-tritan": "#4c2523"
+      },
+      "description": "Status.danger.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: danger.150."
+    },
+    {
+      "name": "status/info/bg",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#e9f2ff",
+        "dark": "#000c24",
+        "light-hc": "#004284",
+        "dark-hc": "#76b2ff",
+        "light-deutan": "#e9f2ff",
+        "dark-deutan": "#000c24",
+        "light-protan": "#b0fffe",
+        "dark-protan": "#000f10",
+        "light-tritan": "#f4efff",
+        "dark-tritan": "#170031"
+      },
+      "description": "Info state (neutral notice, informational) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+    },
+    {
+      "name": "status/info/text",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#004284",
+        "dark": "#bdd9ff",
+        "light-hc": "#e9f2ff",
+        "dark-hc": "#000002",
+        "light-deutan": "#004284",
+        "dark-deutan": "#bdd9ff",
+        "light-protan": "#004a4b",
+        "dark-protan": "#83e7e7",
+        "light-tritan": "#56298d",
+        "dark-tritan": "#dfd0ff"
+      },
+      "description": "Info state (neutral notice, informational) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+    },
+    {
+      "name": "status/info/bg-hover",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#c8d9ee",
+        "dark": "#0f1c36",
+        "light-hc": "#003972",
+        "dark-hc": "#89bdff",
+        "light-deutan": "#c8d9ee",
+        "dark-deutan": "#0f1c36",
+        "light-protan": "#97e6e5",
+        "dark-protan": "#0a2021",
+        "light-tritan": "#ded3ef",
+        "dark-tritan": "#271141"
+      },
+      "description": "Status.info.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: info.175."
+    },
+    {
+      "name": "status/info/bg-pressed",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#acc4df",
+        "dark": "#22314b",
+        "light-hc": "#003162",
+        "dark-hc": "#9ac6ff",
+        "light-deutan": "#acc4df",
+        "dark-deutan": "#22314b",
+        "light-protan": "#82d0cf",
+        "dark-protan": "#183637",
+        "light-tritan": "#cbbce1",
+        "dark-tritan": "#3b2556"
+      },
+      "description": "Status.info.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: info.150."
+    },
+    {
+      "name": "radius/sharp",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 0.4,
+        "dark": 0.4,
+        "light-hc": 0.4,
+        "dark-hc": 0.4,
+        "light-deutan": 0.4,
+        "dark-deutan": 0.4,
+        "light-protan": 0.4,
+        "dark-protan": 0.4,
+        "light-tritan": 0.4,
+        "dark-tritan": 0.4
+      },
+      "description": "Hairline rounding. Almost-square. (px)"
+    },
+    {
+      "name": "radius/soft",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 4.0,
+        "dark": 4.0,
+        "light-hc": 4.0,
+        "dark-hc": 4.0,
+        "light-deutan": 4.0,
+        "dark-deutan": 4.0,
+        "light-protan": 4.0,
+        "dark-protan": 4.0,
+        "light-tritan": 4.0,
+        "dark-tritan": 4.0
+      },
+      "description": "Soft rounding. Inputs, small cards. (px)"
+    },
+    {
+      "name": "radius/round",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 10.0,
+        "dark": 10.0,
+        "light-hc": 10.0,
+        "dark-hc": 10.0,
+        "light-deutan": 10.0,
+        "dark-deutan": 10.0,
+        "light-protan": 10.0,
+        "dark-protan": 10.0,
+        "light-tritan": 10.0,
+        "dark-tritan": 10.0
+      },
+      "description": "Rounded. Main surfaces (cards, panels, modals). (px)"
+    },
+    {
+      "name": "radius/pill",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 96.0,
+        "dark": 96.0,
+        "light-hc": 96.0,
+        "dark-hc": 96.0,
+        "light-deutan": 96.0,
+        "dark-deutan": 96.0,
+        "light-protan": 96.0,
+        "dark-protan": 96.0,
+        "light-tritan": 96.0,
+        "dark-tritan": 96.0
+      },
+      "description": "Pill. Full-pill controls, segmented toggles. (px)"
+    },
+    {
+      "name": "radius/circle",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 50.0,
+        "dark": 50.0,
+        "light-hc": 50.0,
+        "dark-hc": 50.0,
+        "light-deutan": 50.0,
+        "dark-deutan": 50.0,
+        "light-protan": 50.0,
+        "dark-protan": 50.0,
+        "light-tritan": 50.0,
+        "dark-tritan": 50.0
+      },
+      "description": "Circle. Avatars, round buttons. Applied as raw percentage. (px)"
+    },
+    {
+      "name": "icon/size/sm",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 16.0,
+        "dark": 16.0,
+        "light-hc": 16.0,
+        "dark-hc": 16.0,
+        "light-deutan": 16.0,
+        "dark-deutan": 16.0,
+        "light-protan": 16.0,
+        "dark-protan": 16.0,
+        "light-tritan": 16.0,
+        "dark-tritan": 16.0
+      },
+      "description": "Small icon. Inline with body text. (px)"
+    },
+    {
+      "name": "icon/size/md",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 24.0,
+        "dark": 24.0,
+        "light-hc": 24.0,
+        "dark-hc": 24.0,
+        "light-deutan": 24.0,
+        "dark-deutan": 24.0,
+        "light-protan": 24.0,
+        "dark-protan": 24.0,
+        "light-tritan": 24.0,
+        "dark-tritan": 24.0
+      },
+      "description": "Medium icon. Default control icon. (px)"
+    },
+    {
+      "name": "icon/size/lg",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 32.0,
+        "dark": 32.0,
+        "light-hc": 32.0,
+        "dark-hc": 32.0,
+        "light-deutan": 32.0,
+        "dark-deutan": 32.0,
+        "light-protan": 32.0,
+        "dark-protan": 32.0,
+        "light-tritan": 32.0,
+        "dark-tritan": 32.0
+      },
+      "description": "Large icon. Feature blocks, empty states. (px)"
+    },
+    {
+      "name": "focus/ring/width",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 2.0,
+        "dark": 2.0,
+        "light-hc": 2.0,
+        "dark-hc": 2.0,
+        "light-deutan": 2.0,
+        "dark-deutan": 2.0,
+        "light-protan": 2.0,
+        "dark-protan": 2.0,
+        "light-tritan": 2.0,
+        "dark-tritan": 2.0
+      },
+      "description": "Focus ring stroke width. (px)"
+    },
+    {
+      "name": "focus/ring/offset",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "light": 2.0,
+        "dark": 2.0,
+        "light-hc": 2.0,
+        "dark-hc": 2.0,
+        "light-deutan": 2.0,
+        "dark-deutan": 2.0,
+        "light-protan": 2.0,
+        "dark-protan": 2.0,
+        "light-tritan": 2.0,
+        "dark-tritan": 2.0
+      },
+      "description": "Focus ring offset from the element edge. (px)"
+    },
+    {
+      "name": "focus/ring/color",
+      "resolvedType": "COLOR",
+      "valuesByMode": {
+        "light": "#957000",
+        "dark": "#b78c23",
+        "light-hc": "#563f00",
+        "dark-hc": "#d1ab56",
+        "light-deutan": "#957000",
+        "dark-deutan": "#b78c23",
+        "light-protan": "#957000",
+        "dark-protan": "#b78c23",
+        "light-tritan": "#957000",
+        "dark-tritan": "#b78c23"
+      },
+      "description": "Focus ring color."
+    }
+  ]
+}

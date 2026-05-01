@@ -1,0 +1,707 @@
+[
+  {
+    "name": "color/accent/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/gold/0",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/accent/10",
+    "resolvedType": "COLOR",
+    "value": "#130b00",
+    "aliasOf": "palette/gold/10",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/accent/25",
+    "resolvedType": "COLOR",
+    "value": "#342400",
+    "aliasOf": "palette/gold/25",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/accent/50",
+    "resolvedType": "COLOR",
+    "value": "#563f00",
+    "aliasOf": "palette/gold/50",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/accent/75",
+    "resolvedType": "COLOR",
+    "value": "#755700",
+    "aliasOf": "palette/gold/75",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/accent/100",
+    "resolvedType": "COLOR",
+    "value": "#957000",
+    "aliasOf": "palette/gold/100",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/accent/125",
+    "resolvedType": "COLOR",
+    "value": "#b78c23",
+    "aliasOf": "palette/gold/125",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/accent/150",
+    "resolvedType": "COLOR",
+    "value": "#d1aa56",
+    "aliasOf": "palette/gold/150",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/accent/175",
+    "resolvedType": "COLOR",
+    "value": "#f4d38f",
+    "aliasOf": "palette/gold/175",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/accent/190",
+    "resolvedType": "COLOR",
+    "value": "#ffefd0",
+    "aliasOf": "palette/gold/190",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/accent/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/gold/200",
+    "description": "Brand accent (gold). Decorative emphasis, link color, binary on-state. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/neutral/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/neutral/0",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/neutral/10",
+    "resolvedType": "COLOR",
+    "value": "#0d0d0d",
+    "aliasOf": "palette/neutral/10",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/neutral/25",
+    "resolvedType": "COLOR",
+    "value": "#272727",
+    "aliasOf": "palette/neutral/25",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/neutral/50",
+    "resolvedType": "COLOR",
+    "value": "#424242",
+    "aliasOf": "palette/neutral/50",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/neutral/75",
+    "resolvedType": "COLOR",
+    "value": "#5b5b5b",
+    "aliasOf": "palette/neutral/75",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/neutral/100",
+    "resolvedType": "COLOR",
+    "value": "#757575",
+    "aliasOf": "palette/neutral/100",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/neutral/125",
+    "resolvedType": "COLOR",
+    "value": "#929292",
+    "aliasOf": "palette/neutral/125",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/neutral/150",
+    "resolvedType": "COLOR",
+    "value": "#b0b0b0",
+    "aliasOf": "palette/neutral/150",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/neutral/175",
+    "resolvedType": "COLOR",
+    "value": "#d8d8d8",
+    "aliasOf": "palette/neutral/175",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/neutral/190",
+    "resolvedType": "COLOR",
+    "value": "#f2f2f2",
+    "aliasOf": "palette/neutral/190",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/neutral/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/neutral/200",
+    "description": "Neutral grayscale. Surfaces, borders, body text. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/success/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/green/0",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/success/10",
+    "resolvedType": "COLOR",
+    "value": "#001001",
+    "aliasOf": "palette/green/10",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/success/25",
+    "resolvedType": "COLOR",
+    "value": "#002f06",
+    "aliasOf": "palette/green/25",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/success/50",
+    "resolvedType": "COLOR",
+    "value": "#004e10",
+    "aliasOf": "palette/green/50",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/success/75",
+    "resolvedType": "COLOR",
+    "value": "#006a19",
+    "aliasOf": "palette/green/75",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/success/100",
+    "resolvedType": "COLOR",
+    "value": "#068924",
+    "aliasOf": "palette/green/100",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/success/125",
+    "resolvedType": "COLOR",
+    "value": "#3ea748",
+    "aliasOf": "palette/green/125",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/success/150",
+    "resolvedType": "COLOR",
+    "value": "#69c26e",
+    "aliasOf": "palette/green/150",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/success/175",
+    "resolvedType": "COLOR",
+    "value": "#9ee9a0",
+    "aliasOf": "palette/green/175",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/success/190",
+    "resolvedType": "COLOR",
+    "value": "#c8ffc9",
+    "aliasOf": "palette/green/190",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/success/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/green/200",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/warning/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/orange/0",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/warning/10",
+    "resolvedType": "COLOR",
+    "value": "#1a0800",
+    "aliasOf": "palette/orange/10",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/warning/25",
+    "resolvedType": "COLOR",
+    "value": "#411d00",
+    "aliasOf": "palette/orange/25",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/warning/50",
+    "resolvedType": "COLOR",
+    "value": "#6a3400",
+    "aliasOf": "palette/orange/50",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/warning/75",
+    "resolvedType": "COLOR",
+    "value": "#8f4800",
+    "aliasOf": "palette/orange/75",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/warning/100",
+    "resolvedType": "COLOR",
+    "value": "#b75e00",
+    "aliasOf": "palette/orange/100",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/warning/125",
+    "resolvedType": "COLOR",
+    "value": "#e2760f",
+    "aliasOf": "palette/orange/125",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/warning/150",
+    "resolvedType": "COLOR",
+    "value": "#fa974e",
+    "aliasOf": "palette/orange/150",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/warning/175",
+    "resolvedType": "COLOR",
+    "value": "#ffcead",
+    "aliasOf": "palette/orange/175",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/warning/190",
+    "resolvedType": "COLOR",
+    "value": "#ffeee4",
+    "aliasOf": "palette/orange/190",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/warning/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/orange/200",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/danger/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/red/0",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/danger/10",
+    "resolvedType": "COLOR",
+    "value": "#250000",
+    "aliasOf": "palette/red/10",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/danger/25",
+    "resolvedType": "COLOR",
+    "value": "#560000",
+    "aliasOf": "palette/red/25",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/danger/50",
+    "resolvedType": "COLOR",
+    "value": "#880c08",
+    "aliasOf": "palette/red/50",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/danger/75",
+    "resolvedType": "COLOR",
+    "value": "#ae261d",
+    "aliasOf": "palette/red/75",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/danger/100",
+    "resolvedType": "COLOR",
+    "value": "#d14437",
+    "aliasOf": "palette/red/100",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/danger/125",
+    "resolvedType": "COLOR",
+    "value": "#f16657",
+    "aliasOf": "palette/red/125",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/danger/150",
+    "resolvedType": "COLOR",
+    "value": "#ff9181",
+    "aliasOf": "palette/red/150",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/danger/175",
+    "resolvedType": "COLOR",
+    "value": "#ffcbc3",
+    "aliasOf": "palette/red/175",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/danger/190",
+    "resolvedType": "COLOR",
+    "value": "#ffedeb",
+    "aliasOf": "palette/red/190",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/danger/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/red/200",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/info/0",
+    "resolvedType": "COLOR",
+    "value": "#000002",
+    "aliasOf": "palette/blue/0",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/info/10",
+    "resolvedType": "COLOR",
+    "value": "#000c24",
+    "aliasOf": "palette/blue/10",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/info/25",
+    "resolvedType": "COLOR",
+    "value": "#002652",
+    "aliasOf": "palette/blue/25",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/info/50",
+    "resolvedType": "COLOR",
+    "value": "#004184",
+    "aliasOf": "palette/blue/50",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/info/75",
+    "resolvedType": "COLOR",
+    "value": "#005ab2",
+    "aliasOf": "palette/blue/75",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/info/100",
+    "resolvedType": "COLOR",
+    "value": "#0075e2",
+    "aliasOf": "palette/blue/100",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/info/125",
+    "resolvedType": "COLOR",
+    "value": "#3893ff",
+    "aliasOf": "palette/blue/125",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/info/150",
+    "resolvedType": "COLOR",
+    "value": "#76b3ff",
+    "aliasOf": "palette/blue/150",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/info/175",
+    "resolvedType": "COLOR",
+    "value": "#bddaff",
+    "aliasOf": "palette/blue/175",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/info/190",
+    "resolvedType": "COLOR",
+    "value": "#e9f2ff",
+    "aliasOf": "palette/blue/190",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/info/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/blue/200",
+    "description": "Informational notice (blue). Neutral context, hints. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/cyan/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/cyan/0",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/cyan/10",
+    "resolvedType": "COLOR",
+    "value": "#000f10",
+    "aliasOf": "palette/cyan/10",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/cyan/25",
+    "resolvedType": "COLOR",
+    "value": "#002c2d",
+    "aliasOf": "palette/cyan/25",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/cyan/50",
+    "resolvedType": "COLOR",
+    "value": "#004b4b",
+    "aliasOf": "palette/cyan/50",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/cyan/75",
+    "resolvedType": "COLOR",
+    "value": "#006667",
+    "aliasOf": "palette/cyan/75",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/cyan/100",
+    "resolvedType": "COLOR",
+    "value": "#008484",
+    "aliasOf": "palette/cyan/100",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/cyan/125",
+    "resolvedType": "COLOR",
+    "value": "#00a4a4",
+    "aliasOf": "palette/cyan/125",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/cyan/150",
+    "resolvedType": "COLOR",
+    "value": "#3bc1c1",
+    "aliasOf": "palette/cyan/150",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/cyan/175",
+    "resolvedType": "COLOR",
+    "value": "#83e7e7",
+    "aliasOf": "palette/cyan/175",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/cyan/190",
+    "resolvedType": "COLOR",
+    "value": "#b1fffe",
+    "aliasOf": "palette/cyan/190",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/cyan/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/cyan/200",
+    "description": "Brand-extension hue (cyan). Used in vision-mode overrides for daltonism-safe success/info. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/yellow/0",
+    "resolvedType": "COLOR",
+    "value": "#000000",
+    "aliasOf": "palette/yellow/0",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/yellow/10",
+    "resolvedType": "COLOR",
+    "value": "#110d00",
+    "aliasOf": "palette/yellow/10",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/yellow/25",
+    "resolvedType": "COLOR",
+    "value": "#2d2700",
+    "aliasOf": "palette/yellow/25",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/yellow/50",
+    "resolvedType": "COLOR",
+    "value": "#4c4200",
+    "aliasOf": "palette/yellow/50",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/yellow/75",
+    "resolvedType": "COLOR",
+    "value": "#685c00",
+    "aliasOf": "palette/yellow/75",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/yellow/100",
+    "resolvedType": "COLOR",
+    "value": "#867600",
+    "aliasOf": "palette/yellow/100",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/yellow/125",
+    "resolvedType": "COLOR",
+    "value": "#a79300",
+    "aliasOf": "palette/yellow/125",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/yellow/150",
+    "resolvedType": "COLOR",
+    "value": "#c4b025",
+    "aliasOf": "palette/yellow/150",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/yellow/175",
+    "resolvedType": "COLOR",
+    "value": "#e9d974",
+    "aliasOf": "palette/yellow/175",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/yellow/190",
+    "resolvedType": "COLOR",
+    "value": "#fff2a6",
+    "aliasOf": "palette/yellow/190",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/yellow/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/yellow/200",
+    "description": "Brand-extension hue (yellow). Used in vision-mode overrides for daltonism-safe warning. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "color/violet/0",
+    "resolvedType": "COLOR",
+    "value": "#000002",
+    "aliasOf": "palette/violet/0",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 0 \u2014 darkest extreme."
+  },
+  {
+    "name": "color/violet/10",
+    "resolvedType": "COLOR",
+    "value": "#170030",
+    "aliasOf": "palette/violet/10",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 10 \u2014 near-dark / OLED-safe deep."
+  },
+  {
+    "name": "color/violet/25",
+    "resolvedType": "COLOR",
+    "value": "#371060",
+    "aliasOf": "palette/violet/25",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 25 \u2014 deep \u2014 high-emphasis text on light."
+  },
+  {
+    "name": "color/violet/50",
+    "resolvedType": "COLOR",
+    "value": "#56298d",
+    "aliasOf": "palette/violet/50",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces."
+  },
+  {
+    "name": "color/violet/75",
+    "resolvedType": "COLOR",
+    "value": "#7240b2",
+    "aliasOf": "palette/violet/75",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 75 \u2014 secondary text on light."
+  },
+  {
+    "name": "color/violet/100",
+    "resolvedType": "COLOR",
+    "value": "#8e5cd4",
+    "aliasOf": "palette/violet/100",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills."
+  },
+  {
+    "name": "color/violet/125",
+    "resolvedType": "COLOR",
+    "value": "#a97bf1",
+    "aliasOf": "palette/violet/125",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 125 \u2014 primary fill on dark surfaces."
+  },
+  {
+    "name": "color/violet/150",
+    "resolvedType": "COLOR",
+    "value": "#c19eff",
+    "aliasOf": "palette/violet/150",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 150 \u2014 soft border, disabled text."
+  },
+  {
+    "name": "color/violet/175",
+    "resolvedType": "COLOR",
+    "value": "#dfd0ff",
+    "aliasOf": "palette/violet/175",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 175 \u2014 near-light tint."
+  },
+  {
+    "name": "color/violet/190",
+    "resolvedType": "COLOR",
+    "value": "#f4eeff",
+    "aliasOf": "palette/violet/190",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 190 \u2014 tint \u2014 subtle background hue."
+  },
+  {
+    "name": "color/violet/200",
+    "resolvedType": "COLOR",
+    "value": "#ffffff",
+    "aliasOf": "palette/violet/200",
+    "description": "Brand-extension hue (violet). Used in vision-mode overrides for daltonism-safe danger/info. Shade 200 \u2014 lightest extreme."
+  },
+  {
+    "name": "font-family/sans",
+    "resolvedType": "STRING",
+    "value": "Inter",
+    "description": "UI sans-serif stack (Inter first). Body, headings, controls."
+  },
+  {
+    "name": "font-family/mono",
+    "resolvedType": "STRING",
+    "value": "SF Mono",
+    "description": "Monospace stack (SF Mono first). Code, stream URLs, technical output."
+  }
+]

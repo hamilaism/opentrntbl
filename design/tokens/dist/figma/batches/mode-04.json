@@ -1,0 +1,172 @@
+[
+  {
+    "name": "status/info/text",
+    "resolvedType": "COLOR",
+    "description": "Info state (neutral notice, informational) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9.",
+    "valuesByMode": {
+      "light": "#004284",
+      "dark": "#bdd9ff",
+      "light-hc": "#e9f2ff",
+      "dark-hc": "#000002",
+      "light-deutan": "#004284",
+      "dark-deutan": "#bdd9ff",
+      "light-protan": "#004a4b",
+      "dark-protan": "#83e7e7",
+      "light-tritan": "#56298d",
+      "dark-tritan": "#dfd0ff"
+    }
+  },
+  {
+    "name": "status/info/bg-hover",
+    "resolvedType": "COLOR",
+    "description": "Status.info.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: info.175.",
+    "valuesByMode": {
+      "light": "#c8d9ee",
+      "dark": "#0f1c36",
+      "light-hc": "#003972",
+      "dark-hc": "#89bdff",
+      "light-deutan": "#c8d9ee",
+      "dark-deutan": "#0f1c36",
+      "light-protan": "#97e6e5",
+      "dark-protan": "#0a2021",
+      "light-tritan": "#ded3ef",
+      "dark-tritan": "#271141"
+    }
+  },
+  {
+    "name": "status/info/bg-pressed",
+    "resolvedType": "COLOR",
+    "description": "Status.info.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: info.150.",
+    "valuesByMode": {
+      "light": "#acc4df",
+      "dark": "#22314b",
+      "light-hc": "#003162",
+      "dark-hc": "#9ac6ff",
+      "light-deutan": "#acc4df",
+      "dark-deutan": "#22314b",
+      "light-protan": "#82d0cf",
+      "dark-protan": "#183637",
+      "light-tritan": "#cbbce1",
+      "dark-tritan": "#3b2556"
+    }
+  },
+  {
+    "name": "radius/sharp",
+    "resolvedType": "FLOAT",
+    "description": "Hairline rounding. Almost-square. (px)",
+    "valuesByMode": {
+      "light": 0.4,
+      "dark": 0.4,
+      "light-hc": 0.4,
+      "dark-hc": 0.4,
+      "light-deutan": 0.4,
+      "dark-deutan": 0.4,
+      "light-protan": 0.4,
+      "dark-protan": 0.4,
+      "light-tritan": 0.4,
+      "dark-tritan": 0.4
+    }
+  },
+  {
+    "name": "radius/soft",
+    "resolvedType": "FLOAT",
+    "description": "Soft rounding. Inputs, small cards. (px)",
+    "valuesByMode": {
+      "light": 4.0,
+      "dark": 4.0,
+      "light-hc": 4.0,
+      "dark-hc": 4.0,
+      "light-deutan": 4.0,
+      "dark-deutan": 4.0,
+      "light-protan": 4.0,
+      "dark-protan": 4.0,
+      "light-tritan": 4.0,
+      "dark-tritan": 4.0
+    }
+  },
+  {
+    "name": "radius/round",
+    "resolvedType": "FLOAT",
+    "description": "Rounded. Main surfaces (cards, panels, modals). (px)",
+    "valuesByMode": {
+      "light": 10.0,
+      "dark": 10.0,
+      "light-hc": 10.0,
+      "dark-hc": 10.0,
+      "light-deutan": 10.0,
+      "dark-deutan": 10.0,
+      "light-protan": 10.0,
+      "dark-protan": 10.0,
+      "light-tritan": 10.0,
+      "dark-tritan": 10.0
+    }
+  },
+  {
+    "name": "radius/pill",
+    "resolvedType": "FLOAT",
+    "description": "Pill. Full-pill controls, segmented toggles. (px)",
+    "valuesByMode": {
+      "light": 96.0,
+      "dark": 96.0,
+      "light-hc": 96.0,
+      "dark-hc": 96.0,
+      "light-deutan": 96.0,
+      "dark-deutan": 96.0,
+      "light-protan": 96.0,
+      "dark-protan": 96.0,
+      "light-tritan": 96.0,
+      "dark-tritan": 96.0
+    }
+  },
+  {
+    "name": "radius/circle",
+    "resolvedType": "FLOAT",
+    "description": "Circle. Avatars, round buttons. Applied as raw percentage. (px)",
+    "valuesByMode": {
+      "light": 50.0,
+      "dark": 50.0,
+      "light-hc": 50.0,
+      "dark-hc": 50.0,
+      "light-deutan": 50.0,
+      "dark-deutan": 50.0,
+      "light-protan": 50.0,
+      "dark-protan": 50.0,
+      "light-tritan": 50.0,
+      "dark-tritan": 50.0
+    }
+  },
+  {
+    "name": "icon/size/sm",
+    "resolvedType": "FLOAT",
+    "description": "Small icon. Inline with body text. (px)",
+    "valuesByMode": {
+      "light": 16.0,
+      "dark": 16.0,
+      "light-hc": 16.0,
+      "dark-hc": 16.0,
+      "light-deutan": 16.0,
+      "dark-deutan": 16.0,
+      "light-protan": 16.0,
+      "dark-protan": 16.0,
+      "light-tritan": 16.0,
+      "dark-tritan": 16.0
+    }
+  },
+  {
+    "name": "icon/size/md",
+    "resolvedType": "FLOAT",
+    "description": "Medium icon. Default control icon. (px)",
+    "valuesByMode": {
+      "light": 24.0,
+      "dark": 24.0,
+      "light-hc": 24.0,
+      "dark-hc": 24.0,
+      "light-deutan": 24.0,
+      "dark-deutan": 24.0,
+      "light-protan": 24.0,
+      "dark-protan": 24.0,
+      "light-tritan": 24.0,
+      "dark-tritan": 24.0
+    }
+  }
+]

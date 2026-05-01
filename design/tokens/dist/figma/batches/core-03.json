@@ -1,0 +1,202 @@
+[
+  {
+    "name": "palette/cyan/190",
+    "resolvedType": "COLOR",
+    "description": "Near-light. Avoids banding from absolute #fff.",
+    "valuesByMode": {
+      "default": "#b1fffe"
+    }
+  },
+  {
+    "name": "palette/cyan/200",
+    "resolvedType": "COLOR",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    }
+  },
+  {
+    "name": "palette/blue/0",
+    "resolvedType": "COLOR",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+    "valuesByMode": {
+      "default": "#000002"
+    }
+  },
+  {
+    "name": "palette/blue/10",
+    "resolvedType": "COLOR",
+    "description": "Near-dark. Avoids OLED banding from absolute #000.",
+    "valuesByMode": {
+      "default": "#000c24"
+    }
+  },
+  {
+    "name": "palette/blue/25",
+    "resolvedType": "COLOR",
+    "description": "Deep. Text high-emphasis on light surfaces.",
+    "valuesByMode": {
+      "default": "#002652"
+    }
+  },
+  {
+    "name": "palette/blue/50",
+    "resolvedType": "COLOR",
+    "description": "Strong. Body text on light; solid idle on bright themes.",
+    "valuesByMode": {
+      "default": "#004184"
+    }
+  },
+  {
+    "name": "palette/blue/75",
+    "resolvedType": "COLOR",
+    "description": "Mid-dark. Border strong on light; solid idle.",
+    "valuesByMode": {
+      "default": "#005ab2"
+    }
+  },
+  {
+    "name": "palette/blue/100",
+    "resolvedType": "COLOR",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+    "valuesByMode": {
+      "default": "#0075e2"
+    }
+  },
+  {
+    "name": "palette/blue/125",
+    "resolvedType": "COLOR",
+    "description": "Mid-light. Interactive hover on dark themes.",
+    "valuesByMode": {
+      "default": "#3893ff"
+    }
+  },
+  {
+    "name": "palette/blue/150",
+    "resolvedType": "COLOR",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+    "valuesByMode": {
+      "default": "#76b3ff"
+    }
+  },
+  {
+    "name": "palette/blue/175",
+    "resolvedType": "COLOR",
+    "description": "Very light. Base surface on light themes; body text on dark themes.",
+    "valuesByMode": {
+      "default": "#bddaff"
+    }
+  },
+  {
+    "name": "palette/blue/190",
+    "resolvedType": "COLOR",
+    "description": "Near-light. Avoids banding from absolute #fff.",
+    "valuesByMode": {
+      "default": "#e9f2ff"
+    }
+  },
+  {
+    "name": "palette/blue/200",
+    "resolvedType": "COLOR",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    }
+  },
+  {
+    "name": "palette/violet/0",
+    "resolvedType": "COLOR",
+    "description": "Darkest extreme. Pure black for neutral; deepest tint for hues.",
+    "valuesByMode": {
+      "default": "#000002"
+    }
+  },
+  {
+    "name": "palette/violet/10",
+    "resolvedType": "COLOR",
+    "description": "Near-dark. Avoids OLED banding from absolute #000.",
+    "valuesByMode": {
+      "default": "#170030"
+    }
+  },
+  {
+    "name": "palette/violet/25",
+    "resolvedType": "COLOR",
+    "description": "Deep. Text high-emphasis on light surfaces.",
+    "valuesByMode": {
+      "default": "#371060"
+    }
+  },
+  {
+    "name": "palette/violet/50",
+    "resolvedType": "COLOR",
+    "description": "Strong. Body text on light; solid idle on bright themes.",
+    "valuesByMode": {
+      "default": "#56298d"
+    }
+  },
+  {
+    "name": "palette/violet/75",
+    "resolvedType": "COLOR",
+    "description": "Mid-dark. Border strong on light; solid idle.",
+    "valuesByMode": {
+      "default": "#7240b2"
+    }
+  },
+  {
+    "name": "palette/violet/100",
+    "resolvedType": "COLOR",
+    "description": "Midpoint. Placeholder text, disabled controls, max-chroma color.",
+    "valuesByMode": {
+      "default": "#8e5cd4"
+    }
+  },
+  {
+    "name": "palette/violet/125",
+    "resolvedType": "COLOR",
+    "description": "Mid-light. Interactive hover on dark themes.",
+    "valuesByMode": {
+      "default": "#a97bf1"
+    }
+  },
+  {
+    "name": "palette/violet/150",
+    "resolvedType": "COLOR",
+    "description": "Light. Raised surface on bright themes; solid idle on dark themes.",
+    "valuesByMode": {
+      "default": "#c19eff"
+    }
+  },
+  {
+    "name": "palette/violet/175",
+    "resolvedType": "COLOR",
+    "description": "Very light. Base surface on light themes; body text on dark themes.",
+    "valuesByMode": {
+      "default": "#dfd0ff"
+    }
+  },
+  {
+    "name": "palette/violet/190",
+    "resolvedType": "COLOR",
+    "description": "Near-light. Avoids banding from absolute #fff.",
+    "valuesByMode": {
+      "default": "#f4eeff"
+    }
+  },
+  {
+    "name": "palette/violet/200",
+    "resolvedType": "COLOR",
+    "description": "Lightest extreme. Pure white for neutral; palest tint for hues.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    }
+  },
+  {
+    "name": "dimension/01",
+    "resolvedType": "FLOAT",
+    "description": "Hairline. Sub-rem exception for 1px borders/dividers. (px)",
+    "valuesByMode": {
+      "default": 0.4
+    }
+  }
+]

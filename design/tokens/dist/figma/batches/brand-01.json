@@ -1,0 +1,227 @@
+[
+  {
+    "name": "color/success/50",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#004e10"
+    },
+    "aliasOf": "palette/green/50"
+  },
+  {
+    "name": "color/success/75",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#006a19"
+    },
+    "aliasOf": "palette/green/75"
+  },
+  {
+    "name": "color/success/100",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#068924"
+    },
+    "aliasOf": "palette/green/100"
+  },
+  {
+    "name": "color/success/125",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 125 \u2014 primary fill on dark surfaces.",
+    "valuesByMode": {
+      "default": "#3ea748"
+    },
+    "aliasOf": "palette/green/125"
+  },
+  {
+    "name": "color/success/150",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 150 \u2014 soft border, disabled text.",
+    "valuesByMode": {
+      "default": "#69c26e"
+    },
+    "aliasOf": "palette/green/150"
+  },
+  {
+    "name": "color/success/175",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 175 \u2014 near-light tint.",
+    "valuesByMode": {
+      "default": "#9ee9a0"
+    },
+    "aliasOf": "palette/green/175"
+  },
+  {
+    "name": "color/success/190",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#c8ffc9"
+    },
+    "aliasOf": "palette/green/190"
+  },
+  {
+    "name": "color/success/200",
+    "resolvedType": "COLOR",
+    "description": "Positive feedback (green). Connection OK, action complete. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/green/200"
+  },
+  {
+    "name": "color/warning/0",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000000"
+    },
+    "aliasOf": "palette/orange/0"
+  },
+  {
+    "name": "color/warning/10",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#1a0800"
+    },
+    "aliasOf": "palette/orange/10"
+  },
+  {
+    "name": "color/warning/25",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#411d00"
+    },
+    "aliasOf": "palette/orange/25"
+  },
+  {
+    "name": "color/warning/50",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#6a3400"
+    },
+    "aliasOf": "palette/orange/50"
+  },
+  {
+    "name": "color/warning/75",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#8f4800"
+    },
+    "aliasOf": "palette/orange/75"
+  },
+  {
+    "name": "color/warning/100",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#b75e00"
+    },
+    "aliasOf": "palette/orange/100"
+  },
+  {
+    "name": "color/warning/125",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 125 \u2014 primary fill on dark surfaces.",
+    "valuesByMode": {
+      "default": "#e2760f"
+    },
+    "aliasOf": "palette/orange/125"
+  },
+  {
+    "name": "color/warning/150",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 150 \u2014 soft border, disabled text.",
+    "valuesByMode": {
+      "default": "#fa974e"
+    },
+    "aliasOf": "palette/orange/150"
+  },
+  {
+    "name": "color/warning/175",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 175 \u2014 near-light tint.",
+    "valuesByMode": {
+      "default": "#ffcead"
+    },
+    "aliasOf": "palette/orange/175"
+  },
+  {
+    "name": "color/warning/190",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 190 \u2014 tint \u2014 subtle background hue.",
+    "valuesByMode": {
+      "default": "#ffeee4"
+    },
+    "aliasOf": "palette/orange/190"
+  },
+  {
+    "name": "color/warning/200",
+    "resolvedType": "COLOR",
+    "description": "Caution (orange). Non-blocking issues, recoverable problems. Shade 200 \u2014 lightest extreme.",
+    "valuesByMode": {
+      "default": "#ffffff"
+    },
+    "aliasOf": "palette/orange/200"
+  },
+  {
+    "name": "color/danger/0",
+    "resolvedType": "COLOR",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 0 \u2014 darkest extreme.",
+    "valuesByMode": {
+      "default": "#000000"
+    },
+    "aliasOf": "palette/red/0"
+  },
+  {
+    "name": "color/danger/10",
+    "resolvedType": "COLOR",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 10 \u2014 near-dark / OLED-safe deep.",
+    "valuesByMode": {
+      "default": "#250000"
+    },
+    "aliasOf": "palette/red/10"
+  },
+  {
+    "name": "color/danger/25",
+    "resolvedType": "COLOR",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 25 \u2014 deep \u2014 high-emphasis text on light.",
+    "valuesByMode": {
+      "default": "#560000"
+    },
+    "aliasOf": "palette/red/25"
+  },
+  {
+    "name": "color/danger/50",
+    "resolvedType": "COLOR",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 50 \u2014 strong \u2014 body text on light, solid idle on bright surfaces.",
+    "valuesByMode": {
+      "default": "#880c08"
+    },
+    "aliasOf": "palette/red/50"
+  },
+  {
+    "name": "color/danger/75",
+    "resolvedType": "COLOR",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 75 \u2014 secondary text on light.",
+    "valuesByMode": {
+      "default": "#ae261d"
+    },
+    "aliasOf": "palette/red/75"
+  },
+  {
+    "name": "color/danger/100",
+    "resolvedType": "COLOR",
+    "description": "Error / destructive (red). Blocking failures, irreversible actions. Shade 100 \u2014 mid-tone \u2014 borders, disabled fills.",
+    "valuesByMode": {
+      "default": "#d14437"
+    },
+    "aliasOf": "palette/red/100"
+  }
+]

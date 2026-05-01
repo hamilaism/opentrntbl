@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>openTRNTBL</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/components.css">
+<style>
+/* Firmware-specific overrides + classes pas dans le DS V1.
+   Le DS V1 (components.css) couvre déjà : .page, .brand, .title, .subtitle,
+   .section, .card, .row, .row-*, .btn, .btn-1/2/disconnect/toggle/ghost/tonal,
+   .inp, .inp-pw, .inp-action, .inp-group, .inp-label, .inp-wrap, .alert,
+   .alert-icon, .alert-content, .alert-title, .alert-body, .status, .status-*,
+   .check, .dev-icon, .signal, .wifi-bar, .seg-segment, .seg-track, .spin. */
+
+/* Stream URL display (settings dashboard) */
+.stream-card{padding:var(--spacing-default)}
+.stream-label{font-size:var(--text-small-size);color:var(--text-color-secondary);margin-bottom:10px;font-weight:500;line-height:1.5}
+.stream-row{display:flex;align-items:center;gap:10px}
+.stream-url{flex:1;font-size:var(--text-small-size);color:var(--text-color-secondary);background:var(--surface-sunken-background);padding:10px var(--spacing-default);border-radius:var(--radius-soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'SF Mono','Menlo',monospace}
+
+/* Settings panel sections (firmware-specific) */
+.set-toggle{width:100%;background:none;border:none;color:var(--text-color-secondary);font-family:var(--text-body-family);font-size:15px;font-weight:600;padding:var(--spacing-default) 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+.set-toggle:hover{color:var(--text-color-primary)}
+.set-toggle.active{color:var(--accent-default)}
+.set-panel{display:none;flex-direction:column;gap:var(--spacing-default);padding-bottom:var(--spacing-default)}
+.set-panel.open{display:flex}
+.set-info{font-size:var(--text-small-size);color:var(--text-color-secondary);line-height:2}
+.set-section{display:flex;flex-direction:column;gap:var(--spacing-snug);padding-top:var(--spacing-default);border-top:0.5px solid var(--border-subtle)}
+.set-section:first-of-type{border-top:none;padding-top:0}
+.set-section-title{font-size:var(--text-caption-size);font-weight:600;color:var(--text-color-secondary);text-transform:uppercase;letter-spacing:1px}
+.set-row{display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-snug);flex-wrap:wrap}
+.set-row-label{font-size:14px;color:var(--text-color-secondary);flex:0 0 auto}
+
+/* iOS-style switch toggle (Settings on/off) */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-default) 0;margin-bottom:8px}
+.toggle-label{font-size:15px;font-weight:600;color:var(--text-color-secondary)}
+.toggle-switch{position:relative;display:inline-block;width:50px;height:28px}
+.toggle-switch input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:var(--text-color-secondary);transition:.3s;border-radius:14px}
+.toggle-slider:before{position:absolute;content:"";height:22px;width:22px;left:3px;bottom:3px;background-color:var(--surface-base-background);transition:.3s;border-radius:50%}
+input:checked+.toggle-slider{background-color:var(--accent-default)}
+input:checked+.toggle-slider:before{transform:translateX(22px)}
+
+/* Connection state (firmware-specific) */
+.reconnect{display:flex;align-items:center;gap:12px;padding:var(--spacing-default) var(--spacing-loose);background:var(--surface-base-background);border-radius:var(--radius-round);margin-bottom:var(--spacing-default)}
+
+/* Feedback success/error message */
+.feedback{text-align:center;padding:var(--spacing-default) 0;font-size:14px;font-weight:600}
+.fb-ok{color:var(--status-success-text)}
+.fb-err{color:var(--status-danger-text)}
+
+/* Screens routing */
+.screen{display:none}
+.screen.on{display:block}
+.hide{display:none!important}
+
+/* Misc */
+.chevron{font-size:14px;color:var(--text-color-secondary);font-weight:300}
+.row-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<div id="s-wifi" class="screen on"><div class="page">
+  <div class="brand"><div class="brand-name">open<em>TRNTBL</em></div></div>
+  <button class="btn-ghost" id="wifi-back" style="display:none;width:auto;align-self:flex-start;margin-top:var(--spacing-snug);font-size:14px" onclick="show('dash')" data-i18n="common.back">&larr; Retour</button>
+  <h1 class="title">WiFi</h1>
+  <p class="subtitle" data-i18n="wifi.subtitle">Connectez votre platine pour diffuser vos vinyles.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:var(--spacing-default);margin:24px 0 12px">
+    <h2 class="section" style="margin:0" data-i18n="wifi.networks">R&#233;seaux disponibles</h2>
+    <button class="btn-tonal" onclick="doWifiRescan()" style="flex-shrink:0" data-i18n="wifi.rescan">Rescanner</button>
+  </div>
+  <div class="card" id="wifi-list" role="group" aria-label="WiFi networks"><div class="row" style="justify-content:center;cursor:default"><div class="spin"></div></div></div>
+  <button class="btn-ghost" onclick="toggleManual()" data-i18n="wifi.manual">Saisir manuellement</button>
+  <div id="manual-box" class="hide"><div class="card"><div class="inp-group">
+    <label class="inp-label" data-i18n="wifi.ssid">Nom du r&#233;seau</label>
+    <input class="inp" type="text" id="manual-ssid" placeholder="SSID" data-i18n-attr="placeholder:wifi.ssid" oninput="onManualType()">
+  </div></div></div>
+  <div id="pass-box" class="hide">
+    <h2 class="section" id="pass-title" data-i18n="wifi.password">Mot de passe</h2>
+    <div class="card"><div class="inp-group"><div class="inp-wrap">
+      <input class="inp inp-pw" type="password" id="pass-inp" placeholder="Saisissez le mot de passe" data-i18n-attr="placeholder:wifi.password">
+      <button class="inp-action" onclick="togglePw()" data-i18n="wifi.show">Afficher</button>
+    </div></div></div>
+  </div>
+  <div style="height:16px"></div>
+  <button class="btn btn-1" id="wifi-btn" disabled onclick="doConnect()" data-i18n="wifi.connect">Connecter</button>
+  <div id="wifi-fb" class="feedback"></div>
+
+  <button class="set-toggle" onclick="toggleSet('set-panel-wifi')"><span data-i18n="settings.title">R&#233;glages</span><span id="set-arr-wifi">&#x25BE;</span></button>
+  <div class="set-panel" id="set-panel-wifi">
+
+    <div class="set-section">
+      <div class="set-section-title" data-i18n="settings.display">Affichage</div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-theme-wifi" data-i18n="settings.theme">Th&#232;me</span>
+        <div class="seg-track" data-pref="theme" data-wrap="true" role="group" aria-labelledby="lbl-theme-wifi">
+          <button class="seg-segment" data-value="auto"  data-i18n="settings.theme_auto">Auto</button>
+          <button class="seg-segment" data-value="light" data-i18n="settings.theme_light">Clair</button>
+          <button class="seg-segment" data-value="dark"  data-i18n="settings.theme_dark">Sombre</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-density-wifi" data-i18n="settings.density">Densit&#233;</span>
+        <div class="seg-track" data-pref="density" data-wrap="true" role="group" aria-labelledby="lbl-density-wifi">
+          <button class="seg-segment" data-value="compact"  data-i18n="settings.density_compact">Compact</button>
+          <button class="seg-segment" data-value="default"  data-i18n="settings.density_default">Standard</button>
+          <button class="seg-segment" data-value="spacious" data-i18n="settings.density_spacious">A&#233;r&#233;</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-contrast-wifi" data-i18n="settings.contrast">Contraste &#233;lev&#233;</span>
+        <div class="seg-track" data-pref="contrast" data-wrap="true" role="group" aria-labelledby="lbl-contrast-wifi">
+          <button class="seg-segment" data-value="off" data-i18n="settings.contrast_off">Off</button>
+          <button class="seg-segment" data-value="on"  data-i18n="settings.contrast_on">On</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-vision-wifi" data-i18n="settings.vision">Vision</span>
+        <div class="seg-track" data-pref="vision" data-wrap="true" role="group" aria-labelledby="lbl-vision-wifi">
+          <button class="seg-segment" data-value="default"       data-i18n="settings.vision_default">Auto</button>
+          <button class="seg-segment" data-value="deuteranopia"  data-i18n="settings.vision_deutan">Deutan</button>
+          <button class="seg-segment" data-value="protanopia"    data-i18n="settings.vision_protan">Protan</button>
+          <button class="seg-segment" data-value="tritanopia"    data-i18n="settings.vision_tritan">Tritan</button>
+          <button class="seg-segment" data-value="achromatopsia" data-i18n="settings.vision_achroma">Achroma</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="set-section">
+      <div class="set-section-title" id="lbl-lang-wifi" data-i18n="settings.language">Langue</div>
+      <div class="seg-track" data-pref="lang" data-wrap="true" role="group" aria-labelledby="lbl-lang-wifi">
+        <button class="seg-segment" data-value="auto" data-i18n="settings.lang_auto">Auto</button>
+        <button class="seg-segment" data-value="fr">FR</button>
+        <button class="seg-segment" data-value="en">EN</button>
+        <button class="seg-segment" data-value="es">ES</button>
+      </div>
+    </div>
+
+  </div>
+</div></div>
+
+<div id="s-lost" class="screen"><div class="page">
+  <div class="brand"><div class="brand-name">open<em>TRNTBL</em></div></div>
+  <h1 class="title" data-i18n="wifi.connection_title">Connexion</h1>
+  <div style="height:16px"></div>
+  <div class="alert warning" role="alert">
+    <div class="alert-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+    <div class="alert-content">
+      <div class="alert-body">Le r&#233;seau <strong id="lost-ssid">&#8212;</strong> n'est pas accessible.<br>V&#233;rifiez que votre box est allum&#233;e.</div>
+    </div>
+  </div>
+  <div class="reconnect"><div class="spin"></div><div style="font-size:14px;color:var(--text-color-secondary)">Reconnexion automatique&#8230;</div></div>
+  <div style="height:8px"></div>
+  <button class="btn btn-2" onclick="show('wifi')">Changer de r&#233;seau</button>
+</div></div>
+
+<div id="s-dash" class="screen"><div class="page dash-page">
+
+  <section class="dash-zone zone-header">
+    <div class="brand"><div class="brand-name">open<em>TRNTBL</em></div></div>
+  </section>
+
+  <section class="dash-zone zone-top">
+    <h1 class="title" data-i18n="dash.title">Platine</h1>
+    <div class="status-wrap">
+      <span class="status status-idle" id="main-status"><span class="status-dot"></span><span id="status-text" data-i18n="dash.idle">En attente d'un vinyle</span></span>
+    </div>
+    <div class="wifi-bar"><div class="signal" id="wifi-signal"></div><span id="wifi-ssid">&#8212;</span></div>
+  </section>
+
+  <section class="dash-zone zone-output">
+    <h2 class="section" id="local-output-title" data-i18n="dash.local_output">Sortie locale</h2>
+    <div class="card" id="local-output" role="group" aria-labelledby="local-output-title"></div>
+  </section>
+
+  <section class="dash-zone zone-speakers">
+    <h2 class="section" id="sonos-list-title" data-i18n="dash.sonos_speakers">Enceintes Sonos</h2>
+    <div class="card" id="sonos-list" role="group" aria-labelledby="sonos-list-title"><div class="row" style="justify-content:center;cursor:default"><div class="spin"></div></div></div>
+    <div class="zone-actions">
+      <button class="btn-ghost" id="rescan-btn" onclick="startFullScan()" data-i18n="wifi.rescan">Rescanner</button>
+      <div id="disconnect-area" class="hide">
+        <button class="btn btn-disconnect" onclick="doDisconnect()" data-i18n="dash.disconnect_all">Tout d&#233;connecter</button>
+      </div>
+      <button class="btn btn-toggle" id="priority-btn" onclick="togglePriority()" data-i18n="dash.priority_on">Activer la priorit&#233;</button>
+    </div>
+  </section>
+
+  <section class="dash-zone zone-stream">
+    <h2 class="section" data-i18n="dash.audio_stream">Flux audio</h2>
+    <div class="card"><div class="stream-card">
+      <div class="stream-label">Partagez ce lien pour &#233;couter depuis un navigateur ou un lecteur m&#233;dia</div>
+      <div class="stream-row">
+        <div class="stream-url" id="stream-url">&#8212;</div>
+        <button class="btn-tonal" onclick="doShare(this)" data-i18n="dash.share">Partager</button>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="dash-zone zone-settings">
+    <button class="set-toggle" onclick="toggleSet()"><span data-i18n="settings.title">R&#233;glages</span><span id="set-arr">&#x25BE;</span></button>
+    <div class="set-panel" id="set-panel">
+
+    <div class="set-section">
+      <div class="set-section-title" data-i18n="settings.audio_quality">Qualit&#233; audio</div>
+      <div class="seg-track" id="bitrate-seg" role="group" aria-label="Bitrate">
+        <button class="seg-segment" data-value="128" onclick="setBitrate(128)">128k</button>
+        <button class="seg-segment" data-value="192" onclick="setBitrate(192)">192k</button>
+        <button class="seg-segment" data-value="256" onclick="setBitrate(256)">256k</button>
+        <button class="seg-segment" data-value="320" onclick="setBitrate(320)">320k</button>
+      </div>
+      <div class="toggle-row">
+        <span class="toggle-label" data-i18n="settings.show_rca">Afficher la sortie RCA</span>
+        <div style="display:flex;align-items:center;gap:10px">
+          <label class="toggle-switch">
+            <input type="checkbox" id="rca-show-toggle" onchange="toggleRcaShowUI()">
+            <span class="toggle-slider"></span>
+          </label>
+          <div class="spin spin-sm hide" id="rca-spinner"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="set-section">
+      <div class="set-section-title" data-i18n="settings.display">Affichage</div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-theme" data-i18n="settings.theme">Th&#232;me</span>
+        <div class="seg-track" data-pref="theme" data-wrap="true" role="group" aria-labelledby="lbl-theme">
+          <button class="seg-segment" data-value="auto"  data-i18n="settings.theme_auto">Auto</button>
+          <button class="seg-segment" data-value="light" data-i18n="settings.theme_light">Clair</button>
+          <button class="seg-segment" data-value="dark"  data-i18n="settings.theme_dark">Sombre</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-density" data-i18n="settings.density">Densit&#233;</span>
+        <div class="seg-track" data-pref="density" data-wrap="true" role="group" aria-labelledby="lbl-density">
+          <button class="seg-segment" data-value="compact"  data-i18n="settings.density_compact">Compact</button>
+          <button class="seg-segment" data-value="default"  data-i18n="settings.density_default">Standard</button>
+          <button class="seg-segment" data-value="spacious" data-i18n="settings.density_spacious">A&#233;r&#233;</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-contrast" data-i18n="settings.contrast">Contraste &#233;lev&#233;</span>
+        <div class="seg-track" data-pref="contrast" data-wrap="true" role="group" aria-labelledby="lbl-contrast">
+          <button class="seg-segment" data-value="off" data-i18n="settings.contrast_off">Off</button>
+          <button class="seg-segment" data-value="on"  data-i18n="settings.contrast_on">On</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-vision" data-i18n="settings.vision">Vision</span>
+        <div class="seg-track" data-pref="vision" data-wrap="true" role="group" aria-labelledby="lbl-vision">
+          <button class="seg-segment" data-value="default"       data-i18n="settings.vision_default">Auto</button>
+          <button class="seg-segment" data-value="deuteranopia"  data-i18n="settings.vision_deutan">Deutan</button>
+          <button class="seg-segment" data-value="protanopia"    data-i18n="settings.vision_protan">Protan</button>
+          <button class="seg-segment" data-value="tritanopia"    data-i18n="settings.vision_tritan">Tritan</button>
+          <button class="seg-segment" data-value="achromatopsia" data-i18n="settings.vision_achroma">Achroma</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="set-section">
+      <div class="set-section-title" id="lbl-lang" data-i18n="settings.language">Langue</div>
+      <div class="seg-track" data-pref="lang" data-wrap="true" role="group" aria-labelledby="lbl-lang">
+        <button class="seg-segment" data-value="auto" data-i18n="settings.lang_auto">Auto</button>
+        <button class="seg-segment" data-value="fr">FR</button>
+        <button class="seg-segment" data-value="en">EN</button>
+        <button class="seg-segment" data-value="es">ES</button>
+      </div>
+    </div>
+
+    <div class="set-section">
+      <div class="set-section-title" data-i18n="settings.about">&#192; propos</div>
+      <div class="set-info" id="sys-info">&#8212;</div>
+    </div>
+
+    <button class="btn btn-2" onclick="show('wifi')" data-i18n="wifi.change_network">Changer de r&#233;seau WiFi</button>
+    <button class="btn btn-disconnect" onclick="doWifiDisconnect()" data-i18n="wifi.disconnect">D&#233;connecter du WiFi</button>
+  </div>
+  </section>
+
+</div></div>
+
+<script src="/i18n.js"></script>
+<script>
+// ===== USER PREFERENCES =====
+// Display + lang prefs persisted in localStorage. Applied as data-attrs on <body>
+// so tokens.css / components.css overrides ([data-color="dark"], [data-density="compact"],
+// [data-contrast="enhanced"], [data-vision="..."]) take effect immediately.
+//
+// "auto" values:
+//   theme/auto    → follow prefers-color-scheme (dark|light)
+//   vision/default → no override (no data-vision attribute set)
+//   lang/auto     → defer to i18n.js LOCALE (browser fallback)
+var PREFS_KEY = 'opentrntbl-prefs';
+function loadPrefs() {
+  try { return JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') || {}; }
+  catch (e) { return {}; }
+}
+function savePrefs(p) {
+  try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch (e) {}
+}
+function applyPrefs(p) {
+  var b = document.body;
+  // theme → data-color
+  var theme = p.theme || 'auto';
+  if (theme === 'auto') {
+    var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    b.setAttribute('data-color', dark ? 'dark' : 'light');
+  } else {
+    b.setAttribute('data-color', theme);
+  }
+  // density → data-density (default = no attribute)
+  if (p.density && p.density !== 'default') b.setAttribute('data-density', p.density);
+  else b.removeAttribute('data-density');
+  // contrast on → data-contrast="enhanced"
+  if (p.contrast === 'on') b.setAttribute('data-contrast', 'enhanced');
+  else b.removeAttribute('data-contrast');
+  // vision → data-vision (default = no attribute)
+  if (p.vision && p.vision !== 'default') b.setAttribute('data-vision', p.vision);
+  else b.removeAttribute('data-vision');
+}
+function highlightSegGroup(group, value) {
+  group.querySelectorAll('.seg-segment').forEach(function (b) {
+    b.classList.toggle('active', b.getAttribute('data-value') === value);
+  });
+}
+function syncPrefsUI() {
+  var p = loadPrefs();
+  document.querySelectorAll('.seg-track[data-pref]').forEach(function (g) {
+    var key = g.getAttribute('data-pref');
+    var current;
+    if (key === 'lang') {
+      current = p.lang || 'auto';
+    } else {
+      current = p[key] || (key === 'vision' ? 'default'
+                          : key === 'theme'  ? 'auto'
+                          : key === 'density'? 'default'
+                          : key === 'contrast'? 'off'
+                          : 'auto');
+    }
+    highlightSegGroup(g, current);
+  });
+}
+function setPref(key, value) {
+  var p = loadPrefs();
+  p[key] = value;
+  savePrefs(p);
+  if (key === 'lang') {
+    if (value === 'auto') {
+      try { localStorage.removeItem('opentrntbl-lang'); } catch (e) {}
+      var browserLang = (navigator.language || navigator.userLanguage || 'fr').slice(0, 2).toLowerCase();
+      if (typeof setLang === 'function') setLang(browserLang === 'en' || browserLang === 'es' ? browserLang : 'fr');
+    } else if (typeof setLang === 'function') {
+      setLang(value);
+    }
+  } else {
+    applyPrefs(p);
+  }
+  syncPrefsUI();
+}
+// Wire up seg-segment clicks (delegated, runs once at DOM ready)
+function bindSegGroups() {
+  document.querySelectorAll('.seg-track[data-pref]').forEach(function (g) {
+    var key = g.getAttribute('data-pref');
+    g.querySelectorAll('.seg-segment').forEach(function (b) {
+      b.addEventListener('click', function () {
+        setPref(key, b.getAttribute('data-value'));
+      });
+    });
+  });
+}
+// Apply prefs as early as possible (avoid FOUC). DOMContentLoaded sync UI/bindings.
+applyPrefs(loadPrefs());
+window.addEventListener('DOMContentLoaded', function () {
+  bindSegGroups();
+  syncPrefsUI();
+});
+// React to system theme changes when "auto"
+if (window.matchMedia) {
+  try {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+      var p = loadPrefs();
+      if (!p.theme || p.theme === 'auto') applyPrefs(p);
+    });
+  } catch (e) {}
+}
+</script>
+<script>
+var isManual=false, selectedRow=null, sonosScanned=false, selectedSonos={}, scanPollTimer=null, disconnecting=false;
+var rcaEnabled=false;
+window.rcaEnabled=rcaEnabled;
+
+var ICONS = {
+  soundbar:'<svg viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="8" rx="3"/><circle cx="7" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>',
+  homecinema:'<svg viewBox="0 0 24 24"><rect x="2" y="9" width="20" height="6" rx="2"/><rect x="3" y="4" width="4" height="5" rx="1" stroke-dasharray="2 1"/><rect x="17" y="4" width="4" height="5" rx="1" stroke-dasharray="2 1"/></svg>',
+  compact:'<svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="14" r="3"/></svg>',
+  portable:'<svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="20" rx="4"/><circle cx="12" cy="15" r="2"/></svg>',
+  large:'<svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="14" r="3.5"/><line x1="9" y1="7" x2="15" y2="7"/></svg>',
+  headphone:'<svg viewBox="0 0 24 24"><path d="M4 16V12a8 8 0 0 1 16 0v4"/><rect x="2" y="14" width="4" height="6" rx="1"/><rect x="18" y="14" width="4" height="6" rx="1"/></svg>',
+  infra:'<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="8" cy="12" r="1" fill="currentColor" stroke="none"/><line x1="12" y1="10" x2="18" y2="10"/><line x1="12" y1="14" x2="18" y2="14"/></svg>',
+  unknown:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>',
+  rca:'<svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><circle cx="8" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="4"/><circle cx="17" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>'
+};
+
+function show(s){
+  var prev = document.querySelector('.screen.on');
+  var prevName = prev ? prev.id.replace('s-','') : null;
+  document.querySelectorAll('.screen').forEach(function(el){el.classList.remove('on')});
+  document.getElementById('s-'+s).classList.add('on');
+  window.scrollTo(0,0);
+  // Show "Back" on wifi screen only when coming from dash (not on boot AP setup)
+  var back = document.getElementById('wifi-back');
+  if(back) back.style.display = (s==='wifi' && prevName==='dash') ? '' : 'none';
+  if(s==='wifi') doWifiRescan();
+  if(s==='dash') loadDash();
+}
+function init(){
+  fetch('/api/wifi/status').then(function(r){return r.json()}).then(function(d){
+    if(d.connected) show('dash'); else show('wifi');
+  }).catch(function(){show('wifi')});
+}
+
+// ===== WIFI =====
+function doWifiRescan(){
+  var list=document.getElementById('wifi-list');
+  list.innerHTML='<div class="row" style="justify-content:center;cursor:default"><div class="spin"></div></div>';
+  fetch('/api/wifi/rescan',{method:'POST'}).then(function(r){return r.json()}).catch(function(){});
+  setTimeout(scanWifi,3500);
+}
+function scanWifi(){
+  var list=document.getElementById('wifi-list');
+  list.innerHTML='<div class="row" style="justify-content:center;cursor:default"><div class="spin"></div></div>';
+  fetch('/api/wifi/scan').then(function(r){return r.json()}).then(function(d){
+    var html='';
+    d.networks.forEach(function(n){
+      var bars='';
+      for(var i=1;i<=4;i++) bars+='<b'+(n.signal<i*25?' class="off"':'')+'></b>';
+      html+='<button class="row" onclick="pickWifi(this,\''+n.ssid.replace(/'/g,"\\'")+'\')">'
+        +'<div class="row-content"><div class="row-title">'+n.ssid+'</div></div>'
+        +'<div class="row-right">'+(n.secured?'<span style="font-size:12px;color:var(--text-color-secondary)">&#x1F512;</span>':'')
+        +'<div class="signal">'+bars+'</div>'
+        +'<span class="chevron">&#x203A;</span></div></button>';
+    });
+    list.innerHTML=html||'<div class="row" style="cursor:default"><div class="row-content"><div class="row-sub">'+t('common.no_networks')+'</div></div></div>';
+  });
+}
+function pickWifi(el,ssid){
+  isManual=false;document.getElementById('manual-box').classList.add('hide');
+  if(selectedRow) selectedRow.classList.remove('selected');
+  selectedRow=el;el.classList.add('selected');
+  document.getElementById('pass-box').classList.remove('hide');
+  document.getElementById('pass-title').textContent=ssid;
+  document.getElementById('wifi-btn').disabled=false;
+  setTimeout(function(){document.getElementById('pass-inp').focus()},100);
+}
+function toggleManual(){
+  var box=document.getElementById('manual-box');
+  if(box.classList.contains('hide')){
+    box.classList.remove('hide');isManual=true;
+    if(selectedRow){selectedRow.classList.remove('selected');selectedRow=null}
+    document.getElementById('pass-box').classList.remove('hide');
+    document.getElementById('pass-title').textContent=t('wifi.connection_title');
+    document.getElementById('wifi-btn').disabled=false;
+    document.getElementById('manual-ssid').focus();
+  } else{box.classList.add('hide');isManual=false}
+}
+function onManualType(){if(selectedRow){selectedRow.classList.remove('selected');selectedRow=null}}
+function togglePw(){
+  var p=document.getElementById('pass-inp'),b=event.target;
+  if(p.type==='password'){p.type='text';b.textContent=t('wifi.hide')}
+  else{p.type='password';b.textContent=t('wifi.show')}
+}
+function doConnect(){
+  var ssid=isManual?document.getElementById('manual-ssid').value
+    :(selectedRow?selectedRow.querySelector('.row-title').textContent:'');
+  var pw=document.getElementById('pass-inp').value;
+  if(!ssid) return;
+  var btn=document.getElementById('wifi-btn'), fb=document.getElementById('wifi-fb');
+  btn.disabled=true; btn.innerHTML='<div class="spin spin-sm"></div> '+t('wifi.connecting'); fb.textContent='';
+  fetch('/api/wifi/connect',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({ssid:ssid,password:pw})
+  }).then(function(r){return r.json()}).then(function(d){
+    btn.textContent=t('wifi.connect');
+    if(d.success){fb.className='feedback fb-ok';fb.textContent=t('wifi.connected_ok');
+    } else{fb.className='feedback fb-err';fb.textContent=t('wifi.connect_fail');btn.disabled=false}
+  }).catch(function(){btn.textContent=t('wifi.connect');btn.disabled=false;fb.className='feedback fb-err';fb.textContent=t('wifi.error')});
+}
+
+// ===== DASHBOARD =====
+function loadDash(){fetchWifiStatus();if(!sonosScanned) scanSonos();fetchStatus();}
+function fetchWifiStatus(){
+  fetch('/api/wifi/status').then(function(r){return r.json()}).then(function(d){
+    document.getElementById('wifi-ssid').textContent=d.ssid||'\u2014';
+    var bars='';for(var i=1;i<=4;i++) bars+='<b'+(d.signal<i*25?' class="off"':'')+'></b>';
+    document.getElementById('wifi-signal').innerHTML=bars;
+    document.getElementById('stream-url').textContent='http://'+(d.ip||'<YOUR-CHIP-IP>')+':8000/vinyl';
+  });
+}
+
+// ===== SONOS SCAN =====
+// FIX: scanSonos loads cached results without clearing the list
+function scanSonos(){
+  // Render RCA immediately so the user always has a local option,
+  // even while Sonos discovery is still running.
+  if(!sonosScanned){
+    renderSpeakers([], []);
+  }
+  fetch('/api/sonos/scan').then(function(r){return r.json()}).then(function(d){
+    sonosScanned=true;
+    if(d.speakers && d.speakers.length > 0){
+      applyScanResults(d);
+    } else {
+      // Cache empty — trigger full scan automatically
+      startFullScan();
+    }
+  });
+}
+
+// FIX: startFullScan keeps existing list visible, polls for results
+function startFullScan(){
+  var btn=document.getElementById('rescan-btn');
+  btn.textContent=t('common.scan_running');btn.disabled=true;
+  fetch('/api/sonos/scan?full=1').then(function(r){return r.json()}).then(function(d){
+    // Show cached results immediately (don't clear)
+    if(d.speakers && d.speakers.length > 0) applyScanResults(d);
+    // Poll for full scan results
+    if(scanPollTimer) clearInterval(scanPollTimer);
+    scanPollTimer=setInterval(pollScanStatus,3000);
+  });
+}
+
+function pollScanStatus(){
+  fetch('/api/sonos/scan/status').then(function(r){return r.json()}).then(function(d){
+    if(!d.scanning){
+      clearInterval(scanPollTimer);scanPollTimer=null;
+      var btn=document.getElementById('rescan-btn');
+      btn.textContent=t('wifi.rescan');btn.disabled=false;
+      if(d.speakers && d.speakers.length > 0) applyScanResults(d);
+    }
+  }).catch(function(){
+    clearInterval(scanPollTimer);scanPollTimer=null;
+    document.getElementById('rescan-btn').textContent=t('wifi.rescan');
+    document.getElementById('rescan-btn').disabled=false;
+  });
+}
+
+function applyScanResults(d){
+  selectedSonos={};
+  (d.selected||[]).forEach(function(ip){selectedSonos[ip]=true});
+  renderSpeakers(d.speakers||[], d.selected||[]);
+  updateDisconnectBtn();
+}
+
+function renderLocalOutput(selected){
+  // RCA in its own section (Gestalt: separate group = separate meaning)
+  var box=document.getElementById('local-output');
+  var title=document.getElementById('local-output-title');
+  if(!box) return;
+  // Hide RCA section when the user toggle is OFF (rca_enabled=false)
+  if(!window.rcaEnabled){
+    box.innerHTML='';
+    if(title) title.classList.add('hide');
+    return;
+  }
+  if(title) title.classList.remove('hide');
+  var rcaSel=selected.indexOf('rca')>=0;
+  var rcaLabel=t('rca.label');
+  box.innerHTML='<button class="row" data-ip="rca" onclick="pickSonos(this,\'rca\',\''+rcaLabel+'\')">'
+    +'<div class="dev-icon">'+ICONS.rca+'</div>'
+    +'<div class="row-content"><div class="row-title">'+rcaLabel+'</div></div>'
+    +'<div class="check'+(rcaSel?' on':'')+'"></div></button>';
+}
+
+function renderSpeakers(speakers,selected){
+  renderLocalOutput(selected);
+  var list=document.getElementById('sonos-list');
+  var html='';
+  speakers.forEach(function(s){
+    var isSel=selected.indexOf(s.ip)>=0;
+    var icon=ICONS[s.type]||ICONS.unknown;
+    var subtitle=s.model;
+    html+='<button class="row" data-ip="'+s.ip+'" onclick="pickSonos(this,\''+s.ip+'\',\''+s.name.replace(/'/g,"\\'")+'\')">'
+      +'<div class="dev-icon">'+icon+'</div>'
+      +'<div class="row-content"><div class="row-title">'+s.name+'</div><div class="row-sub">'+subtitle+'</div></div>'
+      +'<div class="check'+(isSel?' on':'')+'"></div></button>';
+  });
+  list.innerHTML=html||'<div class="row" style="cursor:default"><div class="row-content"><div class="row-sub">'+t('common.search')+'</div></div></div>';
+}
+
+function pickSonos(el,ip,name){
+  el.classList.add('loading');
+  fetch('/api/sonos/select',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({ip:ip,name:name})
+  }).then(function(r){return r.json()}).then(function(d){
+    el.classList.remove('loading');
+    var check=el.querySelector('.check');
+    if(d.action==='added'){check.className='check on';selectedSonos[ip]=true}
+    else{check.className='check';delete selectedSonos[ip]}
+    updateDisconnectBtn();
+    // Refresh status after a delay (let Sonos process the group change)
+    setTimeout(fetchStatus,3000);
+    // Refresh speaker list to reflect group changes
+    setTimeout(function(){
+      fetch('/api/sonos/scan').then(function(r){return r.json()}).then(function(d){
+        if(d.speakers && d.speakers.length > 0) applyScanResults(d);
+      });
+    },5000);
+  }).catch(function(){el.classList.remove('loading')});
+}
+
+// FIX: doDisconnect — proper response handling, disable button during request
+function doDisconnect(){
+  if(disconnecting) return;
+  disconnecting=true;
+  var btn=document.querySelector('.btn-disconnect');
+  btn.style.opacity='0.5';
+  fetch('/api/sonos/disconnect',{method:'POST'}).then(function(r){return r.json()}).then(function(d){
+    selectedSonos={};
+    document.querySelectorAll('#sonos-list .check').forEach(function(c){c.className='check'});
+    setStatus('idle');
+    updateDisconnectBtn();
+    disconnecting=false;
+    btn.style.opacity='1';
+  }).catch(function(){disconnecting=false;btn.style.opacity='1'});
+}
+
+function doWifiDisconnect(){
+  if(!confirm(t('wifi.confirm_reset'))) return;
+  fetch('/api/wifi/disconnect',{method:'POST'}).then(function(r){return r.json()}).then(function(d){
+    if(d.success){
+      document.body.innerHTML='<div style="padding:40px;text-align:center;font-family:sans-serif;color:#fff;background:#000;min-height:100vh"><h2>'+t('wifi.switching_to_setup')+'</h2><p style="color:#888;margin-top:20px">'+t('wifi.connect_setup_ap')+'</p></div>';
+    }
+  });
+}
+
+function updateDisconnectBtn(){
+  var area=document.getElementById('disconnect-area');
+  if(Object.keys(selectedSonos).length>0) area.classList.remove('hide');
+  else area.classList.add('hide');
+}
+
+// ===== STATUS =====
+// FIX: reads sonos_states from monitor, handles all states properly
+function setStatus(state,names){
+  var el=document.getElementById('main-status'), txt=document.getElementById('status-text');
+  el.className='status';
+  if(state==='playing'){el.classList.add('status-play');txt.textContent=t('dash.playing_on')+(names||'')}
+  else if(state==='partial'){el.classList.add('status-warn');txt.textContent=t('dash.partial_on')+(names||'')}
+  else if(state==='taken'){el.classList.add('status-err');txt.textContent=(names||'')+t('dash.taken_other')}
+  else if(state==='unreachable'){el.classList.add('status-err');txt.textContent=t('dash.unreachable')}
+  else if(state==='connecting'){el.classList.add('status-idle');txt.textContent=t('dash.connecting')}
+  else{el.classList.add('status-idle');txt.textContent=t('dash.idle')}
+}
+
+function fetchStatus(){
+  fetch('/api/status').then(function(r){return r.json()}).then(function(d){
+    var targets=d.sonos_targets||[];
+
+    // Sync selectedSonos with server state
+    if(targets.length>0){
+      selectedSonos={};
+      targets.forEach(function(t){selectedSonos[t.ip]=true});
+    }
+
+    // Update status from monitor state
+    setStatus(d.sonos_state, d.sonos_names);
+    updateDisconnectBtn();
+
+    // Priority button
+    var pbtn=document.getElementById('priority-btn');
+    if(pbtn&&d.vinyl_priority!==undefined){
+      if(d.vinyl_priority){pbtn.classList.add('active');pbtn.textContent=t('dash.priority_off')}
+      else{pbtn.classList.remove('active');pbtn.textContent=t('dash.priority_on')}
+    }
+    updateBitrateButtons(d.bitrate||320);
+    if(d.rca_enabled!==undefined){
+      window.rcaEnabled=d.rca_enabled;
+      updateRcaShowUIButton(d.rca_enabled);
+    }
+    // Re-render RCA output after syncing RCA flags
+    renderLocalOutput(Object.keys(selectedSonos));
+
+    // Sync checkmarks with server
+    document.querySelectorAll('#sonos-list .row').forEach(function(row){
+      var ip=row.getAttribute('data-ip'), check=row.querySelector('.check');
+      if(check&&!row.classList.contains('loading')){
+        if(selectedSonos[ip]) check.className='check on'; else check.className='check';
+      }
+    });
+
+    // wifi info inline from /api/status (consolidated, no extra poll)
+    var w=d.wifi||{};
+    document.getElementById('sys-info').innerHTML=
+      t('settings.network')+' : '+(w.ssid||'\u2014')+'<br>'+t('settings.ip')+' : '+(w.ip||'\u2014')+
+      '<br>'+t('settings.version')+' : '+(d.version||'\u2014')+'<br>'+t('settings.uptime')+' : '+(d.uptime||'\u2014');
+  });
+}
+
+// ===== PRIORITY =====
+// FIX: microcopy "Activer la priorité" / "Désactiver la priorité"
+function togglePriority(){
+  var btn=document.getElementById('priority-btn');
+  var enabled=!btn.classList.contains('active');
+  if(enabled){btn.classList.add('active');btn.textContent=t('dash.priority_off')}
+  else{btn.classList.remove('active');btn.textContent=t('dash.priority_on')}
+  fetch('/api/settings/priority',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({enabled:enabled})});
+}
+
+// ===== BITRATE =====
+function setBitrate(br){
+  updateBitrateButtons(br);
+  fetch('/api/settings/bitrate',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({bitrate:br})});
+}
+function updateBitrateButtons(current){
+  document.querySelectorAll('#bitrate-seg .seg-segment').forEach(function(b){
+    var val=parseInt(b.getAttribute('data-value'));
+    if(!isNaN(val)){
+      if(val===current) b.classList.add('active'); else b.classList.remove('active');
+    }
+  });
+}
+
+// ===== RCA SHOW/HIDE =====
+// The Settings toggle controls rca_enabled (user-facing flag: "show RCA output").
+// Hardware presence (PAM8403/NE5532 wired) is implicit — if the user enables it
+// without the amp, the row just routes audio to a silent jack.
+function toggleRcaShowUI(){
+  var checkbox=document.getElementById('rca-show-toggle');
+  var spinner=document.getElementById('rca-spinner');
+  var show=checkbox.checked;
+  checkbox.disabled=true;
+  spinner.classList.remove('hide');
+  window.rcaEnabled=show;
+  fetch('/api/settings/rca-enabled',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({enabled:show})}).then(function(){
+    // Refresh display
+    fetch('/api/sonos/scan').then(function(r){return r.json()}).then(function(d){
+      if(d.speakers && d.speakers.length > 0) applyScanResults(d);
+      else renderSpeakers([], []);
+      checkbox.disabled=false;
+      spinner.classList.add('hide');
+    });
+  });
+}
+function updateRcaShowUIButton(enabled){
+  var checkbox=document.getElementById('rca-show-toggle');
+  checkbox.checked=enabled;
+}
+
+// ===== SHARE =====
+function doShare(btn){
+  var url=document.getElementById('stream-url').textContent;
+  if(navigator.share){
+    navigator.share({title:t('dash.share_title'),text:t('dash.share_text'),url:url}).catch(function(){});
+  } else {
+    // Fallback for HTTP (navigator.clipboard requires HTTPS)
+    var ta=document.createElement('textarea');
+    ta.value=url;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{document.execCommand('copy');btn.textContent=t('dash.copied');setTimeout(function(){btn.textContent=t('dash.share')},2000)}
+    catch(e){prompt(t('dash.copy_prompt'),url)}
+    document.body.removeChild(ta);
+  }
+}
+
+// ===== SETTINGS =====
+function toggleSet(id){
+  id=id||'set-panel';
+  var p=document.getElementById(id),a=document.getElementById(id.replace('set-panel','set-arr'));
+  p.classList.toggle('open');if(a)a.innerHTML=p.classList.contains('open')?'&#x25B4;':'&#x25BE;';
+}
+
+// Re-render JS-built labels after a language switch (called by setLang in i18n.js)
+function refreshDynamicLabels(){
+  if(document.getElementById('s-dash').classList.contains('on')) fetchStatus();
+}
+
+// ===== POLLING =====
+setInterval(function(){
+  if(!document.getElementById('s-lost').classList.contains('on')) return;
+  fetch('/api/wifi/status').then(function(r){return r.json()}).then(function(d){if(d.connected) show('dash')}).catch(function(){});
+},5000);
+setInterval(function(){
+  if(!document.getElementById('s-dash').classList.contains('on')) return;
+  fetchStatus();
+},10000);
+
+init();
+</script>
+</body>
+</html>

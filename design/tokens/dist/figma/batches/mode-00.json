@@ -1,0 +1,172 @@
+[
+  {
+    "name": "surface/canvas/background",
+    "resolvedType": "COLOR",
+    "description": "Page background. Bottom-most surface. HC light n.175 (gris moyen) creuse l'\u00e9cart avec base/raised pour diff\u00e9rencier les 4 surfaces sans recourir \u00e0 des borders.",
+    "valuesByMode": {
+      "light": "#f1f1f1",
+      "dark": "#000000",
+      "light-hc": "#d7d7d7",
+      "dark-hc": "#000000",
+      "light-deutan": "#f1f1f1",
+      "dark-deutan": "#000000",
+      "light-protan": "#f1f1f1",
+      "dark-protan": "#000000",
+      "light-tritan": "#f1f1f1",
+      "dark-tritan": "#000000"
+    }
+  },
+  {
+    "name": "surface/base/background",
+    "resolvedType": "COLOR",
+    "description": "Default card / panel surface. HC dark n.25 distingue base de canvas (pur black) sans border.",
+    "valuesByMode": {
+      "light": "#ffffff",
+      "dark": "#0c0c0c",
+      "light-hc": "#ffffff",
+      "dark-hc": "#272727",
+      "light-deutan": "#ffffff",
+      "dark-deutan": "#0c0c0c",
+      "light-protan": "#ffffff",
+      "dark-protan": "#0c0c0c",
+      "light-tritan": "#ffffff",
+      "dark-tritan": "#0c0c0c"
+    }
+  },
+  {
+    "name": "surface/raised/background",
+    "resolvedType": "COLOR",
+    "description": "Elevated surface (modal, popover, tonal button bg, segmented track). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.190 (off-white) au-dessus de canvas n.175 ; dark n.75 (gris moyen-clair) au-dessus de base n.25. Pas de texte primaire pos\u00e9 dessus en components.css (v\u00e9rifi\u00e9) ; les stories de doc Surfaces affichent du text dessus \u2192 ratio AAA limite (6.79) accept\u00e9 self-r\u00e9f\u00e9rent.",
+    "valuesByMode": {
+      "light": "#ffffff",
+      "dark": "#272727",
+      "light-hc": "#f1f1f1",
+      "dark-hc": "#5c5c5c",
+      "light-deutan": "#ffffff",
+      "dark-deutan": "#272727",
+      "light-protan": "#ffffff",
+      "dark-protan": "#272727",
+      "light-tritan": "#ffffff",
+      "dark-tritan": "#272727"
+    }
+  },
+  {
+    "name": "surface/sunken/background",
+    "resolvedType": "COLOR",
+    "description": "Recessed surface (input background, well, code block). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.150 (gris fonc\u00e9 creus\u00e9) sous canvas n.175 ; dark n.10 (presque-black) sous canvas n.0 (pure black).",
+    "valuesByMode": {
+      "light": "#f1f1f1",
+      "dark": "#000000",
+      "light-hc": "#afafaf",
+      "dark-hc": "#0c0c0c",
+      "light-deutan": "#f1f1f1",
+      "dark-deutan": "#000000",
+      "light-protan": "#f1f1f1",
+      "dark-protan": "#000000",
+      "light-tritan": "#f1f1f1",
+      "dark-tritan": "#000000"
+    }
+  },
+  {
+    "name": "surface/overlay/background",
+    "resolvedType": "COLOR",
+    "description": "Scrim / backdrop for modals. Apply via CSS with 0.6 alpha.",
+    "valuesByMode": {
+      "light": "#000000",
+      "dark": "#000000",
+      "light-hc": "#000000",
+      "dark-hc": "#000000",
+      "light-deutan": "#000000",
+      "dark-deutan": "#000000",
+      "light-protan": "#000000",
+      "dark-protan": "#000000",
+      "light-tritan": "#000000",
+      "dark-tritan": "#000000"
+    }
+  },
+  {
+    "name": "surface/dim",
+    "resolvedType": "COLOR",
+    "description": "Surface sombre fixe \u2014 track HC SegmentedControl, input HC, etc. Volontairement constante peu importe light/dark/HC : un fond opaque sombre qui distingue par luminance.",
+    "valuesByMode": {
+      "light": "#434343",
+      "dark": "#434343",
+      "light-hc": "#434343",
+      "dark-hc": "#434343",
+      "light-deutan": "#434343",
+      "dark-deutan": "#434343",
+      "light-protan": "#434343",
+      "dark-protan": "#434343",
+      "light-tritan": "#434343",
+      "dark-tritan": "#434343"
+    }
+  },
+  {
+    "name": "surface/bright",
+    "resolvedType": "COLOR",
+    "description": "Surface claire fixe \u2014 tile actif HC SegmentedControl. Volontairement constante. Pendant de surface.dim.",
+    "valuesByMode": {
+      "light": "#ffffff",
+      "dark": "#ffffff",
+      "light-hc": "#ffffff",
+      "dark-hc": "#ffffff",
+      "light-deutan": "#ffffff",
+      "dark-deutan": "#ffffff",
+      "light-protan": "#ffffff",
+      "dark-protan": "#ffffff",
+      "light-tritan": "#ffffff",
+      "dark-tritan": "#ffffff"
+    }
+  },
+  {
+    "name": "surface/base-hover",
+    "resolvedType": "COLOR",
+    "description": "Surface.base hover \u2014 Donnie pattern. Light = 86%/14% (visible sur fond blanc). Dark = 92%/8% (subtil pour ne pas r\u00e9duire le contraste avec text-primary clair). Consomm\u00e9 par btn-2:hover, btn-toggle:hover (off).",
+    "valuesByMode": {
+      "light": "#e1e1e1",
+      "dark": "#1e1e1e",
+      "light-hc": "#dbdbdb",
+      "dark-hc": "#383838",
+      "light-deutan": "#e1e1e1",
+      "dark-deutan": "#1e1e1e",
+      "light-protan": "#e1e1e1",
+      "dark-protan": "#1e1e1e",
+      "light-tritan": "#e1e1e1",
+      "dark-tritan": "#1e1e1e"
+    }
+  },
+  {
+    "name": "surface/base-pressed",
+    "resolvedType": "COLOR",
+    "description": "Surface.base pressed \u2014 Donnie pattern. Light = 74%/26% (tr\u00e8s marqu\u00e9). Dark = 84%/16% (mod\u00e9r\u00e9, pour ne pas chuter le contraste). Consomm\u00e9 par btn-2:active.",
+    "valuesByMode": {
+      "light": "#c7c7c7",
+      "dark": "#313131",
+      "light-hc": "#bdbdbd",
+      "dark-hc": "#4a4a4a",
+      "light-deutan": "#c7c7c7",
+      "dark-deutan": "#313131",
+      "light-protan": "#c7c7c7",
+      "dark-protan": "#313131",
+      "light-tritan": "#c7c7c7",
+      "dark-tritan": "#313131"
+    }
+  },
+  {
+    "name": "surface/sunken-hover",
+    "resolvedType": "COLOR",
+    "description": "Surface.sunken hover \u2014 Donnie pattern. Light 86%/14%, Dark 92%/8% (subtil). Consomm\u00e9 par inp:hover.",
+    "valuesByMode": {
+      "light": "#d5d5d5",
+      "dark": "#131313",
+      "light-hc": "#969696",
+      "dark-hc": "#1f1f1f",
+      "light-deutan": "#d5d5d5",
+      "dark-deutan": "#131313",
+      "light-protan": "#d5d5d5",
+      "dark-protan": "#131313",
+      "light-tritan": "#d5d5d5",
+      "dark-tritan": "#131313"
+    }
+  }
+]
