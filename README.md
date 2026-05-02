@@ -148,7 +148,7 @@ The web portal UI is built on a **DTCG-compliant design tokens system** (113 CSS
 
 The system is structured in 4 strict layers (`primitive → brand → semantic → component`), each carrying a specific kind of decision. Source in `design/tokens/src/` (DTCG JSON), generators in `design/tokens/scripts/`, Storybook gallery in `design/components/`.
 
-**Inspirations** : the architecture builds on the public work of [Donnie d'Amato](https://donnie.dev/) (color systems, `color-mix()` hover pattern), [Bill Collins](https://github.com/billycollins) (token architecture, longest-match cascade), [Ness Grixti](https://nessgrixti.com/) (DS methodology), and David Fusilier (mode composition).
+**Inspirations** : the architecture builds on the public work of [Donnie d'Amato](https://donnie.damato.design/) (color systems, `color-mix()` hover pattern), [Bill Collins](https://github.com/billycollins) (token architecture, longest-match cascade), [Ness Grixti](https://nessgrixti.com/) (DS methodology), and David Fusilier (mode composition).
 
 → Full architecture details, mode axes specifics, generator pipeline, and extension guide in **[`docs/DESIGN-TOKENS.md`](docs/DESIGN-TOKENS.md)**.
 
