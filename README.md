@@ -8,7 +8,13 @@
 ![Status: alpha](https://img.shields.io/badge/status-alpha-orange.svg)
 ![Hardware: C.H.I.P.](https://img.shields.io/badge/hardware-C.H.I.P.%20v1.0-purple.svg)
 
-> 📸 *Hero photo placeholder — TRNTBL platine + dashboard mobile screenshot side-by-side*
+<img width="600" height="auto" alt="White VNYL turntable seen from a three-quarter angle, with a transparent platter, gold tonearm and mounted cartridge, on a pink background." src="https://github.com/user-attachments/assets/711335dd-0ef0-46bb-8afb-9d9c6ee72e81" />
+
+## UI
+
+<img width="400" height="auto" alt="OpenTRNTBL Wi-Fi captive portal on iOS — network connection screen with available networks list loading, a Rescan button and a manual entry option." src="https://github.com/user-attachments/assets/518dc4dc-3d98-4550-b004-391324e1f904" />
+<img width="400" height="auto" alt="OpenTRNTBL main app interface — turntable status showing 'Waiting for a record', connected to ORBI65 network, with a list of available Sonos speakers (Bedroom One, Living Room Beam, Sonos Roam, Vynil Port) and an Audio Stream section." src="https://github.com/user-attachments/assets/6b44858b-0d46-458b-a1c2-1a548eec7784" />
+
 
 ---
 
