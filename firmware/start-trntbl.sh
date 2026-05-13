@@ -19,11 +19,11 @@ wait_for() {
     local desc="$1"
     local test_cmd="$2"
     local timeout="${3:-20}"
-    local start=$(date +%s)
-    local i
-    for i in $(seq 1 "$timeout"); do
+    local start
+    start=$(date +%s)
+    for _ in $(seq 1 "$timeout"); do
         if eval "$test_cmd" >/dev/null 2>&1; then
-            echo "$(date) $desc OK ($((`date +%s` - start))s)" >> "$LOG"
+            echo "$(date) $desc OK ($(($(date +%s) - start))s)" >> "$LOG"
             return 0
         fi
         sleep 1
@@ -33,7 +33,8 @@ wait_for() {
 }
 
 has_real_ip() {
-    local ip=$(hostname -I 2>/dev/null | tr -d ' ')
+    local ip
+    ip=$(hostname -I 2>/dev/null | tr -d ' ')
     [ -n "$ip" ] && ! echo "$ip" | grep -q "^169\.254"
 }
 
@@ -237,7 +238,7 @@ except:
 fi
 
 # Flask portal — always starts (serves WiFi config in AP mode, dashboard in normal mode)
-cd /home/chip/opentrntbl
+cd /home/chip/opentrntbl || exit 1
 python app.py > /tmp/trntbl-portal.log 2>&1 &
 echo "$(date) Portal started on port 80" >> "$LOG"
 

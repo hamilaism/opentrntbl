@@ -38,7 +38,8 @@ except:
 
 check_signal() {
     curl -s -m 4 http://localhost:8000/vinyl | mpg123 -q -w /tmp/monitor-test.wav - 2>/dev/null
-    local rms=$(sox /tmp/monitor-test.wav -n stat 2>&1 | grep "RMS     amplitude" | head -1 | awk '{print $3}')
+    local rms
+    rms=$(sox /tmp/monitor-test.wav -n stat 2>&1 | grep "RMS     amplitude" | head -1 | awk '{print $3}')
     rm -f /tmp/monitor-test.wav
     python -c "print('yes' if float('${rms:-0}') > float('$SILENCE_THRESHOLD') else 'no')" 2>/dev/null
 }
@@ -54,7 +55,8 @@ get_sonos_uri() {
 
 soap_play() {
     local ip="$1"
-    local chip_ip=$(hostname -I | tr -d ' ')
+    local chip_ip
+    chip_ip=$(hostname -I | tr -d ' ')
     local stream="x-rincon-mp3radio://${chip_ip}:8000/vinyl"
     curl -s -m 3 -X POST "http://${ip}:1400/MediaRenderer/AVTransport/Control" \
         -H "Content-Type: text/xml" \
@@ -84,7 +86,7 @@ while true; do
     need_priority=false
     taken_ips=""
 
-    while IFS='|' read -r ip name; do
+    while IFS='|' read -r ip _; do
         [ -z "$ip" ] && continue
         uri=$(get_sonos_uri "$ip")
 

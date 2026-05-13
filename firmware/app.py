@@ -54,7 +54,7 @@ def load_config():
         if 'rca_show_ui' not in cfg:
             cfg['rca_show_ui'] = True
         return cfg
-    except:
+    except Exception:
         return {'sonos_targets': [], 'wifi_ssid': None, 'vinyl_priority': False,
                 'bitrate': 320, 'output_mode': 'sonos', 'rca_enabled': False, 'rca_show_ui': True}
 
@@ -62,26 +62,68 @@ def save_config(cfg):
     try:
         with open(CONFIG_FILE, 'w') as f:
             json.dump(cfg, f)
-    except:
+    except Exception:
         pass
 
 def load_cached_ips():
     try:
         with open(CACHE_FILE, 'r') as f:
             return json.load(f)
-    except:
+    except Exception:
         return []
 
 def save_cached_ips(ips):
     try:
         with open(CACHE_FILE, 'w') as f:
             json.dump(ips, f)
-    except:
+    except Exception:
         pass
 
 # ===================================
 # SONOS — SOAP helpers
 # ===================================
+
+_SOAP_NS = (
+    '<?xml version="1.0"?>'
+    '<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"'
+    ' s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">'
+    '<s:Body>'
+)
+_SOAP_NS_CLOSE = '</s:Body></s:Envelope>'
+_SOAP_AVT = 'xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"'
+
+_SOAP_SET_URI = (
+    _SOAP_NS
+    + '<u:SetAVTransportURI ' + _SOAP_AVT + '>'
+    + '<InstanceID>0</InstanceID><CurrentURI>{uri}</CurrentURI>'
+    + '<CurrentURIMetaData></CurrentURIMetaData>'
+    + '</u:SetAVTransportURI>' + _SOAP_NS_CLOSE
+)
+_SOAP_PLAY = (
+    _SOAP_NS
+    + '<u:Play ' + _SOAP_AVT + '>'
+    + '<InstanceID>0</InstanceID><Speed>1</Speed>'
+    + '</u:Play>' + _SOAP_NS_CLOSE
+)
+_SOAP_STOP = (
+    _SOAP_NS
+    + '<u:Stop ' + _SOAP_AVT + '>'
+    + '<InstanceID>0</InstanceID>'
+    + '</u:Stop>' + _SOAP_NS_CLOSE
+)
+_SOAP_GET_TRANSPORT = (
+    _SOAP_NS
+    + '<u:GetTransportInfo ' + _SOAP_AVT + '>'
+    + '<InstanceID>0</InstanceID>'
+    + '</u:GetTransportInfo>' + _SOAP_NS_CLOSE
+)
+_SOAP_BECOME_COORD = (
+    _SOAP_NS
+    + '<u:BecomeCoordinatorOfStandaloneGroup ' + _SOAP_AVT + '>'
+    + '<InstanceID>0</InstanceID>'
+    + '</u:BecomeCoordinatorOfStandaloneGroup>' + _SOAP_NS_CLOSE
+)
+
 
 def soap_call(ip, action, body):
     try:
@@ -92,7 +134,7 @@ def soap_call(ip, action, body):
             '-H', 'SOAPAction: "urn:schemas-upnp-org:service:AVTransport:1#{}"'.format(action),
             '-d', body
         ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    except:
+    except Exception:
         pass
 
 def get_player_id(ip):
@@ -101,48 +143,43 @@ def get_player_id(ip):
         resp = urllib2.urlopen('http://{}:1400/info'.format(ip), timeout=2)
         data = json.loads(resp.read())
         return data.get('playerId', '')
-    except:
+    except Exception:
         return ''
 
 def sonos_play_on(ip):
     """Send vinyl stream to a speaker and start playback."""
     chip_ip = subprocess.check_output(['hostname', '-I']).strip()
     stream = 'x-rincon-mp3radio://{}:8000/vinyl'.format(chip_ip)
-    soap_call(ip, 'SetAVTransportURI',
-        '<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:SetAVTransportURI xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID><CurrentURI>{}</CurrentURI><CurrentURIMetaData></CurrentURIMetaData></u:SetAVTransportURI></s:Body></s:Envelope>'.format(stream))
-    soap_call(ip, 'Play',
-        '<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:Play xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID><Speed>1</Speed></u:Play></s:Body></s:Envelope>')
+    soap_call(ip, 'SetAVTransportURI', _SOAP_SET_URI.format(uri=stream))
+    soap_call(ip, 'Play', _SOAP_PLAY)
 
 def sonos_stop_on(ip):
     """Stop playback on a speaker."""
-    soap_call(ip, 'Stop',
-        '<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:Stop xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID></u:Stop></s:Body></s:Envelope>')
+    soap_call(ip, 'Stop', _SOAP_STOP)
 
 def sonos_join_group(ip, coordinator_rincon):
     """Join a speaker to a coordinator's group (native Sonos sync)."""
     soap_call(ip, 'SetAVTransportURI',
-        '<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:SetAVTransportURI xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID><CurrentURI>x-rincon:{}</CurrentURI><CurrentURIMetaData></CurrentURIMetaData></u:SetAVTransportURI></s:Body></s:Envelope>'.format(coordinator_rincon))
+              _SOAP_SET_URI.format(uri='x-rincon:{}'.format(coordinator_rincon)))
 
 def sonos_leave_group(ip):
     """Remove a speaker from its current group (become standalone)."""
-    soap_call(ip, 'BecomeCoordinatorOfStandaloneGroup',
-        '<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:BecomeCoordinatorOfStandaloneGroup xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID></u:BecomeCoordinatorOfStandaloneGroup></s:Body></s:Envelope>')
+    soap_call(ip, 'BecomeCoordinatorOfStandaloneGroup', _SOAP_BECOME_COORD)
 
 def get_transport_state(ip):
     """Query Sonos GetTransportInfo. Returns 'PLAYING', 'PAUSED_PLAYBACK', 'STOPPED' or '' on error."""
-    body = '<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetTransportInfo xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID></u:GetTransportInfo></s:Body></s:Envelope>'
     try:
         out = subprocess.check_output([
             'curl', '-s', '-m', '3', '-X', 'POST',
             'http://{}:1400/MediaRenderer/AVTransport/Control'.format(ip),
             '-H', 'Content-Type: text/xml',
             '-H', 'SOAPAction: "urn:schemas-upnp-org:service:AVTransport:1#GetTransportInfo"',
-            '-d', body,
+            '-d', _SOAP_GET_TRANSPORT,
         ], stderr=subprocess.PIPE)
         m = re.search(r'<CurrentTransportState>([^<]+)</CurrentTransportState>', out.decode('utf-8', errors='replace'))
         if m:
             return m.group(1)
-    except:
+    except Exception:
         pass
     return ''
 
@@ -160,12 +197,12 @@ def verify_targets_state_at_boot():
         cfg = load_config()
         cfg['sonos_targets'] = []
         save_config(cfg)
-    except:
+    except Exception:
         pass
     try:
         with open(STATE_FILE, 'w') as f:
             f.write('{}')
-    except:
+    except Exception:
         pass
 
 # ===================================
@@ -199,7 +236,7 @@ def wifi_scan():
                     parts = line.split('\t')
                     if len(parts) < 5:
                         continue
-                    bssid, freq, signal_dbm, flags, ssid = parts[0], parts[1], parts[2], parts[3], parts[4].strip()
+                    _, _, signal_dbm, flags, ssid = parts[0], parts[1], parts[2], parts[3], parts[4].strip()
                     if not ssid or ssid == 'TRNTBL-Setup':
                         continue
                     if not signal_dbm.lstrip('-').isdigit():
@@ -210,7 +247,7 @@ def wifi_scan():
                         'signal': max(0, min(100, 2 * (dbm + 100))),
                         'secured': ('WPA' in flags) or ('WEP' in flags),
                     })
-            except:
+            except Exception:
                 pass
             if len(networks) >= 3:
                 break
@@ -246,8 +283,6 @@ def wifi_scan():
         debug_log.close()
         try:
             current_ssid = None
-            current_bssid = None
-            current_freq = None
             current_signal = None
             current_flags = ''
 
@@ -263,9 +298,8 @@ def wifi_scan():
                                     'signal': max(0, min(100, 2 * (dbm + 100))),
                                     'secured': 'WPA' in current_flags or 'WEP' in current_flags,
                                 })
-                            except:
+                            except Exception:
                                 pass
-                    current_bssid = line.split()[1]
                     current_ssid = None
                     current_signal = None
                     current_flags = ''
@@ -274,7 +308,7 @@ def wifi_scan():
                 elif 'signal: ' in line:
                     try:
                         current_signal = line.split('signal: ')[1].split()[0]
-                    except:
+                    except Exception:
                         pass
                 elif 'capability: ' in line or 'RSN:' in line or 'WPA:' in line:
                     current_flags += ' ' + line
@@ -287,9 +321,9 @@ def wifi_scan():
                         'signal': max(0, min(100, 2 * (dbm + 100))),
                         'secured': 'WPA' in current_flags or 'WEP' in current_flags,
                     })
-                except:
+                except Exception:
                     pass
-        except:
+        except Exception:
             pass
 
     best = {}
@@ -310,7 +344,7 @@ def wifi_rescan():
     try:
         subprocess.Popen(['iw', 'dev', 'wlan0', 'scan', 'trigger'],
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    except:
+    except Exception:
         pass
     return jsonify({'success': True, 'message': 'Scan started, check /api/wifi/scan in 3s'})
 
@@ -371,7 +405,7 @@ def get_wifi_info():
     """Shared between /api/wifi/status and /api/status to avoid double polling."""
     try:
         ip = subprocess.check_output(['hostname', '-I'], stderr=subprocess.PIPE).decode().strip()
-    except:
+    except Exception:
         ip = ''
     ssid = ''
     try:
@@ -380,7 +414,7 @@ def get_wifi_info():
             if 'SSID:' in line:
                 ssid = line.split('SSID:')[1].strip()
                 break
-    except:
+    except Exception:
         pass
     signal = 0
     try:
@@ -390,13 +424,13 @@ def get_wifi_info():
                     parts = line.split()
                     dbm = int(float(parts[3].rstrip('.')))
                     signal = max(0, min(100, 2 * (dbm + 100)))
-    except:
+    except Exception:
         pass
     ap_mode = False
     try:
         with open('/tmp/trntbl-wifi-mode', 'r') as f:
             ap_mode = f.read().strip() == 'ap'
-    except:
+    except Exception:
         pass
     if ap_mode:
         return {'connected': False, 'ssid': '', 'ip': ip, 'signal': 0, 'ap_mode': True}
@@ -415,13 +449,20 @@ SOUNDBAR_MODELS = ['beam', 'arc', 'ray', 'playbar', 'playbase']
 
 def get_device_type(model):
     ml = model.lower()
-    if any(m in ml for m in SOUNDBAR_MODELS): return 'soundbar'
-    if 'roam' in ml: return 'portable'
-    if any(m in ml for m in ['one', 'era 100']): return 'compact'
-    if any(m in ml for m in ['move', 'era 300', 'five']): return 'large'
-    if 'ace' in ml: return 'headphone'
-    if any(m in ml for m in ['amp', 'port', 'connect']): return 'infra'
-    if 'sub' in ml: return 'sub'
+    if any(m in ml for m in SOUNDBAR_MODELS):
+        return 'soundbar'
+    if 'roam' in ml:
+        return 'portable'
+    if any(m in ml for m in ['one', 'era 100']):
+        return 'compact'
+    if any(m in ml for m in ['move', 'era 300', 'five']):
+        return 'large'
+    if 'ace' in ml:
+        return 'headphone'
+    if any(m in ml for m in ['amp', 'port', 'connect']):
+        return 'infra'
+    if 'sub' in ml:
+        return 'sub'
     return 'unknown'
 
 def enrich_device(d):
@@ -448,7 +489,7 @@ def probe_sonos(ip):
             'playerId': data.get('playerId', ''),
             'groupId': data.get('groupId', '')
         })
-    except:
+    except Exception:
         return None
 
 def probe_many(ips, max_concurrent=15):
@@ -565,14 +606,14 @@ def sonos_scan_status():
             selected_ips = ['rca']
         try:
             os.remove(FULLSCAN_FILE)
-        except:
+        except Exception:
             pass
         return jsonify({
             'scanning': False,
             'speakers': speakers,
             'selected': selected_ips
         })
-    except:
+    except Exception:
         return jsonify({'scanning': False})
 
 # ===================================
@@ -786,7 +827,7 @@ def status():
                 else:
                     for t in targets:
                         sonos_states[t['ip']] = content
-        except:
+        except Exception:
             pass
 
     # Determine overall state from monitor data
@@ -812,7 +853,7 @@ def status():
         with open('/proc/uptime', 'r') as f:
             secs = int(float(f.read().split()[0]))
             uptime = '{}h {:02d}m'.format(secs // 3600, (secs % 3600) // 60)
-    except:
+    except Exception:
         pass
 
     return jsonify({
@@ -840,7 +881,7 @@ def index():
     try:
         with open(p, 'r') as f:
             return Response(f.read(), mimetype='text/html')
-    except:
+    except Exception:
         return '<h1>openTRNTBL</h1><p>index.html not found</p>'
 
 @app.route('/i18n.js')
@@ -849,7 +890,7 @@ def i18n_js():
     try:
         with open(p, 'r') as f:
             return Response(f.read(), mimetype='application/javascript')
-    except:
+    except Exception:
         return Response('// i18n.js not found', mimetype='application/javascript', status=404)
 
 @app.route('/tokens.css')
@@ -858,7 +899,7 @@ def tokens_css():
     try:
         with open(p, 'r') as f:
             return Response(f.read(), mimetype='text/css')
-    except:
+    except Exception:
         return Response('/* tokens.css not found */', mimetype='text/css', status=404)
 
 @app.route('/components.css')
@@ -867,7 +908,7 @@ def components_css():
     try:
         with open(p, 'r') as f:
             return Response(f.read(), mimetype='text/css')
-    except:
+    except Exception:
         return Response('/* components.css not found */', mimetype='text/css', status=404)
 
 @app.route('/<path:path>')
@@ -878,7 +919,10 @@ def catch_all(path):
 
 if __name__ == '__main__':
     if not os.path.exists(CONFIG_FILE):
-        save_config({'sonos_targets': [], 'wifi_ssid': None, 'vinyl_priority': False, 'bitrate': 320, 'output_mode': 'sonos', 'rca_enabled': False, 'rca_show_ui': True})
+        save_config({
+            'sonos_targets': [], 'wifi_ssid': None, 'vinyl_priority': False,
+            'bitrate': 320, 'output_mode': 'sonos', 'rca_enabled': False, 'rca_show_ui': True,
+        })
     # Validate Sonos targets state at boot — avoids stale "playing" UI after reboot
     # Run in background thread so Flask starts without waiting for SOAP queries (3s × N speakers)
     threading.Thread(target=verify_targets_state_at_boot).start()

@@ -49,7 +49,8 @@ REBOOT_LOG=/var/log/sdio-reboot-history
 MAX_REBOOTS_PER_HOUR=4
 
 should_reboot_or_give_up() {
-    local now=$(date +%s)
+    local now
+    now=$(date +%s)
     local cutoff=$((now - 3600))
     # Filter recent reboots
     local recent=0

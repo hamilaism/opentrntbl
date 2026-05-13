@@ -16,7 +16,7 @@ elif ping -c 1 -W 2 trntbl.local > /dev/null 2>&1; then
 else
     echo "Could not find CHIP automatically."
     echo -n "Enter CHIP IP address: "
-    read CHIP_IP
+    read -r CHIP_IP
     if [ -z "$CHIP_IP" ]; then
         echo "No IP provided. Exiting."
         exit 1
