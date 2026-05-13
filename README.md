@@ -5,7 +5,7 @@
 > VNYL shut down their servers in 2023. Your TRNTBL is now dead hardware. This firmware brings it back to life.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![Status: alpha](https://img.shields.io/badge/status-alpha-orange.svg)
+![Status: stable](https://img.shields.io/badge/status-stable-brightgreen.svg)
 ![Hardware: C.H.I.P.](https://img.shields.io/badge/hardware-C.H.I.P.%20v1.0-purple.svg)
 
 <img width="600" height="auto" alt="White VNYL turntable seen from a three-quarter angle, with a transparent platter, gold tonearm and mounted cartridge, on a pink background." src="https://github.com/user-attachments/assets/711335dd-0ef0-46bb-8afb-9d9c6ee72e81" />
@@ -147,6 +147,8 @@ The web portal UI is built on a **DTCG-compliant design tokens system** (113 CSS
 - **Density** : default, compact, spacious
 
 The system is structured in 4 strict layers (`primitive → brand → semantic → component`), each carrying a specific kind of decision. Source in `design/tokens/src/` (DTCG JSON), generators in `design/tokens/scripts/`, Storybook gallery in `design/components/`.
+
+→ **[Browse the live Storybook →](https://hamilaism.github.io/opentrntbl/)** — token primitives, semantic aliases, motion, radius, spacing, color modes.
 
 **Inspirations** : the architecture builds on the public work of [Donnie d'Amato](https://donnie.damato.design/) (color systems, `color-mix()` hover pattern), [Bill Collins](https://github.com/billycollins) (token architecture, longest-match cascade), [Ness Grixti](https://nessgrixti.com/) (DS methodology), and David Fusilier (mode composition).
 
