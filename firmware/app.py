@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""openTRNTBL by ismo — Portal & API v9 (pre-alpha)
+"""openTRNTBL by ismo — Portal & API v9
 All fixes applied:
 - threaded=True (no more UI freeze)
 - Native Sonos grouping via x-rincon: (speakers stay in sync)
@@ -867,7 +867,7 @@ def status():
         'rca_enabled': cfg.get('rca_enabled', False),
         'rca_show_ui': cfg.get('rca_show_ui', True),
         'uptime': uptime,
-        'version': 'openTRNTBL pre-alpha',
+        'version': 'openTRNTBL v1.0.0',
         'wifi': get_wifi_info()
     })
 

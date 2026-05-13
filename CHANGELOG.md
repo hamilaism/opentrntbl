@@ -4,6 +4,29 @@ All notable changes to the project, dated.
 
 Status legend: ✅ tested and validated in real conditions  ·  🟡 partially tested (works but not 100%)  ·  ⚠️ deployed but not verified end-to-end  ·  ❌ known broken, deferred to V2 with reason
 
+## [v1.0.0] — 2026-05-13 — stable release
+
+Promoted from alpha. 180h continuous run validated (well beyond the 72h target). CI in place. NE5532 wiring deferred as a hardware enhancement (not a blocker — firmware is fully functional over Sonos/WiFi). Design asset polish continues in 1.0.x.
+
+### Added
+
+- ✅ **GitHub Actions CI**: shellcheck (severity=warning) on all `firmware/*.sh` + flake8 on `firmware/app.py`, runs on every push and PR
+- ✅ **Storybook deployed to GitHub Pages**: `https://hamilaism.github.io/opentrntbl/` — live DS token + component gallery, auto-deployed on push to main
+
+### Fixed (code quality)
+
+- ✅ **`app.py` bare `except:` → `except Exception:`** (28 instances): was silently catching `KeyboardInterrupt` and `SystemExit`
+- ✅ **`app.py` unused local variables** removed (4 instances: `bssid`, `freq`, `current_bssid`, `current_freq` in WiFi scan parser)
+- ✅ **`app.py` SOAP XML templates** extracted as module-level constants `_SOAP_*` — line length from 400+ chars to readable multi-line strings
+- ✅ **`app.py` one-liner `if ...: return`** in `get_device_type()` expanded to standard multi-line style
+- ✅ **Shell scripts SC2155** (5 instances): `local var=$(cmd)` split to `local var; var=$(cmd)` — `local` was masking return values
+- ✅ **Shell scripts SC2034** (2 instances): unused loop/read variables renamed to `_`
+- ✅ **Shell scripts SC2164**: `cd /home/chip/opentrntbl` → `cd ... || exit 1`
+- ✅ **Shell scripts SC2006**: legacy backtick `` `date +%s` `` → `$(date +%s)`
+- ✅ **Shell scripts SC2162**: `read CHIP_IP` → `read -r CHIP_IP` in `deploy.sh`
+
+---
+
 ## [v1.0.0-alpha] — 2026-05-02 — first public alpha
 
 First public tagged release. The firmware is stable for daily use, DS V1 is shipped, critical structural bugs are fixed (fd-leak, scan UX, cold scan retry, boot speaker selection clear). The next stable v1.0.0 will integrate polished design assets (Figma + Penpot complete), 72h soak tests passed, and NE5532 wiring documented end-to-end. The maintainer will do a manual cleanup pass on the design assets before v1.0.0 — until now everything was vibecoded with Claude Code, no manual touchup.
