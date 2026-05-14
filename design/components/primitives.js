@@ -9,17 +9,17 @@
 
 /** Spinner (.spin) — variant small pour inline boutons */
 export const spinner = ({ small = false } = {}) =>
-  `<div class="spin${small ? ' spin-sm' : ''}"></div>`;
+  `<div class="spin${small ? ' spin-sm' : ''}" role="status" aria-label="Loading"></div>`;
 
 /** Status dot (.status-dot) — currentColor, animé si parent a .status-play.
  *  Le dot est gardé pour son sémantique "live/breathing" (signal d'activité,
  *  pas de variant). L'accessibilité non-couleur (WCAG 1.4.1) est portée par
  *  le label de StatusBadge — pas besoin d'icône SVG redondante. */
-export const statusDot = () => `<span class="status-dot"></span>`;
+export const statusDot = () => `<span class="status-dot" aria-hidden="true"></span>`;
 
 /** Checkbox (.check) — accent gold quand on=true */
 export const check = ({ on = false } = {}) =>
-  `<div class="check${on ? ' on' : ''}"></div>`;
+  `<div class="check${on ? ' on' : ''}" aria-hidden="true"></div>`;
 
 /** Brand mark — "open<em>TRNTBL</em>" lettering */
 export const brand = ({ prefix = 'open', accent = 'TRNTBL' } = {}) =>

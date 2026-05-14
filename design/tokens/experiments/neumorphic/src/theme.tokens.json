@@ -1,0 +1,202 @@
+{
+  "$description": "Neumorphic theme. Single surface color — ALL surfaces share the same base. Depth is 100% shadows. No visible borders for elevation. See ACCESSIBILITY.md for contrast audit.",
+
+  "base": {
+    "$description": "Live DevTools knobs — change --base-surface to repaint everything.",
+    "surface":      { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } },
+    "shadow-light": { "$type": "color", "$value": "oklch(0.99 0.002 262)", "$extensions": { "dark": "oklch(0.35 0.008 262)" },
+                      "$description": "Light shadow (top-left). Lighter than base surface." },
+    "shadow-dark":  { "$type": "color", "$value": "oklch(0.80 0.010 262)", "$extensions": { "dark": "oklch(0.15 0.012 262)" },
+                      "$description": "Dark shadow (bottom-right). Darker than base surface." }
+  },
+
+  "semantic": {
+    "surface": {
+      "$description": "All backgrounds are the same mono-surface. Elevation comes from shadows only.",
+      "canvas": {
+        "background": { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } }
+      },
+      "base": {
+        "background": { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } },
+        "hover":      { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" },
+                        "$description": "Hover stays same bg — shadow deepens via component override." },
+        "pressed":    { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } }
+      },
+      "raised": {
+        "background": { "$type": "color",  "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } },
+        "elevation":  { "$type": "shadow", "$value": "-4px -4px 8px oklch(0.99 0.002 262), 4px 4px 8px oklch(0.80 0.010 262)",
+                        "$extensions": { "dark": "-4px -4px 8px oklch(0.35 0.008 262), 4px 4px 8px oklch(0.15 0.012 262)" } }
+      },
+      "sunken": {
+        "background": { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } },
+        "hover":      { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } },
+        "pressed":    { "$type": "color", "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } }
+      },
+      "overlay": {
+        "background": { "$type": "color",  "$value": "oklch(0.94 0.005 262)", "$extensions": { "dark": "oklch(0.25 0.010 262)" } },
+        "elevation":  { "$type": "shadow", "$value": "-8px -8px 20px oklch(0.99 0.002 262), 8px 8px 20px oklch(0.80 0.010 262)",
+                        "$extensions": { "dark": "-8px -8px 20px oklch(0.35 0.008 262), 8px 8px 20px oklch(0.15 0.012 262)" } }
+      },
+      "dim":    { "$type": "color", "$value": "oklch(0.30 0.008 262)", "$extensions": { "dark": "oklch(0.15 0.008 262)" } },
+      "bright": { "$type": "color", "$value": "oklch(0.97 0.004 262)", "$extensions": { "dark": "oklch(0.40 0.008 262)" } }
+    },
+
+    "elevation": {
+      "$description": "Named shadow vars consumed by component overrides below. Mirrors surface.raised.elevation etc. but with named semantics.",
+      "flat":         { "$type": "shadow", "$value": "0px 0px 0px 0px transparent",                                                                                    "$extensions": { "dark": "0px 0px 0px 0px transparent" } },
+      "raised":       { "$type": "shadow", "$value": "-4px -4px 8px oklch(0.99 0.002 262), 4px 4px 8px oklch(0.80 0.010 262)",                                         "$extensions": { "dark": "-4px -4px 8px oklch(0.35 0.008 262), 4px 4px 8px oklch(0.15 0.012 262)" } },
+      "raised-hover": { "$type": "shadow", "$value": "-4px -4px 8px oklch(0.99 0.002 262), 4px 4px 8px oklch(0.80 0.010 262)",                                       "$extensions": { "dark": "-4px -4px 8px oklch(0.35 0.008 262), 4px 4px 8px oklch(0.15 0.012 262)" } },
+      "pressed":      { "$type": "shadow", "$value": "inset -3px -3px 4px oklch(0.99 0.002 262), inset 3px 3px 4px oklch(0.80 0.010 262)",                             "$extensions": { "dark": "inset -3px -3px 4px oklch(0.35 0.008 262), inset 3px 3px 4px oklch(0.15 0.012 262)" } },
+      "sunken":       { "$type": "shadow", "$value": "inset -4px -4px 8px oklch(0.99 0.002 262), inset 4px 4px 8px oklch(0.80 0.010 262)",                             "$extensions": { "dark": "inset -4px -4px 8px oklch(0.35 0.008 262), inset 4px 4px 8px oklch(0.15 0.012 262)" } },
+      "overlay":      { "$type": "shadow", "$value": "-8px -8px 20px oklch(0.99 0.002 262), 8px 8px 20px oklch(0.80 0.010 262)",                                       "$extensions": { "dark": "-8px -8px 20px oklch(0.35 0.008 262), 8px 8px 20px oklch(0.15 0.012 262)" } }
+    },
+
+    "border": {
+      "$description": "Decorative only. Contrast < 3:1 intentional — elevation is by shadow, not border.",
+      "subtle":  { "$type": "color", "$value": "oklch(0.88 0.006 262)", "$extensions": { "dark": "oklch(0.32 0.008 262)" } },
+      "default": { "$type": "color", "$value": "oklch(0.84 0.008 262)", "$extensions": { "dark": "oklch(0.36 0.009 262)" } },
+      "strong":  { "$type": "color", "$value": "oklch(0.78 0.010 262)", "$extensions": { "dark": "oklch(0.42 0.010 262)" } },
+      "focus":   { "$type": "color", "$value": "oklch(0.55 0.14 85)",   "$extensions": { "dark": "oklch(0.65 0.14 85)"  } }
+    },
+
+    "accent": {
+      "default": { "$type": "color", "$value": "oklch(0.55 0.14 85)",                                 "$extensions": { "dark": "oklch(0.65 0.14 85)" } },
+      "hover":   { "$type": "color", "$value": "color-mix(in oklch, oklch(0.55 0.14 85) 88%, #fff)", "$extensions": { "dark": "color-mix(in oklch, oklch(0.65 0.14 85) 88%, #fff)" } },
+      "pressed": { "$type": "color", "$value": "color-mix(in oklch, oklch(0.55 0.14 85) 80%, #000)", "$extensions": { "dark": "color-mix(in oklch, oklch(0.65 0.14 85) 80%, #000)" } }
+    },
+
+    "text": {
+      "color": {
+        "primary":     { "$type": "color", "$value": "oklch(0.22 0.008 262)", "$extensions": { "dark": "oklch(0.90 0.006 262)" } },
+        "secondary":   { "$type": "color", "$value": "oklch(0.44 0.008 262)", "$extensions": { "dark": "oklch(0.72 0.006 262)" } },
+        "placeholder": { "$type": "color", "$value": "oklch(0.55 0.006 262)", "$extensions": { "dark": "oklch(0.60 0.006 262)" } },
+        "disabled":    { "$type": "color", "$value": "oklch(0.62 0.006 262)", "$extensions": { "dark": "oklch(0.50 0.006 262)" } },
+        "inverse":     { "$type": "color", "$value": "oklch(0.96 0.003 262)", "$extensions": { "dark": "oklch(0.18 0.006 262)" } },
+        "accent":      { "$type": "color", "$value": "oklch(0.40 0.14 85)",   "$extensions": { "dark": "oklch(0.75 0.14 85)"  } },
+        "on-accent":   { "$type": "color", "$value": "oklch(0.10 0.008 262)", "$extensions": { "dark": "oklch(0.10 0.008 262)" } },
+        "on-dim":      { "$type": "color", "$value": "oklch(0.94 0.004 262)", "$extensions": { "dark": "oklch(0.92 0.004 262)" } },
+        "on-bright":   { "$type": "color", "$value": "oklch(0.18 0.008 262)", "$extensions": { "dark": "oklch(0.18 0.008 262)" } }
+      },
+      "caption": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "0.75rem" },
+        "weight":      { "$type": "fontWeight", "$value": 400 },
+        "line-height": { "$type": "number",     "$value": 1.2 }
+      },
+      "small": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "0.875rem" },
+        "weight":      { "$type": "fontWeight", "$value": 400 },
+        "line-height": { "$type": "number",     "$value": 1.4 }
+      },
+      "body": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1rem" },
+        "weight":      { "$type": "fontWeight", "$value": 400 },
+        "line-height": { "$type": "number",     "$value": 1.4 }
+      },
+      "body-emphasis": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1rem" },
+        "weight":      { "$type": "fontWeight", "$value": 600 },
+        "line-height": { "$type": "number",     "$value": 1.4 }
+      },
+      "subheading": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1.25rem" },
+        "weight":      { "$type": "fontWeight", "$value": 600 },
+        "line-height": { "$type": "number",     "$value": 1.2 }
+      },
+      "heading-3": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1.5rem" },
+        "weight":      { "$type": "fontWeight", "$value": 700 },
+        "line-height": { "$type": "number",     "$value": 1.2 }
+      },
+      "heading-2": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "2rem" },
+        "weight":      { "$type": "fontWeight", "$value": 700 },
+        "line-height": { "$type": "number",     "$value": 1.0 }
+      },
+      "heading-1": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "2.5rem" },
+        "weight":      { "$type": "fontWeight", "$value": 800 },
+        "line-height": { "$type": "number",     "$value": 1.0 }
+      }
+    },
+
+    "status": {
+      "success": {
+        "bg":        { "$type": "color", "$value": "oklch(0.91 0.012 145)",                                                                    "$extensions": { "dark": "oklch(0.28 0.015 145)" } },
+        "bg-hover":  { "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 145) 86%, oklch(0.22 0.008 262))",                   "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 145) 86%, oklch(0.90 0.006 262))" } },
+        "bg-pressed":{ "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 145) 74%, oklch(0.22 0.008 262))",                   "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 145) 74%, oklch(0.90 0.006 262))" } },
+        "text":      { "$type": "color", "$value": "oklch(0.30 0.14 145)",                                                                     "$extensions": { "dark": "oklch(0.75 0.14 145)" } }
+      },
+      "warning": {
+        "bg":        { "$type": "color", "$value": "oklch(0.91 0.012 55)",                                                                     "$extensions": { "dark": "oklch(0.28 0.015 55)" } },
+        "bg-hover":  { "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 55) 86%, oklch(0.22 0.008 262))",                    "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 55) 86%, oklch(0.90 0.006 262))" } },
+        "bg-pressed":{ "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 55) 74%, oklch(0.22 0.008 262))",                    "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 55) 74%, oklch(0.90 0.006 262))" } },
+        "text":      { "$type": "color", "$value": "oklch(0.30 0.14 55)",                                                                      "$extensions": { "dark": "oklch(0.75 0.14 55)" } }
+      },
+      "danger": {
+        "bg":        { "$type": "color", "$value": "oklch(0.91 0.012 29)",                                                                     "$extensions": { "dark": "oklch(0.28 0.015 29)" } },
+        "bg-hover":  { "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 29) 86%, oklch(0.22 0.008 262))",                    "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 29) 86%, oklch(0.90 0.006 262))" } },
+        "bg-pressed":{ "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 29) 74%, oklch(0.22 0.008 262))",                    "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 29) 74%, oklch(0.90 0.006 262))" } },
+        "text":      { "$type": "color", "$value": "oklch(0.28 0.18 29)",                                                                      "$extensions": { "dark": "oklch(0.72 0.18 29)" } }
+      },
+      "info": {
+        "bg":        { "$type": "color", "$value": "oklch(0.91 0.012 255)",                                                                    "$extensions": { "dark": "oklch(0.28 0.015 255)" } },
+        "bg-hover":  { "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 255) 86%, oklch(0.22 0.008 262))",                   "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 255) 86%, oklch(0.90 0.006 262))" } },
+        "bg-pressed":{ "$type": "color", "$value": "color-mix(in oklch, oklch(0.91 0.012 255) 74%, oklch(0.22 0.008 262))",                   "$extensions": { "dark": "color-mix(in oklch, oklch(0.28 0.015 255) 74%, oklch(0.90 0.006 262))" } },
+        "text":      { "$type": "color", "$value": "oklch(0.28 0.15 255)",                                                                     "$extensions": { "dark": "oklch(0.75 0.15 255)" } }
+      }
+    },
+
+    "focus": {
+      "ring": {
+        "color":  { "$type": "color",     "$value": "oklch(0.55 0.14 85)", "$extensions": { "dark": "oklch(0.65 0.14 85)" } },
+        "width":  { "$type": "dimension", "$value": "2px" },
+        "offset": { "$type": "dimension", "$value": "3px" }
+      }
+    },
+
+    "spacing": {
+      "tight":   { "$type": "dimension", "$value": "0.25rem", "$extensions": { "compact": "0.125rem", "spacious": "0.375rem" } },
+      "snug":    { "$type": "dimension", "$value": "0.5rem",  "$extensions": { "compact": "0.375rem", "spacious": "0.625rem" } },
+      "default": { "$type": "dimension", "$value": "1rem",    "$extensions": { "compact": "0.75rem",  "spacious": "1.25rem"  } },
+      "loose":   { "$type": "dimension", "$value": "1.5rem",  "$extensions": { "compact": "1.25rem",  "spacious": "2rem"     } },
+      "airy":    { "$type": "dimension", "$value": "2.5rem",  "$extensions": { "compact": "2rem",     "spacious": "3rem"     } }
+    },
+
+    "radius": {
+      "$description": "Rounder than V1 — smooth corners reduce shadow clipping.",
+      "sharp":  { "$type": "dimension", "$value": "0rem"   },
+      "soft":   { "$type": "dimension", "$value": "0.5rem" },
+      "round":  { "$type": "dimension", "$value": "1rem"   },
+      "pill":   { "$type": "dimension", "$value": "9999px" },
+      "circle": { "$type": "dimension", "$value": "50%"    }
+    },
+
+    "motion": {
+      "$description": "Slightly slower state-change (250ms) for the soft physical feel.",
+      "feedback":          { "duration": { "$type": "duration", "$value": "100ms" },  "easing": { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1] } },
+      "state-change":      { "duration": { "$type": "duration", "$value": "250ms" },  "easing": { "$type": "cubicBezier", "$value": [0.4, 0, 0.2, 1] } },
+      "enter":             { "duration": { "$type": "duration", "$value": "450ms" },  "easing": { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1] } },
+      "exit":              { "duration": { "$type": "duration", "$value": "250ms" },  "easing": { "$type": "cubicBezier", "$value": [0.4, 0, 1, 1] } },
+      "component-enter":   { "duration": { "$type": "duration", "$value": "140ms" },  "easing": { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1] },
+                             "$description": "Component gaining active/raised state (pop). Fast immediate response." },
+      "component-exit":    { "duration": { "$type": "duration", "$value": "320ms" },  "easing": { "$type": "cubicBezier", "$value": [0.4, 0, 1, 1] },
+                             "$description": "Component losing active/raised state (spring-return). Slower settle." }
+    },
+
+    "icon": {
+      "size": {
+        "sm": { "$type": "dimension", "$value": "1rem"   },
+        "md": { "$type": "dimension", "$value": "1.5rem" },
+        "lg": { "$type": "dimension", "$value": "2rem"   }
+      }
+    }
+  }
+}

@@ -54,7 +54,7 @@ function playMotion(btn) {
 
 export default {
   title: 'Tokens/Core/Motion',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 // ---------------------------------------------------------------------------

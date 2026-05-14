@@ -1,0 +1,62 @@
+{
+  "base": {
+    "hue": {
+      "$type": "number",
+      "$value": 264,
+      "$description": "Zinc hue — change for slate (210), stone (30), etc.",
+      "$extensions": {}
+    },
+    "canvas-l": {
+      "$type": "number",
+      "$value": 0.985,
+      "$description": "Canvas lightness (zinc-50). Dark: 0.088",
+      "$extensions": { "com.opntrntbl.dark": 0.088 }
+    },
+    "card-l": {
+      "$type": "number",
+      "$value": 1.0,
+      "$description": "Card lightness (pure white). Dark: 0.108",
+      "$extensions": { "com.opntrntbl.dark": 0.108 }
+    },
+    "card-c": {
+      "$type": "number",
+      "$value": 0.0,
+      "$description": "Card chroma. Dark: 0.012",
+      "$extensions": { "com.opntrntbl.dark": 0.012 }
+    },
+    "border-l": {
+      "$type": "number",
+      "$value": 0.918,
+      "$description": "Border-default lightness (zinc-200). Dark: 0.24",
+      "$extensions": { "com.opntrntbl.dark": 0.24 }
+    },
+    "border-c": {
+      "$type": "number",
+      "$value": 0.004,
+      "$description": "Border chroma. Dark: 0.014",
+      "$extensions": { "com.opntrntbl.dark": 0.014 }
+    },
+    "shadow-alpha": {
+      "$type": "number",
+      "$value": 0.05,
+      "$description": "Shadow opacity. Dark: 0.30",
+      "$extensions": { "com.opntrntbl.dark": 0.30 }
+    },
+    "density-factor": {
+      "$type": "number",
+      "$value": 1,
+      "$extensions": {
+        "com.opntrntbl.compact": 0.5,
+        "com.opntrntbl.spacious": 1.5
+      }
+    },
+    "motion-base": {
+      "$type": "number",
+      "$value": 100
+    },
+    "font-family-sans": {
+      "$type": "fontFamily",
+      "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+    }
+  }
+}

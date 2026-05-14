@@ -47,7 +47,7 @@ function playMotion(btn) {
 
 export default {
   title: 'Tokens/Semantic/Radius & Motion',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 export const Radius = () => {

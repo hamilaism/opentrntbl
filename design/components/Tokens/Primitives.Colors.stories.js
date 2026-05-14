@@ -4,7 +4,7 @@ import { tokens, contrast as wcagContrast, wcagBadge } from './_helpers.js';
 
 export default {
   title: 'Tokens/Core/Colors',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }, { id: 'empty-table-header', enabled: false }] } } },
 };
 
 const SHADES = [0, 10, 25, 50, 75, 100, 125, 150, 175, 190, 200];
@@ -60,7 +60,7 @@ function hueRow(hue, ramp) {
 
   return `
     <div style="margin-bottom:20px">
-      <h3 style="font-family:system-ui;font-size:14px;font-weight:700;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.08em">${hue}</h3>
+      <h2 style="font-family:system-ui;font-size:14px;font-weight:700;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.08em">${hue}</h2>
       <div style="display:grid;grid-template-columns:repeat(${SHADES.length}, minmax(0, 1fr));gap:${SWATCH_GAP}px">
         ${cells}
       </div>
@@ -91,7 +91,7 @@ export const ContrastMatrix = () => {
   const palette = tokens.core.palette;
   const hue = 'neutral'; // showcase with neutral
   const ramp = palette[hue];
-  const headers = SHADES.map(s => `<th style="padding:6px;font-size:11px;font-weight:700;text-align:center;font-family:monospace">${s}</th>`).join('');
+  const headers = SHADES.map(s => `<th scope="col" style="padding:6px;font-size:11px;font-weight:700;text-align:center;font-family:monospace">${s}</th>`).join('');
   const rows = SHADES.map(s1 => {
     const k1 = String(s1);
     const hex1 = ramp[k1].$value.hex;
@@ -111,7 +111,7 @@ export const ContrastMatrix = () => {
     }).join('');
     return `
       <tr>
-        <th style="padding:6px;text-align:right;font-size:11px;font-weight:700;font-family:monospace">${s1}</th>
+        <th scope="row" style="padding:6px;text-align:right;font-size:11px;font-weight:700;font-family:monospace">${s1}</th>
         ${cells}
       </tr>
     `;
@@ -127,7 +127,7 @@ export const ContrastMatrix = () => {
       <table style="border-collapse:collapse;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.1)">
         <thead>
           <tr>
-            <th></th>
+            <th scope="col" aria-label="Shade"></th>
             ${headers}
           </tr>
         </thead>

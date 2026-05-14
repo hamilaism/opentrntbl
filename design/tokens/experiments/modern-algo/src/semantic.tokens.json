@@ -1,0 +1,170 @@
+{
+  "surface": {
+    "canvas": {
+      "background": {
+        "$value": "oklch(var(--base-canvas-l) 0.002 var(--base-hue))",
+        "$extensions": { "com.opntrntbl.dark": "oklch(var(--base-canvas-l) 0.012 var(--base-hue))" }
+      }
+    },
+    "base": {
+      "background": {
+        "$value": "oklch(var(--base-card-l) var(--base-card-c) var(--base-hue))",
+        "$extensions": { "com.opntrntbl.dark": "oklch(var(--base-card-l) var(--base-card-c) var(--base-hue))" }
+      },
+      "hover": {
+        "$value": "oklch(0.968 0.002 264)",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.155 0.012 264)" }
+      },
+      "pressed": {
+        "$value": "oklch(0.948 0.003 264)",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.195 0.012 264)" }
+      }
+    },
+    "raised": {
+      "background": {
+        "$value": "oklch(var(--base-card-l) var(--base-card-c) var(--base-hue))",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.135 0.012 264)" }
+      },
+      "elevation": {
+        "$value": "0 1px 2px 0 oklch(0 0 0 / var(--base-shadow-alpha))",
+        "$extensions": { "com.opntrntbl.dark": "0 1px 2px 0 oklch(0 0 0 / var(--base-shadow-alpha))" }
+      }
+    },
+    "sunken": {
+      "background": {
+        "$value": "oklch(0.972 0 0)",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.085 0 0)" }
+      },
+      "hover": {
+        "$value": "oklch(0.960 0 0)",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.12 0 0)" }
+      },
+      "pressed": {
+        "$value": "oklch(0.948 0 0)",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.15 0 0)" }
+      }
+    },
+    "overlay": {
+      "background": {
+        "$value": "oklch(1 0 0)",
+        "$extensions": { "com.opntrntbl.dark": "oklch(0.145 0 0)" }
+      },
+      "elevation": {
+        "$value": "0 8px 30px oklch(0 0 0 / 0.12), 0 0 0 1px oklch(0 0 0 / 0.08)",
+        "$extensions": { "com.opntrntbl.dark": "0 8px 30px oklch(0 0 0 / 0.50), 0 0 0 1px oklch(0 0 0 / 0.40)" }
+      }
+    },
+    "dim": {
+      "$value": "oklch(0.28 0 0)",
+      "$extensions": { "com.opntrntbl.dark": "oklch(0.14 0 0)" }
+    },
+    "bright": {
+      "$value": "oklch(0.972 0 0)",
+      "$extensions": { "com.opntrntbl.dark": "oklch(0.38 0 0)" }
+    }
+  },
+  "border": {
+    "subtle": {
+      "$value": "oklch(0.932 0.004 264)",
+      "$extensions": { "com.opntrntbl.dark": "oklch(0.18 0.012 264)" }
+    },
+    "default": {
+      "$value": "oklch(var(--base-border-l) var(--base-border-c) var(--base-hue))",
+      "$extensions": { "com.opntrntbl.dark": "oklch(var(--base-border-l) var(--base-border-c) var(--base-hue))" }
+    },
+    "strong": {
+      "$value": "oklch(0.78 0.006 264)",
+      "$extensions": { "com.opntrntbl.dark": "oklch(0.42 0.014 264)" }
+    },
+    "focus": {
+      "$value": "oklch(0.15 0.018 264)",
+      "$extensions": { "com.opntrntbl.dark": "oklch(0.88 0.008 264)" }
+    }
+  },
+  "accent": {
+    "default": { "$value": "oklch(0.52 0.14 85)",                                "$extensions": { "com.opntrntbl.dark": "oklch(0.74 0.14 85)" } },
+    "hover":   { "$value": "color-mix(in oklch, oklch(0.52 0.14 85) 85%, #000)", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.74 0.14 85) 88%, #fff)" } },
+    "pressed": { "$value": "color-mix(in oklch, oklch(0.52 0.14 85) 72%, #000)", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.74 0.14 85) 70%, #000)" } }
+  },
+  "text": {
+    "color": {
+      "primary":     { "$value": "oklch(0.15 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.92 0 0)" } },
+      "secondary":   { "$value": "oklch(0.50 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.65 0 0)" } },
+      "placeholder": { "$value": "oklch(0.65 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.50 0 0)" } },
+      "disabled":    { "$value": "oklch(0.75 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.40 0 0)" } },
+      "inverse":     { "$value": "oklch(0.98 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.12 0 0)" } },
+      "accent":      { "$value": "oklch(0.42 0.14 85)", "$extensions": { "com.opntrntbl.dark": "oklch(0.80 0.14 85)" } },
+      "on-accent":   { "$value": "oklch(1 0 0)",    "$extensions": { "com.opntrntbl.dark": "oklch(0.08 0 0)" } },
+      "on-dim":      { "$value": "oklch(0.97 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.92 0 0)" } },
+      "on-bright":   { "$value": "oklch(0.14 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.14 0 0)" } }
+    },
+    "caption":       { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "0.75rem" }, "weight": { "$value": 400 }, "line-height": { "$value": 1.2 } },
+    "small":         { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "0.875rem" }, "weight": { "$value": 400 }, "line-height": { "$value": 1.4 } },
+    "body":          { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1rem" }, "weight": { "$value": 400 }, "line-height": { "$value": 1.5 } },
+    "body-emphasis": { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1rem" }, "weight": { "$value": 500 }, "line-height": { "$value": 1.5 } },
+    "subheading":    { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1.25rem" }, "weight": { "$value": 600 }, "line-height": { "$value": 1.3 } },
+    "heading-3":     { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1.5rem" }, "weight": { "$value": 600 }, "line-height": { "$value": 1.3 } },
+    "heading-2":     { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "2rem" }, "weight": { "$value": 700 }, "line-height": { "$value": 1.1 } },
+    "heading-1":     { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "2.5rem" }, "weight": { "$value": 700 }, "line-height": { "$value": 1.1 } }
+  },
+  "status": {
+    "success": {
+      "bg":         { "$value": "oklch(0.96 0.04 145)", "$extensions": { "com.opntrntbl.dark": "oklch(0.24 0.05 145)" } },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.96 0.04 145) 88%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 145) 88%, oklch(0.92 0 0))" } },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.96 0.04 145) 76%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 145) 76%, oklch(0.92 0 0))" } },
+      "text":       { "$value": "oklch(0.34 0.14 145)", "$extensions": { "com.opntrntbl.dark": "oklch(0.76 0.14 145)" } }
+    },
+    "warning": {
+      "bg":         { "$value": "oklch(0.96 0.04 75)", "$extensions": { "com.opntrntbl.dark": "oklch(0.24 0.05 75)" } },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.96 0.04 75) 88%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 75) 88%, oklch(0.92 0 0))" } },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.96 0.04 75) 76%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 75) 76%, oklch(0.92 0 0))" } },
+      "text":       { "$value": "oklch(0.38 0.15 68)", "$extensions": { "com.opntrntbl.dark": "oklch(0.78 0.14 75)" } }
+    },
+    "danger": {
+      "bg":         { "$value": "oklch(0.96 0.04 25)", "$extensions": { "com.opntrntbl.dark": "oklch(0.24 0.05 25)" } },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.96 0.04 25) 88%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 25) 88%, oklch(0.92 0 0))" } },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.96 0.04 25) 76%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 25) 76%, oklch(0.92 0 0))" } },
+      "text":       { "$value": "oklch(0.32 0.18 25)", "$extensions": { "com.opntrntbl.dark": "oklch(0.74 0.18 25)" } }
+    },
+    "info": {
+      "bg":         { "$value": "oklch(0.96 0.04 255)", "$extensions": { "com.opntrntbl.dark": "oklch(0.24 0.05 255)" } },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.96 0.04 255) 88%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 255) 88%, oklch(0.92 0 0))" } },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.96 0.04 255) 76%, oklch(0.15 0 0))", "$extensions": { "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.24 0.05 255) 76%, oklch(0.92 0 0))" } },
+      "text":       { "$value": "oklch(0.30 0.15 255)", "$extensions": { "com.opntrntbl.dark": "oklch(0.76 0.15 255)" } }
+    }
+  },
+  "focus": {
+    "ring": {
+      "color":  { "$value": "oklch(0.18 0 0)", "$extensions": { "com.opntrntbl.dark": "oklch(0.86 0 0)" } },
+      "width":  { "$value": "2px" },
+      "offset": { "$value": "2px" }
+    }
+  },
+  "spacing": {
+    "tight":   { "$value": "0.25rem" },
+    "snug":    { "$value": "0.5rem" },
+    "default": { "$value": "1rem" },
+    "loose":   { "$value": "1.5rem" },
+    "airy":    { "$value": "2.5rem" }
+  },
+  "radius": {
+    "sharp":  { "$value": "0rem" },
+    "soft":   { "$value": "0.25rem" },
+    "round":  { "$value": "0.375rem" },
+    "pill":   { "$value": "9999px" },
+    "circle": { "$value": "50%" }
+  },
+  "motion": {
+    "feedback":        { "duration": { "$value": "80ms" }, "easing": { "$value": "cubic-bezier(0, 0, 0.2, 1)" } },
+    "state-change":    { "duration": { "$value": "120ms" }, "easing": { "$value": "cubic-bezier(0.4, 0, 0.2, 1)" } },
+    "enter":           { "duration": { "$value": "180ms" }, "easing": { "$value": "cubic-bezier(0, 0, 0.2, 1)" } },
+    "exit":            { "duration": { "$value": "120ms" }, "easing": { "$value": "cubic-bezier(0.4, 0, 1, 1)" } }
+  },
+  "icon": {
+    "size": {
+      "sm": { "$value": "1rem" },
+      "md": { "$value": "1.5rem" },
+      "lg": { "$value": "2rem" }
+    }
+  }
+}

@@ -27,7 +27,7 @@ const renderRow = ({ title, subtitle, icon, trailing, selected, loading, secured
       <div style="display:flex;align-items:center;gap:8px">
         ${secured ? `<span style="font-size:12px;color:var(--text-color-placeholder)">🔒</span>` : ''}
         ${signalBars(signal)}
-        <span style="font-size:14px;color:var(--text-color-placeholder)">›</span>
+        <span style="font-size:14px;color:var(--text-color-placeholder)" aria-hidden="true">›</span>
       </div>`;
   }
   return `
@@ -113,6 +113,67 @@ export default {
       },
     },
   },
+};
+
+// ===== Overview — row states + trailing patterns =====
+export const Overview = {
+  name: 'Overview',
+  parameters: {
+    controls: { disable: true },
+    // Loading row uses opacity:0.5 → WCAG 1.4.3 exempts inactive UI components from contrast.
+    a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } },
+  },
+  render: () => `
+    <div style="background:var(--surface-canvas-background);padding:var(--spacing-loose)">
+    <div style="display:flex;flex-direction:column;gap:var(--spacing-default);max-width:480px">
+      <div>
+        <div style="font-size:var(--text-caption-size);color:var(--text-color-secondary);font-weight:500;margin-bottom:var(--spacing-snug)">Check trailing — speaker list</div>
+        <div class="card" role="group" aria-label="Sonos speakers">
+          <button class="row">
+            ${devIcon('soundbar')}
+            <div class="row-content"><div class="row-title">Salon Beam</div><div class="row-sub">Sonos Beam · 192.168.1.53</div></div>
+            ${check({ on: true })}
+          </button>
+          <button class="row">
+            ${devIcon('compact')}
+            <div class="row-content"><div class="row-title">Chambre</div><div class="row-sub">Sonos One · 192.168.1.55</div></div>
+            ${check({ on: false })}
+          </button>
+          <button class="row loading">
+            ${devIcon('portable')}
+            <div class="row-content"><div class="row-title">Vinyl Port</div><div class="row-sub">Sonos Roam · connecting…</div></div>
+            ${check({ on: false })}
+          </button>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:var(--text-caption-size);color:var(--text-color-secondary);font-weight:500;margin-bottom:var(--spacing-snug)">Signal trailing — WiFi list</div>
+        <div class="card" role="group" aria-label="WiFi networks">
+          <button class="row">
+            <div class="row-content"><div class="row-title">MyHomeWiFi</div><div class="row-sub">Connected</div></div>
+            <div style="display:flex;align-items:center;gap:8px"><span style="font-size:12px;color:var(--text-color-placeholder)">🔒</span>${signalBars(4)}<span style="font-size:14px;color:var(--text-color-placeholder)" aria-hidden="true">›</span></div>
+          </button>
+          <button class="row">
+            <div class="row-content"><div class="row-title">FreeBox-ABC</div></div>
+            <div style="display:flex;align-items:center;gap:8px">${signalBars(2)}<span style="font-size:14px;color:var(--text-color-placeholder)" aria-hidden="true">›</span></div>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:var(--text-caption-size);color:var(--text-color-secondary);font-weight:500;margin-bottom:var(--spacing-snug)">Status display — informational (sunken, not interactive)</div>
+        <div class="card card--status" role="group" aria-label="Status display">
+          <div class="row" style="cursor:default">
+            <div class="row-content"><div class="row-title">MyHomeWiFi</div><div class="row-sub">Network · <YOUR-CHIP-IP></div></div>
+          </div>
+          <div class="row" style="cursor:default">
+            ${devIcon('soundbar')}
+            <div class="row-content"><div class="row-title">Playing on Salon Beam</div><div class="row-sub">Sonos Beam · 192.168.1.53</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  `,
 };
 
 // ===== Canonical stories =====

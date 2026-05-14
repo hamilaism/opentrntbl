@@ -1,0 +1,181 @@
+{
+  "$description": "ShadCN/Aceternity-inspired modern theme. White cards on zinc-50 canvas. Depth cue = 1px border + shadow-sm. Radius 6px. Neutral palette with cool tint (hue 264). Primary = near-black. Fast motion.",
+
+  "semantic": {
+    "surface": {
+      "$description": "Zinc-50 canvas, white cards. Shadow-sm as sole elevation cue.",
+      "canvas": {
+        "background": { "$type": "color", "$value": "oklch(0.985 0.002 264)", "$extensions": { "dark": "oklch(0.088 0.012 264)" } }
+      },
+      "base": {
+        "background": { "$type": "color", "$value": "oklch(1 0 0)",           "$extensions": { "dark": "oklch(0.108 0.012 264)" } },
+        "hover":      { "$type": "color", "$value": "oklch(0.968 0.002 264)", "$extensions": { "dark": "oklch(0.155 0.012 264)" } },
+        "pressed":    { "$type": "color", "$value": "oklch(0.948 0.003 264)", "$extensions": { "dark": "oklch(0.195 0.012 264)" } }
+      },
+      "raised": {
+        "background": { "$type": "color",  "$value": "oklch(1 0 0)",    "$extensions": { "dark": "oklch(0.135 0.012 264)" } },
+        "elevation":  { "$type": "shadow", "$value": "0 1px 2px 0 oklch(0 0 0 / 0.05)",
+                        "$extensions": { "dark": "0 1px 2px 0 oklch(0 0 0 / 0.30)" } }
+      },
+      "sunken": {
+        "background": { "$type": "color", "$value": "oklch(0.972 0 0)", "$extensions": { "dark": "oklch(0.085 0 0)" } },
+        "hover":      { "$type": "color", "$value": "oklch(0.960 0 0)", "$extensions": { "dark": "oklch(0.12 0 0)" } },
+        "pressed":    { "$type": "color", "$value": "oklch(0.948 0 0)", "$extensions": { "dark": "oklch(0.15 0 0)" } }
+      },
+      "overlay": {
+        "background": { "$type": "color",  "$value": "oklch(1 0 0)",    "$extensions": { "dark": "oklch(0.145 0 0)" } },
+        "elevation":  { "$type": "shadow", "$value": "0 8px 30px oklch(0 0 0 / 0.12), 0 0 0 1px oklch(0 0 0 / 0.08)",
+                        "$extensions": { "dark": "0 8px 30px oklch(0 0 0 / 0.50), 0 0 0 1px oklch(0 0 0 / 0.40)" } }
+      },
+      "dim":    { "$type": "color", "$value": "oklch(0.28 0 0)", "$extensions": { "dark": "oklch(0.14 0 0)" } },
+      "bright": { "$type": "color", "$value": "oklch(0.972 0 0)", "$extensions": { "dark": "oklch(0.38 0 0)" } }
+    },
+
+    "border": {
+      "$description": "Cool-tinted zinc borders. Subtle = dividers, default = component outline (zinc-200), strong = hover emphasis.",
+      "subtle":  { "$type": "color", "$value": "oklch(0.932 0.004 264)", "$extensions": { "dark": "oklch(0.18 0.012 264)" } },
+      "default": { "$type": "color", "$value": "oklch(0.918 0.004 264)", "$extensions": { "dark": "oklch(0.24 0.014 264)" } },
+      "strong":  { "$type": "color", "$value": "oklch(0.78 0.006 264)",  "$extensions": { "dark": "oklch(0.42 0.014 264)" } },
+      "focus":   { "$type": "color", "$value": "oklch(0.15 0.018 264)",  "$extensions": { "dark": "oklch(0.88 0.008 264)" },
+                   "$description": "ShadCN-style: near-black ring in light, near-white in dark." }
+    },
+
+    "accent": {
+      "$description": "Same brand hue (85 = gold) — shows how the brand accent adapts to a Notion substrate.",
+      "default": { "$type": "color", "$value": "oklch(0.52 0.14 85)",                                 "$extensions": { "dark": "oklch(0.74 0.14 85)" } },
+      "hover":   { "$type": "color", "$value": "color-mix(in oklch, oklch(0.52 0.14 85) 85%, #000)", "$extensions": { "dark": "color-mix(in oklch, oklch(0.74 0.14 85) 88%, #fff)" } },
+      "pressed": { "$type": "color", "$value": "color-mix(in oklch, oklch(0.52 0.14 85) 72%, #000)", "$extensions": { "dark": "color-mix(in oklch, oklch(0.74 0.14 85) 70%, #000)" } }
+    },
+
+    "text": {
+      "color": {
+        "primary":     { "$type": "color", "$value": "oklch(0.15 0 0)", "$extensions": { "dark": "oklch(0.92 0 0)" } },
+        "secondary":   { "$type": "color", "$value": "oklch(0.50 0 0)", "$extensions": { "dark": "oklch(0.65 0 0)" } },
+        "placeholder": { "$type": "color", "$value": "oklch(0.65 0 0)", "$extensions": { "dark": "oklch(0.50 0 0)" } },
+        "disabled":    { "$type": "color", "$value": "oklch(0.75 0 0)", "$extensions": { "dark": "oklch(0.40 0 0)" } },
+        "inverse":     { "$type": "color", "$value": "oklch(0.98 0 0)", "$extensions": { "dark": "oklch(0.12 0 0)" } },
+        "accent":      { "$type": "color", "$value": "oklch(0.42 0.14 85)", "$extensions": { "dark": "oklch(0.80 0.14 85)" } },
+        "on-accent":   { "$type": "color", "$value": "oklch(1 0 0)",        "$extensions": { "dark": "oklch(0.08 0 0)" } },
+        "on-dim":      { "$type": "color", "$value": "oklch(0.97 0 0)",     "$extensions": { "dark": "oklch(0.92 0 0)" } },
+        "on-bright":   { "$type": "color", "$value": "oklch(0.14 0 0)",     "$extensions": { "dark": "oklch(0.14 0 0)" } }
+      },
+      "caption": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "0.75rem" },
+        "weight":      { "$type": "fontWeight", "$value": 400 },
+        "line-height": { "$type": "number",     "$value": 1.2 }
+      },
+      "small": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "0.875rem" },
+        "weight":      { "$type": "fontWeight", "$value": 400 },
+        "line-height": { "$type": "number",     "$value": 1.4 }
+      },
+      "body": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1rem" },
+        "weight":      { "$type": "fontWeight", "$value": 400 },
+        "line-height": { "$type": "number",     "$value": 1.5 }
+      },
+      "body-emphasis": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1rem" },
+        "weight":      { "$type": "fontWeight", "$value": 500 },
+        "line-height": { "$type": "number",     "$value": 1.5 }
+      },
+      "subheading": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1.25rem" },
+        "weight":      { "$type": "fontWeight", "$value": 600 },
+        "line-height": { "$type": "number",     "$value": 1.3 }
+      },
+      "heading-3": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "1.5rem" },
+        "weight":      { "$type": "fontWeight", "$value": 600 },
+        "line-height": { "$type": "number",     "$value": 1.3 }
+      },
+      "heading-2": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "2rem" },
+        "weight":      { "$type": "fontWeight", "$value": 700 },
+        "line-height": { "$type": "number",     "$value": 1.1 }
+      },
+      "heading-1": {
+        "family":      { "$type": "fontFamily", "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"] },
+        "size":        { "$type": "dimension",  "$value": "2.5rem" },
+        "weight":      { "$type": "fontWeight", "$value": 700 },
+        "line-height": { "$type": "number",     "$value": 1.1 }
+      }
+    },
+
+    "status": {
+      "$description": "Notion-style: very light tinted backgrounds, dark text for clear contrast.",
+      "success": {
+        "bg":         { "$type": "color", "$value": "oklch(0.96 0.04 145)",                                                                  "$extensions": { "dark": "oklch(0.24 0.05 145)" } },
+        "bg-hover":   { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 145) 88%, oklch(0.15 0 0))",                       "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 145) 88%, oklch(0.92 0 0))" } },
+        "bg-pressed": { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 145) 76%, oklch(0.15 0 0))",                       "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 145) 76%, oklch(0.92 0 0))" } },
+        "text":       { "$type": "color", "$value": "oklch(0.34 0.14 145)",                                                                  "$extensions": { "dark": "oklch(0.76 0.14 145)" } }
+      },
+      "warning": {
+        "bg":         { "$type": "color", "$value": "oklch(0.96 0.04 75)",                                                                   "$extensions": { "dark": "oklch(0.24 0.05 75)" } },
+        "bg-hover":   { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 75) 88%, oklch(0.15 0 0))",                        "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 75) 88%, oklch(0.92 0 0))" } },
+        "bg-pressed": { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 75) 76%, oklch(0.15 0 0))",                        "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 75) 76%, oklch(0.92 0 0))" } },
+        "text":       { "$type": "color", "$value": "oklch(0.38 0.15 68)",                                                                   "$extensions": { "dark": "oklch(0.78 0.14 75)" } }
+      },
+      "danger": {
+        "bg":         { "$type": "color", "$value": "oklch(0.96 0.04 25)",                                                                   "$extensions": { "dark": "oklch(0.24 0.05 25)" } },
+        "bg-hover":   { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 25) 88%, oklch(0.15 0 0))",                        "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 25) 88%, oklch(0.92 0 0))" } },
+        "bg-pressed": { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 25) 76%, oklch(0.15 0 0))",                        "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 25) 76%, oklch(0.92 0 0))" } },
+        "text":       { "$type": "color", "$value": "oklch(0.32 0.18 25)",                                                                   "$extensions": { "dark": "oklch(0.74 0.18 25)" } }
+      },
+      "info": {
+        "bg":         { "$type": "color", "$value": "oklch(0.96 0.04 255)",                                                                  "$extensions": { "dark": "oklch(0.24 0.05 255)" } },
+        "bg-hover":   { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 255) 88%, oklch(0.15 0 0))",                       "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 255) 88%, oklch(0.92 0 0))" } },
+        "bg-pressed": { "$type": "color", "$value": "color-mix(in oklch, oklch(0.96 0.04 255) 76%, oklch(0.15 0 0))",                       "$extensions": { "dark": "color-mix(in oklch, oklch(0.24 0.05 255) 76%, oklch(0.92 0 0))" } },
+        "text":       { "$type": "color", "$value": "oklch(0.30 0.15 255)",                                                                  "$extensions": { "dark": "oklch(0.76 0.15 255)" } }
+      }
+    },
+
+    "focus": {
+      "ring": {
+        "color":  { "$type": "color",     "$value": "oklch(0.18 0 0)",  "$extensions": { "dark": "oklch(0.86 0 0)" } },
+        "width":  { "$type": "dimension", "$value": "2px" },
+        "offset": { "$type": "dimension", "$value": "2px" }
+      }
+    },
+
+    "spacing": {
+      "tight":   { "$type": "dimension", "$value": "0.25rem", "$extensions": { "compact": "0.125rem", "spacious": "0.375rem" } },
+      "snug":    { "$type": "dimension", "$value": "0.5rem",  "$extensions": { "compact": "0.375rem", "spacious": "0.625rem" } },
+      "default": { "$type": "dimension", "$value": "1rem",    "$extensions": { "compact": "0.75rem",  "spacious": "1.25rem"  } },
+      "loose":   { "$type": "dimension", "$value": "1.5rem",  "$extensions": { "compact": "1.25rem",  "spacious": "2rem"     } },
+      "airy":    { "$type": "dimension", "$value": "2.5rem",  "$extensions": { "compact": "2rem",     "spacious": "3rem"     } }
+    },
+
+    "radius": {
+      "$description": "6px — ShadCN rounded-md. Structured without being bubbly.",
+      "sharp":  { "$type": "dimension", "$value": "0rem"     },
+      "soft":   { "$type": "dimension", "$value": "0.25rem"  },
+      "round":  { "$type": "dimension", "$value": "0.375rem" },
+      "pill":   { "$type": "dimension", "$value": "9999px"   },
+      "circle": { "$type": "dimension", "$value": "50%"      }
+    },
+
+    "motion": {
+      "$description": "Fast and clean — Notion never lingers.",
+      "feedback":     { "duration": { "$type": "duration", "$value": "80ms"  }, "easing": { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1] } },
+      "state-change": { "duration": { "$type": "duration", "$value": "120ms" }, "easing": { "$type": "cubicBezier", "$value": [0.4, 0, 0.2, 1] } },
+      "enter":        { "duration": { "$type": "duration", "$value": "180ms" }, "easing": { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1] } },
+      "exit":         { "duration": { "$type": "duration", "$value": "120ms" }, "easing": { "$type": "cubicBezier", "$value": [0.4, 0, 1, 1] } }
+    },
+
+    "icon": {
+      "size": {
+        "sm": { "$type": "dimension", "$value": "1rem"   },
+        "md": { "$type": "dimension", "$value": "1.5rem" },
+        "lg": { "$type": "dimension", "$value": "2rem"   }
+      }
+    }
+  }
+}

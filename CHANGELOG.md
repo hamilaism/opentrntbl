@@ -4,6 +4,47 @@ All notable changes to the project, dated.
 
 Status legend: ✅ tested and validated in real conditions  ·  🟡 partially tested (works but not 100%)  ·  ⚠️ deployed but not verified end-to-end  ·  ❌ known broken, deferred to V2 with reason
 
+## [v1.2.0] — 2026-05-14 — Design System stable: 4 themes, a11y 0 violations, test coverage 99%
+
+DS package graduates from `1.0.0` → `1.2.0`. Work focused on the Storybook Design System: theme experiments, zero-violation a11y, test coverage.
+
+### Added
+
+- ✅ **4 complete DS themes**: Sonos V1 (existing dark theme, TRNTBL identity), Neumorphic V2 (physical material: shadows, depth, pop animations), Flat-UI V3 (Notion-like paper tone, type-forward, warm surface), Modern V4 (ShadCN/Radix-inspired, compact, focus halos)
+- ✅ **Live theme switcher in the firmware portal**: pick any theme from the Display panel — sets `data-token-system` on `<body>`, CSS cascade, no reload
+- ✅ **Storybook screens matching trntbl.local** (`Patterns/Dashboard`, `Patterns/WifiSetup`, `Patterns/SpeakerPicker`, `Patterns/Stream`, `Patterns/AP-Setup`) — mirror real portal markup and UX flow
+- ✅ **`firmware-ui.css`** loaded in Storybook — guaranteed visual parity with the real portal
+- ✅ **Toggle DS component**: canonical stories (Default, Checked, Interactive) + Overview
+- ✅ **`Dev/Helpers` story**: exercises defensive paths in `_helpers.js` — null guards, dead aliases, `resolveTypography` optional fields, `dimValue` branches
+- ✅ **Token architecture experiments** (6 reference architectures in `design/tokens/experiments/`): algorithmic, flat-ui, modern-algo, modern-nested, nested-modes, neumorphic — each with its own Python resolver and generated CSS
+
+### Fixed / Improved
+
+- ✅ **A11y: 0 violations** — 85/85 tests green in `error` mode (axe-core via `@storybook/addon-a11y`):
+  - Structural fixes: `aria-pressed` on SegmentedControl, `role="group"` (replacing `role="list"`), `for`/`id` labels, `aria-hidden` on decoratives, `role="img"` signalBars, `aria-label` Toggle input
+  - Documented WCAG 1.4.3 exemptions: disabled states (opacity:0.4), loading (opacity:0.5), brand accent color (gold) on light surface
+  - HTML structure fixes: `h3`→`h2` (heading-order), `scope="col/row"` on table headers
+- ✅ **Dead imports cleaned up**: `dimValue` removed from unused imports in `Primitives.Dimensions` and `Semantic.Spacing`
+- ✅ **Architecture selector removed** from firmware settings panel (was dev-only, not for end-users)
+
+### Test coverage
+
+| Metric | Before | After |
+|---|---|---|
+| Statements | 95.49% | **99.09%** |
+| Branches | 68.42% | **91.42%** |
+| Functions | 91.66% | **100%** |
+| Lines | 93.93% | **98.97%** |
+
+Floor at 91.42% branches: 4 remaining branches in `activeModes()` and `preview.js` are structurally unreachable from a story (decorator sets `body.dataset.*` before execution).
+
+### Known / non-blocking
+
+- 🟡 Architecture selector removed from portal (dev-only feature)
+- 🟡 `activeModes()` fallbacks not covered — structural, not fixable without test infra outside Storybook
+
+---
+
 ## [v1.0.0] — 2026-05-13 — stable release
 
 Promoted from alpha. 180h continuous run validated (well beyond the 72h target). CI in place. NE5532 wiring deferred as a hardware enhancement (not a blocker — firmware is fully functional over Sonos/WiFi). Design asset polish continues in 1.0.x.

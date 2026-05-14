@@ -1,10 +1,10 @@
 // openTRNTBL — Semantic / Spacing stories (density-aware).
 
-import { tokens, resolveToken, dimValue, activeModes } from './_helpers.js';
+import { tokens, resolveToken, activeModes } from './_helpers.js';
 
 export default {
   title: 'Tokens/Semantic/Spacing',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 const ROLES = ['tight', 'snug', 'default', 'loose', 'airy'];

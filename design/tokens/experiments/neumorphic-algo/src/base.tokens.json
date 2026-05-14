@@ -1,0 +1,68 @@
+{
+  "base": {
+    "surface-l": {
+      "$type": "number",
+      "$value": 0.94,
+      "$description": "Surface lightness — seul paramètre à changer pour rethemer. Dark: 0.25",
+      "$extensions": { "com.opntrntbl.dark": 0.25 }
+    },
+    "surface-c": {
+      "$type": "number",
+      "$value": 0.005
+    },
+    "hue": {
+      "$type": "number",
+      "$value": 262
+    },
+    "shadow-l-delta": {
+      "$type": "number",
+      "$value": 0.05,
+      "$description": "surface-l + this = shadow-light. Dark: 0.10",
+      "$extensions": { "com.opntrntbl.dark": 0.10 }
+    },
+    "shadow-d-delta": {
+      "$type": "number",
+      "$value": 0.14,
+      "$description": "surface-l - this = shadow-dark. Dark: 0.10",
+      "$extensions": { "com.opntrntbl.dark": 0.10 }
+    },
+    "shadow-c": {
+      "$type": "number",
+      "$value": 0.008
+    },
+    "shadow-offset": {
+      "$type": "number",
+      "$value": 4,
+      "$description": "Shadow offset in px"
+    },
+    "shadow-blur": {
+      "$type": "number",
+      "$value": 8,
+      "$description": "Shadow blur in px"
+    },
+    "hue-accent": {
+      "$type": "number",
+      "$value": 85
+    },
+    "chroma-accent": {
+      "$type": "number",
+      "$value": 0.14
+    },
+    "density-factor": {
+      "$type": "number",
+      "$value": 1,
+      "$extensions": {
+        "com.opntrntbl.compact": 0.5,
+        "com.opntrntbl.spacious": 1.5
+      }
+    },
+    "motion-base": {
+      "$type": "number",
+      "$value": 150
+    },
+    "font-family-sans": {
+      "$type": "fontFamily",
+      "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+    }
+  }
+}

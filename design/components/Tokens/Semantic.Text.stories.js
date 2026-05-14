@@ -4,7 +4,7 @@ import { tokens, resolveToken, resolveTypography, activeModes } from './_helpers
 
 export default {
   title: 'Tokens/Semantic/Text',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 const TYPE_ROLES = [

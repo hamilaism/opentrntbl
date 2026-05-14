@@ -6,6 +6,7 @@
 <title>openTRNTBL</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/themes.css">
 <link rel="stylesheet" href="/components.css">
 <style>
 /* Firmware-specific overrides + classes pas dans le DS V1.
@@ -97,7 +98,16 @@ input:checked+.toggle-slider:before{transform:translateX(22px)}
       <div class="set-section-title" data-i18n="settings.display">Affichage</div>
 
       <div class="set-row">
-        <span class="set-row-label" id="lbl-theme-wifi" data-i18n="settings.theme">Th&#232;me</span>
+        <span class="set-row-label" id="lbl-ds-wifi" data-i18n="settings.design_style">Th&#232;me</span>
+        <div class="seg-track" data-pref="designStyle" data-wrap="true" role="group" aria-labelledby="lbl-ds-wifi">
+          <button class="seg-segment" data-value="sonos"  data-i18n="settings.style_sonos">Sonos</button>
+          <button class="seg-segment" data-value="soft"   data-i18n="settings.style_soft">Soft</button>
+          <button class="seg-segment" data-value="simple" data-i18n="settings.style_simple">Simple</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-theme-wifi" data-i18n="settings.color_mode">Apparence</span>
         <div class="seg-track" data-pref="theme" data-wrap="true" role="group" aria-labelledby="lbl-theme-wifi">
           <button class="seg-segment" data-value="auto"  data-i18n="settings.theme_auto">Auto</button>
           <button class="seg-segment" data-value="light" data-i18n="settings.theme_light">Clair</button>
@@ -232,7 +242,16 @@ input:checked+.toggle-slider:before{transform:translateX(22px)}
       <div class="set-section-title" data-i18n="settings.display">Affichage</div>
 
       <div class="set-row">
-        <span class="set-row-label" id="lbl-theme" data-i18n="settings.theme">Th&#232;me</span>
+        <span class="set-row-label" id="lbl-ds" data-i18n="settings.design_style">Th&#232;me</span>
+        <div class="seg-track" data-pref="designStyle" data-wrap="true" role="group" aria-labelledby="lbl-ds">
+          <button class="seg-segment" data-value="sonos">Sonos</button>
+          <button class="seg-segment" data-value="soft">Soft</button>
+          <button class="seg-segment" data-value="simple">Simple</button>
+        </div>
+      </div>
+
+      <div class="set-row">
+        <span class="set-row-label" id="lbl-theme" data-i18n="settings.color_mode">Apparence</span>
         <div class="seg-track" data-pref="theme" data-wrap="true" role="group" aria-labelledby="lbl-theme">
           <button class="seg-segment" data-value="auto"  data-i18n="settings.theme_auto">Auto</button>
           <button class="seg-segment" data-value="light" data-i18n="settings.theme_light">Clair</button>
@@ -310,8 +329,24 @@ function loadPrefs() {
 function savePrefs(p) {
   try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch (e) {}
 }
+
+// token-system map: [designStyle][architecture] → data-token-system attribute value
+var TOKEN_SYSTEM_MAP = {
+  'sonos':  { 'classic': '',                 'nested': 'nested-modes',      'algo': 'algorithmic'    },
+  'soft':   { 'classic': 'neumorphic',       'nested': 'neumorphic-nested', 'algo': 'neumorphic-algo' },
+  'simple': { 'classic': 'flat-ui',          'nested': 'modern-nested',     'algo': 'modern-algo'    },
+};
+function applyTokenSystem(style, arch) {
+  var styleMap = TOKEN_SYSTEM_MAP[style || 'sonos'] || TOKEN_SYSTEM_MAP['sonos'];
+  var sys = styleMap[arch || 'classic'];
+  if (sys === undefined) sys = styleMap['classic'] || '';
+  if (sys) document.body.setAttribute('data-token-system', sys);
+  else document.body.removeAttribute('data-token-system');
+}
+
 function applyPrefs(p) {
   var b = document.body;
+  applyTokenSystem(p.designStyle || 'sonos', p.architecture || 'classic');
   // theme → data-color
   var theme = p.theme || 'auto';
   if (theme === 'auto') {
@@ -343,10 +378,12 @@ function syncPrefsUI() {
     if (key === 'lang') {
       current = p.lang || 'auto';
     } else {
-      current = p[key] || (key === 'vision' ? 'default'
-                          : key === 'theme'  ? 'auto'
-                          : key === 'density'? 'default'
-                          : key === 'contrast'? 'off'
+      current = p[key] || (key === 'vision'       ? 'default'
+                          : key === 'theme'        ? 'auto'
+                          : key === 'density'      ? 'default'
+                          : key === 'contrast'     ? 'off'
+                          : key === 'designStyle'   ? 'sonos'
+                          : key === 'architecture'  ? 'classic'
                           : 'auto');
     }
     highlightSegGroup(g, current);

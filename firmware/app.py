@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""openTRNTBL by ismo — Portal & API v9
+"""openTRNTBL by ismo — Portal & API v9 (pre-alpha)
 All fixes applied:
 - threaded=True (no more UI freeze)
 - Native Sonos grouping via x-rincon: (speakers stay in sync)
@@ -867,7 +867,7 @@ def status():
         'rca_enabled': cfg.get('rca_enabled', False),
         'rca_show_ui': cfg.get('rca_show_ui', True),
         'uptime': uptime,
-        'version': 'openTRNTBL v1.0.0',
+        'version': 'openTRNTBL pre-alpha',
         'wifi': get_wifi_info()
     })
 
@@ -910,6 +910,15 @@ def components_css():
             return Response(f.read(), mimetype='text/css')
     except Exception:
         return Response('/* components.css not found */', mimetype='text/css', status=404)
+
+@app.route('/themes.css')
+def themes_css():
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'themes.css')
+    try:
+        with open(p, 'r') as f:
+            return Response(f.read(), mimetype='text/css')
+    except:
+        return Response('/* themes.css not found */', mimetype='text/css', status=404)
 
 @app.route('/<path:path>')
 def catch_all(path):

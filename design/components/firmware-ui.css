@@ -1,0 +1,38 @@
+/*
+ * Firmware UI — styles spécifiques au portail web (index.html).
+ * Importé par Storybook (preview.js) pour que les stories Screens
+ * soient fidèles à trntbl.local sans dupliquer le CSS.
+ *
+ * NE PAS ajouter ici des styles DS génériques — ils appartiennent
+ * à components.css. Ceci couvre uniquement les classes page-spécifiques
+ * du firmware qui ne font pas partie du design system réutilisable.
+ */
+
+/* ── Stream URL (dashboard) ─────────────────────────────────────────── */
+.stream-card { padding: var(--spacing-default); }
+.stream-label { font-size: var(--text-small-size); color: var(--text-color-secondary); margin-bottom: 10px; font-weight: 500; line-height: 1.5; }
+.stream-row { display: flex; align-items: center; gap: 10px; }
+.stream-url { flex: 1; font-size: var(--text-small-size); color: var(--text-color-secondary); background: var(--surface-sunken-background); padding: 10px var(--spacing-default); border-radius: var(--radius-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: 'SF Mono', 'Menlo', monospace; }
+
+/* ── Settings panel ──────────────────────────────────────────────────── */
+.set-toggle { width: 100%; background: none; border: none; color: var(--text-color-secondary); font-family: var(--text-body-family); font-size: 15px; font-weight: 600; padding: var(--spacing-default) 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+.set-toggle:hover { color: var(--text-color-primary); }
+.set-toggle.active { color: var(--accent-default); }
+.set-panel { display: none; flex-direction: column; gap: var(--spacing-default); padding-bottom: var(--spacing-default); }
+.set-panel.open { display: flex; }
+.set-info { font-size: var(--text-small-size); color: var(--text-color-secondary); line-height: 2; }
+.set-section { display: flex; flex-direction: column; gap: var(--spacing-snug); padding-top: var(--spacing-default); border-top: 0.5px solid var(--border-subtle); }
+.set-section:first-of-type { border-top: none; padding-top: 0; }
+.set-section-title { font-size: var(--text-caption-size); font-weight: 600; color: var(--text-color-secondary); text-transform: uppercase; letter-spacing: 1px; }
+.set-row { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-snug); flex-wrap: wrap; }
+.set-row-label { font-size: 14px; color: var(--text-color-secondary); flex: 0 0 auto; }
+
+/* ── Reconnecting indicator ───────────────────────────────────────────── */
+.reconnect { display: flex; align-items: center; gap: 12px; padding: var(--spacing-default) var(--spacing-loose); background: var(--surface-base-background); border-radius: var(--radius-round); margin-bottom: var(--spacing-default); }
+
+/* ── Misc ─────────────────────────────────────────────────────────────── */
+.feedback { text-align: center; padding: var(--spacing-default) 0; font-size: 14px; font-weight: 600; }
+.fb-ok { color: var(--status-success-text); }
+.fb-err { color: var(--status-danger-text); }
+.chevron { font-size: 14px; color: var(--text-color-secondary); font-weight: 300; }
+.row-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }

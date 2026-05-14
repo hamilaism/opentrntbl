@@ -1,0 +1,71 @@
+{
+  "$description": "Base parameters. These are the only values a designer edits to retheme the system. Everything in semantic.tokens.json is a formula derived from these.",
+  "base": {
+    "hue": {
+      "$type": "number",
+      "$value": 262,
+      "$description": "Brand hue (0–360). Single change repaints all tinted surfaces and borders."
+    },
+    "chroma": {
+      "$type": "number",
+      "$value": 0.012,
+      "$description": "Surface chroma. Low (0.01–0.02) = subtle tint. High = saturated surfaces."
+    },
+    "hue-accent": {
+      "$type": "number",
+      "$value": 85,
+      "$description": "Accent hue. Default: gold (85). Try base.hue + 180 for complementary."
+    },
+    "chroma-accent": {
+      "$type": "number",
+      "$value": 0.15,
+      "$description": "Accent chroma. Controls saturation of interactive elements."
+    },
+    "hue-success": { "$type": "number", "$value": 145 },
+    "hue-warning": { "$type": "number", "$value": 55 },
+    "hue-danger":  { "$type": "number", "$value": 29 },
+    "hue-info":    { "$type": "number", "$value": 255 },
+    "chroma-status": {
+      "$type": "number",
+      "$value": 0.14,
+      "$description": "Shared chroma for all status colors (success/warning/danger/info)."
+    },
+    "font-size": {
+      "$type": "number",
+      "$value": 16,
+      "$description": "Base font size in px. Changing this scales the entire type system."
+    },
+    "scale-ratio": {
+      "$type": "number",
+      "$value": 1.25,
+      "$description": "Typographic modular scale ratio. 1.25 = major third. 1.333 = perfect fourth."
+    },
+    "space-unit": {
+      "$type": "number",
+      "$value": 4,
+      "$description": "Base spacing atom in px. All spacings are integer multiples. Hard grid."
+    },
+    "density-factor": {
+      "$type": "number",
+      "$value": 1,
+      "$description": "Active density multiplier. Resolver generates mode overrides from density-compact / density-spacious.",
+      "$extensions": {
+        "com.opntrntbl.compact":  0.5,
+        "com.opntrntbl.spacious": 1.5
+      }
+    },
+    "motion-base": {
+      "$type": "number",
+      "$value": 150,
+      "$description": "Base motion duration in ms. All durations are multiples of this."
+    },
+    "font-family-sans": {
+      "$type": "fontFamily",
+      "$value": ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+    },
+    "font-family-mono": {
+      "$type": "fontFamily",
+      "$value": ["SF Mono", "Menlo", "Consolas", "monospace"]
+    }
+  }
+}

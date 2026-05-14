@@ -77,6 +77,7 @@ scp -o ConnectTimeout=30 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/
     "$DIR/index.html" \
     "$DIR/i18n.js" \
     "$DIR/tokens.css" \
+    "$DIR/themes.css" \
     "$DIR/components.css" \
     "$DIR/sonos-monitor.sh" \
     "$DIR/scan-sonos-bg.sh" \
@@ -109,6 +110,7 @@ cp /tmp/opentrntbl-deploy/app.py /home/chip/opentrntbl/
 cp /tmp/opentrntbl-deploy/index.html /home/chip/opentrntbl/
 cp /tmp/opentrntbl-deploy/i18n.js /home/chip/opentrntbl/
 cp /tmp/opentrntbl-deploy/tokens.css /home/chip/opentrntbl/
+cp /tmp/opentrntbl-deploy/themes.css /home/chip/opentrntbl/
 cp /tmp/opentrntbl-deploy/components.css /home/chip/opentrntbl/
 cp /tmp/opentrntbl-deploy/sonos-monitor.sh /home/chip/opentrntbl/
 cp /tmp/opentrntbl-deploy/scan-sonos-bg.sh /home/chip/opentrntbl/

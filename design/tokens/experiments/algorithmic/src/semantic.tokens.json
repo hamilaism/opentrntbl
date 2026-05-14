@@ -1,0 +1,479 @@
+{
+  "$description": "Semantic layer. All values are formulas referencing {base.*}. Resolver substitutes references and emits CSS. Lightness (L) values are design decisions hardcoded here — hue and chroma flow from base.",
+  "surface": {
+    "canvas": {
+      "$type": "color",
+      "$value": "oklch(0.96 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.08 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.98 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.04 {base.chroma} {base.hue})"
+      }
+    },
+    "base": {
+      "$type": "color",
+      "$value": "oklch(0.98 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.12 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(1.0 0 0)",
+        "com.opntrntbl.hc-dark": "oklch(0.10 {base.chroma} {base.hue})"
+      }
+    },
+    "raised": {
+      "$type": "color",
+      "$value": "oklch(1.0 0 0)",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.17 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.94 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.22 {base.chroma} {base.hue})"
+      }
+    },
+    "sunken": {
+      "$type": "color",
+      "$value": "oklch(0.94 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.06 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.88 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.04 {base.chroma} {base.hue})"
+      }
+    },
+    "overlay": {
+      "$type": "color",
+      "$value": "oklch(1.0 0 0)",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.14 {base.chroma} {base.hue})"
+      }
+    },
+    "dim": {
+      "$type": "color",
+      "$value": "oklch(0.27 {base.chroma} {base.hue})"
+    },
+    "bright": {
+      "$type": "color",
+      "$value": "oklch(1.0 0 0)"
+    },
+    "base-hover": {
+      "$type": "color",
+      "$value": "color-mix(in oklch, oklch(0.98 {base.chroma} {base.hue}) 86%, oklch(0.18 {base.chroma} {base.hue}))",
+      "$extensions": {
+        "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.12 {base.chroma} {base.hue}) 92%, oklch(0.92 {base.chroma} {base.hue}))"
+      }
+    },
+    "base-pressed": {
+      "$type": "color",
+      "$value": "color-mix(in oklch, oklch(0.98 {base.chroma} {base.hue}) 74%, oklch(0.18 {base.chroma} {base.hue}))",
+      "$extensions": {
+        "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.12 {base.chroma} {base.hue}) 84%, oklch(0.92 {base.chroma} {base.hue}))"
+      }
+    },
+    "sunken-hover": {
+      "$type": "color",
+      "$value": "color-mix(in oklch, oklch(0.94 {base.chroma} {base.hue}) 86%, oklch(0.18 {base.chroma} {base.hue}))",
+      "$extensions": {
+        "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.06 {base.chroma} {base.hue}) 92%, oklch(0.92 {base.chroma} {base.hue}))"
+      }
+    },
+    "sunken-pressed": {
+      "$type": "color",
+      "$value": "color-mix(in oklch, oklch(0.94 {base.chroma} {base.hue}) 66%, oklch(0.18 {base.chroma} {base.hue}))",
+      "$extensions": {
+        "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.06 {base.chroma} {base.hue}) 76%, oklch(0.92 {base.chroma} {base.hue}))"
+      }
+    }
+  },
+  "border": {
+    "subtle": {
+      "$type": "color",
+      "$value": "oklch(0.87 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.22 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.60 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.60 {base.chroma} {base.hue})"
+      }
+    },
+    "default": {
+      "$type": "color",
+      "$value": "oklch(0.60 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.52 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.35 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.72 {base.chroma} {base.hue})"
+      }
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "oklch(0.30 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.72 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.10 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.92 {base.chroma} {base.hue})"
+      }
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "oklch(0.55 {base.chroma-accent} {base.hue-accent})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.68 {base.chroma-accent} {base.hue-accent})",
+        "com.opntrntbl.hc": "oklch(0.40 {base.chroma-accent} {base.hue-accent})",
+        "com.opntrntbl.hc-dark": "oklch(0.78 {base.chroma-accent} {base.hue-accent})"
+      }
+    }
+  },
+  "accent": {
+    "default": {
+      "$type": "color",
+      "$value": "oklch(0.55 {base.chroma-accent} {base.hue-accent})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.68 {base.chroma-accent} {base.hue-accent})"
+      }
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "color-mix(in oklch, oklch(0.55 {base.chroma-accent} {base.hue-accent}) 88%, #ffffff)"
+    },
+    "pressed": {
+      "$type": "color",
+      "$value": "color-mix(in oklch, oklch(0.55 {base.chroma-accent} {base.hue-accent}) 80%, #000000)"
+    }
+  },
+  "text": {
+    "primary": {
+      "$type": "color",
+      "$value": "oklch(0.18 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.92 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.0 0 0)",
+        "com.opntrntbl.hc-dark": "oklch(1.0 0 0)"
+      }
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "oklch(0.47 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.70 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc": "oklch(0.20 {base.chroma} {base.hue})",
+        "com.opntrntbl.hc-dark": "oklch(0.88 {base.chroma} {base.hue})"
+      }
+    },
+    "placeholder": {
+      "$type": "color",
+      "$value": "oklch(0.55 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.62 {base.chroma} {base.hue})"
+      }
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "oklch(0.62 {base.chroma} {base.hue})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.55 {base.chroma} {base.hue})"
+      }
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "oklch(1.0 0 0)",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.06 {base.chroma} {base.hue})"
+      }
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "oklch(0.40 {base.chroma-accent} {base.hue-accent})",
+      "$extensions": {
+        "com.opntrntbl.dark": "oklch(0.72 {base.chroma-accent} {base.hue-accent})"
+      }
+    },
+    "on-accent": {
+      "$type": "color",
+      "$value": "oklch(0.0 0 0)"
+    },
+    "on-dim": {
+      "$type": "color",
+      "$value": "oklch(1.0 0 0)"
+    },
+    "on-bright": {
+      "$type": "color",
+      "$value": "oklch(0.0 0 0)"
+    }
+  },
+  "status": {
+    "success": {
+      "bg": {
+        "$type": "color",
+        "$value": "oklch(0.95 {base.chroma-status} {base.hue-success})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.11 {base.chroma-status} {base.hue-success})",
+          "com.opntrntbl.hc": "oklch(0.88 {base.chroma-status} {base.hue-success})",
+          "com.opntrntbl.hc-dark": "oklch(0.20 {base.chroma-status} {base.hue-success})"
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "oklch(0.32 {base.chroma-status} {base.hue-success})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.80 {base.chroma-status} {base.hue-success})",
+          "com.opntrntbl.hc": "oklch(0.22 {base.chroma-status} {base.hue-success})",
+          "com.opntrntbl.hc-dark": "oklch(0.88 {base.chroma-status} {base.hue-success})"
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-success}) 86%, oklch(0.32 {base.chroma-status} {base.hue-success}))",
+        "$extensions": {
+          "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.11 {base.chroma-status} {base.hue-success}) 92%, oklch(0.80 {base.chroma-status} {base.hue-success}))"
+        }
+      },
+      "bg-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-success}) 74%, oklch(0.32 {base.chroma-status} {base.hue-success}))",
+        "$extensions": {
+          "com.opntrntbl.dark": "color-mix(in oklch, oklch(0.11 {base.chroma-status} {base.hue-success}) 82%, oklch(0.80 {base.chroma-status} {base.hue-success}))"
+        }
+      }
+    },
+    "warning": {
+      "bg": {
+        "$type": "color",
+        "$value": "oklch(0.95 {base.chroma-status} {base.hue-warning})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.11 {base.chroma-status} {base.hue-warning})",
+          "com.opntrntbl.hc": "oklch(0.88 {base.chroma-status} {base.hue-warning})",
+          "com.opntrntbl.hc-dark": "oklch(0.20 {base.chroma-status} {base.hue-warning})"
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "oklch(0.32 {base.chroma-status} {base.hue-warning})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.80 {base.chroma-status} {base.hue-warning})",
+          "com.opntrntbl.hc": "oklch(0.22 {base.chroma-status} {base.hue-warning})",
+          "com.opntrntbl.hc-dark": "oklch(0.88 {base.chroma-status} {base.hue-warning})"
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-warning}) 86%, oklch(0.32 {base.chroma-status} {base.hue-warning}))"
+      },
+      "bg-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-warning}) 74%, oklch(0.32 {base.chroma-status} {base.hue-warning}))"
+      }
+    },
+    "danger": {
+      "bg": {
+        "$type": "color",
+        "$value": "oklch(0.95 {base.chroma-status} {base.hue-danger})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.11 {base.chroma-status} {base.hue-danger})",
+          "com.opntrntbl.hc": "oklch(0.88 {base.chroma-status} {base.hue-danger})",
+          "com.opntrntbl.hc-dark": "oklch(0.20 {base.chroma-status} {base.hue-danger})"
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "oklch(0.32 {base.chroma-status} {base.hue-danger})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.80 {base.chroma-status} {base.hue-danger})",
+          "com.opntrntbl.hc": "oklch(0.22 {base.chroma-status} {base.hue-danger})",
+          "com.opntrntbl.hc-dark": "oklch(0.88 {base.chroma-status} {base.hue-danger})"
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-danger}) 86%, oklch(0.32 {base.chroma-status} {base.hue-danger}))"
+      },
+      "bg-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-danger}) 74%, oklch(0.32 {base.chroma-status} {base.hue-danger}))"
+      }
+    },
+    "info": {
+      "bg": {
+        "$type": "color",
+        "$value": "oklch(0.95 {base.chroma-status} {base.hue-info})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.11 {base.chroma-status} {base.hue-info})",
+          "com.opntrntbl.hc": "oklch(0.88 {base.chroma-status} {base.hue-info})",
+          "com.opntrntbl.hc-dark": "oklch(0.20 {base.chroma-status} {base.hue-info})"
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "oklch(0.32 {base.chroma-status} {base.hue-info})",
+        "$extensions": {
+          "com.opntrntbl.dark": "oklch(0.80 {base.chroma-status} {base.hue-info})",
+          "com.opntrntbl.hc": "oklch(0.22 {base.chroma-status} {base.hue-info})",
+          "com.opntrntbl.hc-dark": "oklch(0.88 {base.chroma-status} {base.hue-info})"
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-info}) 86%, oklch(0.32 {base.chroma-status} {base.hue-info}))"
+      },
+      "bg-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, oklch(0.95 {base.chroma-status} {base.hue-info}) 74%, oklch(0.32 {base.chroma-status} {base.hue-info}))"
+      }
+    }
+  },
+  "spacing": {
+    "tight":   { "$type": "dimension", "$value": "calc({base.space-unit}px * 1  * {base.density-factor})", "$description": "1× space-unit" },
+    "snug":    { "$type": "dimension", "$value": "calc({base.space-unit}px * 2  * {base.density-factor})", "$description": "2× space-unit" },
+    "default": { "$type": "dimension", "$value": "calc({base.space-unit}px * 4  * {base.density-factor})", "$description": "4× space-unit" },
+    "loose":   { "$type": "dimension", "$value": "calc({base.space-unit}px * 6  * {base.density-factor})", "$description": "6× space-unit" },
+    "airy":    { "$type": "dimension", "$value": "calc({base.space-unit}px * 10 * {base.density-factor})", "$description": "10× space-unit" }
+  },
+  "text": {
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 0.58), calc({base.font-size}px * 0.64), calc({base.font-size}px * 0.72))",
+        "lineHeight": 1.8,
+        "fontWeight": 400,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step −2 (ratio^−2 = 0.64). lh = 1 + 8/10.24px ≈ 1.8"
+    },
+    "small": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 0.72), calc({base.font-size}px * 0.80), calc({base.font-size}px * 0.9))",
+        "lineHeight": 1.625,
+        "fontWeight": 400,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step −1 (ratio^−1 = 0.80). lh = 1 + 8/12.8px ≈ 1.6"
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 0.9), calc({base.font-size}px * 1), calc({base.font-size}px * 1.1))",
+        "lineHeight": 1.5,
+        "fontWeight": 400,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step 0 (ratio^0 = 1). lh = 1 + 8/16px = 1.5"
+    },
+    "body-emphasis": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 0.9), calc({base.font-size}px * 1), calc({base.font-size}px * 1.1))",
+        "lineHeight": 1.5,
+        "fontWeight": 600,
+        "fontFamily": "{base.font-family-sans}"
+      }
+    },
+    "subheading": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 1.1), calc({base.font-size}px * 1.25), calc({base.font-size}px * 1.4))",
+        "lineHeight": 1.4,
+        "fontWeight": 600,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step +1 (ratio^1 = 1.25). lh = 1 + 8/20px = 1.4"
+    },
+    "heading-3": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 1.4), calc({base.font-size}px * 1.5625), calc({base.font-size}px * 1.75))",
+        "lineHeight": 1.32,
+        "fontWeight": 700,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step +2 (ratio^2 = 1.5625). lh = 1 + 8/25px ≈ 1.32"
+    },
+    "heading-2": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 1.75), calc({base.font-size}px * 1.953), calc({base.font-size}px * 2.2))",
+        "lineHeight": 1.25,
+        "fontWeight": 700,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step +3 (ratio^3 ≈ 1.953). lh ≈ 1.25"
+    },
+    "heading-1": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 2.2), calc({base.font-size}px * 2.441), calc({base.font-size}px * 2.75))",
+        "lineHeight": 1.2,
+        "fontWeight": 800,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step +4 (ratio^4 ≈ 2.44). lh ≈ 1.2"
+    },
+    "display-small": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 2.75), calc({base.font-size}px * 3.052), calc({base.font-size}px * 3.4))",
+        "lineHeight": 1.16,
+        "fontWeight": 800,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step +5 (ratio^5 ≈ 3.05). lh ≈ 1.16"
+    },
+    "display-large": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 3.4), calc({base.font-size}px * 3.815), calc({base.font-size}px * 4.2))",
+        "lineHeight": 1.13,
+        "fontWeight": 800,
+        "fontFamily": "{base.font-family-sans}"
+      },
+      "$description": "scale step +6 (ratio^6 ≈ 3.81). lh ≈ 1.13"
+    },
+    "code": {
+      "$type": "typography",
+      "$value": {
+        "fontSize": "clamp(calc({base.font-size}px * 0.72), calc({base.font-size}px * 0.80), calc({base.font-size}px * 0.9))",
+        "lineHeight": 1.625,
+        "fontWeight": 400,
+        "fontFamily": "{base.font-family-mono}"
+      }
+    }
+  },
+  "radius": {
+    "sharp":  { "$type": "dimension", "$value": "0px" },
+    "soft":   { "$type": "dimension", "$value": "calc({base.space-unit}px * 1)", "$description": "1× space-unit" },
+    "round":  { "$type": "dimension", "$value": "calc({base.space-unit}px * 2)", "$description": "2× space-unit" },
+    "pill":   { "$type": "dimension", "$value": "999px" },
+    "circle": { "$type": "dimension", "$value": "50%" }
+  },
+  "motion": {
+    "feedback": {
+      "$type": "transition",
+      "$value": { "duration": "calc({base.motion-base}ms * 1)", "timingFunction": "cubic-bezier(0, 0, 0.2, 1)" },
+      "$description": "1× motion-base"
+    },
+    "state-change": {
+      "$type": "transition",
+      "$value": { "duration": "calc({base.motion-base}ms * 1.5)", "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)" },
+      "$description": "1.5× motion-base"
+    },
+    "enter": {
+      "$type": "transition",
+      "$value": { "duration": "calc({base.motion-base}ms * 2)", "timingFunction": "cubic-bezier(0, 0, 0.2, 1)" },
+      "$description": "2× motion-base"
+    },
+    "exit": {
+      "$type": "transition",
+      "$value": { "duration": "calc({base.motion-base}ms * 0.75)", "timingFunction": "cubic-bezier(0.4, 0, 1, 1)" },
+      "$description": "0.75× motion-base"
+    }
+  },
+  "icon": {
+    "size": {
+      "sm": { "$type": "dimension", "$value": "calc({base.space-unit}px * 4)",  "$description": "4× = 16px at default" },
+      "md": { "$type": "dimension", "$value": "calc({base.space-unit}px * 6)",  "$description": "6× = 24px at default" },
+      "lg": { "$type": "dimension", "$value": "calc({base.space-unit}px * 8)",  "$description": "8× = 32px at default" }
+    }
+  },
+  "focus": {
+    "ring": {
+      "width":  { "$type": "dimension", "$value": "calc({base.space-unit}px * 0.5)", "$description": "2px at default" },
+      "offset": { "$type": "dimension", "$value": "calc({base.space-unit}px * 0.5)", "$description": "2px at default" },
+      "color":  { "$type": "color",     "$value": "oklch(0.55 {base.chroma-accent} {base.hue-accent})", "$extensions": { "com.opntrntbl.dark": "oklch(0.68 {base.chroma-accent} {base.hue-accent})" } }
+    }
+  }
+}

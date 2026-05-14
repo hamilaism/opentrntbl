@@ -1,0 +1,496 @@
+{
+  "semantic": {
+    "surface": {
+      "canvas": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.190}",
+          "$description": "Page background. Bottom-most surface. HC light n.175 (gris moyen) creuse l'\u00e9cart avec base/raised pour diff\u00e9rencier les 4 surfaces sans recourir \u00e0 des borders."
+        }
+      },
+      "base": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$description": "Default card / panel surface. HC dark n.25 distingue base de canvas (pur black) sans border."
+        }
+      },
+      "raised": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$description": "Elevated surface (modal, popover, tonal button bg, segmented track). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.190 (off-white) au-dessus de canvas n.175 ; dark n.75 (gris moyen-clair) au-dessus de base n.25. Pas de texte primaire pos\u00e9 dessus en components.css (v\u00e9rifi\u00e9) ; les stories de doc Surfaces affichent du text dessus \u2192 ratio AAA limite (6.79) accept\u00e9 self-r\u00e9f\u00e9rent."
+        },
+        "elevation": {
+          "$type": "shadow",
+          "$value": "{primitives/openTRNTBL.shadow.elevation-1}",
+          "$description": "Subtle elevation pour cards / panels. Sonos-like = 1 layer discret. Marques sans \u00e9l\u00e9vation (Notion-like) pointeront ce slot vers shadow.elevation-0 (no-op)."
+        }
+      },
+      "sunken": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.190}",
+          "$description": "Recessed surface (input background, well, code block). Vague 8 \u2014 HC vraie hi\u00e9rarchie : light n.150 (gris fonc\u00e9 creus\u00e9) sous canvas n.175 ; dark n.10 (presque-black) sous canvas n.0 (pure black)."
+        }
+      },
+      "overlay": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$description": "Scrim / backdrop for modals. Apply via CSS with 0.6 alpha."
+        },
+        "elevation": {
+          "$type": "shadow",
+          "$value": "{primitives/openTRNTBL.shadow.elevation-3}",
+          "$description": "High elevation pour modals / dialogs full-screen. 2 layers (ambient + key). Marques flat (Notion-like) pointeront ce slot vers shadow.elevation-0."
+        }
+      },
+      "dim": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.50}",
+        "$description": "Surface sombre fixe \u2014 track HC SegmentedControl, input HC, etc. Volontairement constante peu importe light/dark/HC : un fond opaque sombre qui distingue par luminance."
+      },
+      "bright": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.200}",
+        "$description": "Surface claire fixe \u2014 tile actif HC SegmentedControl. Volontairement constante. Pendant de surface.dim."
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 86%, {semantic.text.color.primary})",
+        "$description": "Surface.base hover \u2014 Donnie pattern. Light = 86%/14% (visible sur fond blanc). Dark = 92%/8% (subtil pour ne pas r\u00e9duire le contraste avec text-primary clair). Consomm\u00e9 par btn-2:hover, btn-toggle:hover (off)."
+      },
+      "base-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.base.background} 74%, {semantic.text.color.primary})",
+        "$description": "Surface.base pressed \u2014 Donnie pattern. Light = 74%/26% (tr\u00e8s marqu\u00e9). Dark = 84%/16% (mod\u00e9r\u00e9, pour ne pas chuter le contraste). Consomm\u00e9 par btn-2:active."
+      },
+      "sunken-hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 86%, {semantic.text.color.primary})",
+        "$description": "Surface.sunken hover \u2014 Donnie pattern. Light 86%/14%, Dark 92%/8% (subtil). Consomm\u00e9 par inp:hover."
+      },
+      "sunken-pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.surface.sunken.background} 66%, {semantic.text.color.primary})",
+        "$description": "Surface.sunken pressed \u2014 Donnie pattern. Light 66%/34%, Dark 76%/24%."
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.175}",
+        "$description": "Low-emphasis divider (row separators, group dividers)."
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.100}",
+        "$description": "Standard border (inputs, outlined buttons, segmented track). WCAG 2.4.11 \u22653:1 on base/sunken/raised in light + dark."
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.neutral.100}",
+        "$description": "Emphasis border (hover, selected, active)."
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.accent.100}",
+        "$description": "Focus ring color. Always visible (accessibility baseline)."
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "{primitives/openTRNTBL.color.accent.125}",
+        "$description": "Brand accent (gold) \u2014 decorative fill (idle). Light = accent.125 (mid-tone). Dark = accent.150 (plus clair, lift sur fond sombre). Vision daltonisme : tritanopia mappe sur orange (jaune indistinguable), achromatopsia mappe sur text-primary (luminance-only). Deut\u00e9ranopie/protanopie : pas d'override (gold OK)."
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {primitives/openTRNTBL.color.accent.125} 88%, #ffffff)",
+        "$description": "Brand accent (gold) \u2014 hover (lightened)."
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "color-mix(in oklch, {semantic.accent.default} 80%, #000000)",
+        "$description": "Brand accent (gold) \u2014 pressed (darkened). Fallback Penpot: accent.100. Consomm\u00e9 par btn-toggle.active:active."
+      }
+    },
+    "text": {
+      "color": {
+        "primary": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.25}",
+          "$description": "Primary text. Body copy, headings."
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.75}",
+          "$description": "Secondary text. Labels, metadata, captions."
+        },
+        "placeholder": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.75}",
+          "$description": "Placeholder text. Empty-state hints in inputs. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark)."
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.75}",
+          "$description": "Disabled text. Controls that can't be interacted with. AA on sunken (light 6.07, dark 6.75); AAA on HC (n.10 sur sunken n.150 light, n.190 sur sunken n.10 dark). Distinguishable from primary via opacity 0.5 in components.css."
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$description": "Text on solid/colored surfaces (e.g. white on primary)."
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.accent.75}",
+          "$description": "Accent text. Inline links, brand emphasis."
+        },
+        "on-accent": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$description": "Text on top of the accent (gold) surface \u2014 e.g. .btn-toggle.active. Default = neutral.0 (black) sur gold. Vision achromatopsia : accent bascule en grayscale, donc on-accent doit s'inverser pour conserver le contraste. Light ach : accent=neutral.25 (sombre) \u2192 on-accent=neutral.200 (clair). Dark ach : accent=neutral.190 (clair) \u2192 on-accent=neutral.25 (sombre)."
+        },
+        "on-dim": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.200}",
+          "$description": "Text on surface.dim \u2014 white fixe. Pendant de on-accent pour la surface sombre fixe (HC SegCtrl track, input HC)."
+        },
+        "on-bright": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.neutral.0}",
+          "$description": "Text on surface.bright \u2014 black fixe. Pendant de on-dim pour la surface claire fixe (HC SegCtrl tile active)."
+        }
+      },
+      "caption": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.10}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Caption. Metadata, legal text."
+      },
+      "small": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.20}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Small body. Secondary copy, dense UI."
+      },
+      "body": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.30}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Body. Default reading size."
+      },
+      "body.emphasis": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.30}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 600,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Body emphasis. Same size as body, heavier weight for emphasis."
+      },
+      "subheading": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.50}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 600,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Subheading. Section labels inside a page."
+      },
+      "heading-3": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.60}",
+          "lineHeight": "{core.line-height.20}",
+          "fontWeight": 700,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Tertiary heading. Within-section titles."
+      },
+      "heading-2": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.80}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 700,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Secondary heading. Major-section titles."
+      },
+      "heading-1": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.100}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Primary heading. Page titles."
+      },
+      "display-small": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.120}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Small display. Marketing or hero subtitles."
+      },
+      "display-large": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.160}",
+          "lineHeight": "{core.line-height.10}",
+          "fontWeight": 800,
+          "fontFamily": "{primitives/openTRNTBL.font-family.sans}"
+        },
+        "$description": "Large display. Hero titles."
+      },
+      "code": {
+        "$type": "typography",
+        "$value": {
+          "fontSize": "{core.font-size.20}",
+          "lineHeight": "{core.line-height.30}",
+          "fontWeight": 400,
+          "fontFamily": "{primitives/openTRNTBL.font-family.mono}"
+        },
+        "$description": "Monospace code / stream URLs / log output."
+      }
+    },
+    "status": {
+      "success": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.success.190}",
+          "$description": "Success state (completed action, OK) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.success.50}",
+          "$description": "Success state (completed action, OK) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 14%)",
+          "$description": "Status.success.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: success.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.success.bg}, {semantic.status.success.text} 26%)",
+          "$description": "Status.success.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: success.150."
+        }
+      },
+      "warning": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.warning.190}",
+          "$description": "Warning state (caution, non-blocking issue) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.warning.50}",
+          "$description": "Warning state (caution, non-blocking issue) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 14%)",
+          "$description": "Status.warning.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: warning.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.warning.bg}, {semantic.status.warning.text} 26%)",
+          "$description": "Status.warning.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: warning.150."
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.danger.190}",
+          "$description": "Danger state (error, destructive action) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.danger.50}",
+          "$description": "Danger state (error, destructive action) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 14%)",
+          "$description": "Status.danger.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: danger.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.danger.bg}, {semantic.status.danger.text} 26%)",
+          "$description": "Status.danger.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: danger.150."
+        }
+      },
+      "info": {
+        "bg": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.info.190}",
+          "$description": "Info state (neutral notice, informational) \u2014 background tint. Vague 8.5 \u2014 HC : bg satur\u00e9 (light n.50, dark n.150) invers\u00e9 pour atteindre 3:1 vs canvas (badge claque)."
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{primitives/openTRNTBL.color.info.50}",
+          "$description": "Info state (neutral notice, informational) \u2014 text on the tint. Vague 8.5 \u2014 HC : text invers\u00e9 (light n.190, dark n.0) pour AAA contre le bg HC satur\u00e9."
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 14%)",
+          "$description": "Status.info.bg hover \u2014 Donnie pattern (currentColor 8%). Fallback: info.175."
+        },
+        "bg-pressed": {
+          "$type": "color",
+          "$value": "color-mix(in oklch, {semantic.status.info.bg}, {semantic.status.info.text} 26%)",
+          "$description": "Status.info.bg pressed \u2014 Donnie pattern (currentColor 18%). Fallback: info.150."
+        }
+      }
+    },
+    "spacing": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "{core.dimension.10}",
+        "$description": "Tight gap. Between adjacent visual elements sharing a conceptual unit."
+      },
+      "snug": {
+        "$type": "dimension",
+        "$value": "{core.dimension.20}",
+        "$description": "Snug gap. Inner padding of controls (buttons, inputs)."
+      },
+      "default": {
+        "$type": "dimension",
+        "$value": "{core.dimension.40}",
+        "$description": "Default gap. Between distinct elements on a surface."
+      },
+      "loose": {
+        "$type": "dimension",
+        "$value": "{core.dimension.60}",
+        "$description": "Loose gap. Between grouped sections."
+      },
+      "airy": {
+        "$type": "dimension",
+        "$value": "{core.dimension.100}",
+        "$description": "Airy gap. Major section breaks."
+      }
+    },
+    "radius": {
+      "sharp": {
+        "$type": "dimension",
+        "$value": "{core.dimension.01}",
+        "$description": "Hairline rounding. Almost-square."
+      },
+      "soft": {
+        "$type": "dimension",
+        "$value": "{core.dimension.10}",
+        "$description": "Soft rounding. Inputs, small cards."
+      },
+      "round": {
+        "$type": "dimension",
+        "$value": "{core.dimension.25}",
+        "$description": "Rounded. Main surfaces (cards, panels, modals)."
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "{core.dimension.240}",
+        "$description": "Pill. Full-pill controls, segmented toggles."
+      },
+      "circle": {
+        "$type": "dimension",
+        "$value": "50%",
+        "$description": "Circle. Avatars, round buttons. Applied as raw percentage."
+      }
+    },
+    "motion": {
+      "feedback": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.fast}",
+          "timingFunction": "{core.easing.out}"
+        },
+        "$description": "Hover, focus ring, micro-feedback."
+      },
+      "state-change": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.moderate}",
+          "timingFunction": "{core.easing.in-out}"
+        },
+        "$description": "Toggle, switch, tab change."
+      },
+      "enter": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.slow}",
+          "timingFunction": "{core.easing.out}"
+        },
+        "$description": "Element entering (modal, drawer, toast)."
+      },
+      "exit": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{core.duration.moderate}",
+          "timingFunction": "{core.easing.in}"
+        },
+        "$description": "Element leaving (close modal, dismiss toast)."
+      }
+    },
+    "icon": {
+      "size": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{core.dimension.40}",
+          "$description": "Small icon. Inline with body text."
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{core.dimension.60}",
+          "$description": "Medium icon. Default control icon."
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{core.dimension.80}",
+          "$description": "Large icon. Feature blocks, empty states."
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{core.dimension.05}",
+          "$description": "Focus ring stroke width."
+        },
+        "offset": {
+          "$type": "dimension",
+          "$value": "{core.dimension.05}",
+          "$description": "Focus ring offset from the element edge."
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.border.focus}",
+          "$description": "Focus ring color."
+        }
+      }
+    }
+  },
+  "$description": "Semantic defaults \u2014 no mode overrides. Mode overrides live in modes/*.tokens.json."
+}

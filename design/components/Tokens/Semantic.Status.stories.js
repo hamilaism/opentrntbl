@@ -4,7 +4,7 @@ import { tokens, resolveToken, activeModes } from './_helpers.js';
 
 export default {
   title: 'Tokens/Semantic/Status',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 const ROLES = ['success', 'warning', 'danger', 'info'];

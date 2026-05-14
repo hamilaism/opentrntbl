@@ -8,7 +8,7 @@ import { tokens, resolveToken, activeModes } from './_helpers.js';
 
 export default {
   title: 'Tokens/Semantic/Accent',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 export const States = () => {

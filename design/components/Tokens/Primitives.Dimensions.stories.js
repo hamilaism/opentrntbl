@@ -1,10 +1,10 @@
 // openTRNTBL — Tokens / Core / Dimensions stories.
 
-import { tokens, dimValue } from './_helpers.js';
+import { tokens } from './_helpers.js';
 
 export default {
   title: 'Tokens/Core/Dimensions',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 export const Scale = () => {

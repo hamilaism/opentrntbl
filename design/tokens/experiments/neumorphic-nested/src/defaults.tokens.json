@@ -1,0 +1,129 @@
+{
+  "shadow-light": { "$value": "oklch(0.99 0.002 262)" },
+  "shadow-dark":  { "$value": "oklch(0.80 0.010 262)" },
+  "surface": {
+    "canvas": { "background": { "$value": "oklch(0.94 0.005 262)" } },
+    "base": {
+      "background": { "$value": "oklch(0.94 0.005 262)" },
+      "hover":      { "$value": "oklch(0.94 0.005 262)" },
+      "pressed":    { "$value": "oklch(0.94 0.005 262)" }
+    },
+    "raised": {
+      "background": { "$value": "oklch(0.94 0.005 262)" },
+      "elevation":  { "$value": "-4px -4px 8px oklch(0.99 0.002 262), 4px 4px 8px oklch(0.80 0.010 262)" }
+    },
+    "sunken": {
+      "background": { "$value": "oklch(0.94 0.005 262)" },
+      "hover":      { "$value": "oklch(0.94 0.005 262)" },
+      "pressed":    { "$value": "oklch(0.94 0.005 262)" }
+    },
+    "overlay": {
+      "background": { "$value": "oklch(0.94 0.005 262)" },
+      "elevation":  { "$value": "-8px -8px 20px oklch(0.99 0.002 262), 8px 8px 20px oklch(0.80 0.010 262)" }
+    },
+    "dim":    { "$value": "oklch(0.30 0.008 262)" },
+    "bright": { "$value": "oklch(0.97 0.004 262)" }
+  },
+  "elevation": {
+    "flat":         { "$value": "0px 0px 0px 0px transparent" },
+    "raised":       { "$value": "-4px -4px 8px oklch(0.99 0.002 262), 4px 4px 8px oklch(0.80 0.010 262)" },
+    "raised-hover": { "$value": "-4px -4px 8px oklch(0.99 0.002 262), 4px 4px 8px oklch(0.80 0.010 262)" },
+    "pressed":      { "$value": "inset -3px -3px 4px oklch(0.99 0.002 262), inset 3px 3px 4px oklch(0.80 0.010 262)" },
+    "sunken":       { "$value": "inset -4px -4px 8px oklch(0.99 0.002 262), inset 4px 4px 8px oklch(0.80 0.010 262)" },
+    "overlay":      { "$value": "-8px -8px 20px oklch(0.99 0.002 262), 8px 8px 20px oklch(0.80 0.010 262)" }
+  },
+  "border": {
+    "subtle":  { "$value": "oklch(0.88 0.006 262)" },
+    "default": { "$value": "oklch(0.84 0.008 262)" },
+    "strong":  { "$value": "oklch(0.78 0.010 262)" },
+    "focus":   { "$value": "oklch(0.55 0.14 85)" }
+  },
+  "accent": {
+    "default": { "$value": "oklch(0.55 0.14 85)" },
+    "hover":   { "$value": "color-mix(in oklch, oklch(0.55 0.14 85) 88%, #fff)" },
+    "pressed": { "$value": "color-mix(in oklch, oklch(0.55 0.14 85) 80%, #000)" }
+  },
+  "text": {
+    "color": {
+      "primary":     { "$value": "oklch(0.22 0.008 262)" },
+      "secondary":   { "$value": "oklch(0.44 0.008 262)" },
+      "placeholder": { "$value": "oklch(0.55 0.006 262)" },
+      "disabled":    { "$value": "oklch(0.62 0.006 262)" },
+      "inverse":     { "$value": "oklch(0.96 0.003 262)" },
+      "accent":      { "$value": "oklch(0.40 0.14 85)" },
+      "on-accent":   { "$value": "oklch(0.10 0.008 262)" },
+      "on-dim":      { "$value": "oklch(0.94 0.004 262)" },
+      "on-bright":   { "$value": "oklch(0.18 0.008 262)" }
+    },
+    "caption":       { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "0.75rem" }, "weight": { "$value": 400 }, "line-height": { "$value": 1.2 } },
+    "small":         { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "0.875rem" }, "weight": { "$value": 400 }, "line-height": { "$value": 1.4 } },
+    "body":          { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1rem" }, "weight": { "$value": 400 }, "line-height": { "$value": 1.4 } },
+    "body-emphasis": { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1rem" }, "weight": { "$value": 600 }, "line-height": { "$value": 1.4 } },
+    "subheading":    { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1.25rem" }, "weight": { "$value": 600 }, "line-height": { "$value": 1.2 } },
+    "heading-3":     { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "1.5rem" }, "weight": { "$value": 700 }, "line-height": { "$value": 1.2 } },
+    "heading-2":     { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "2rem" }, "weight": { "$value": 700 }, "line-height": { "$value": 1.0 } },
+    "heading-1":     { "family": { "$value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif" }, "size": { "$value": "2.5rem" }, "weight": { "$value": 800 }, "line-height": { "$value": 1.0 } }
+  },
+  "status": {
+    "success": {
+      "bg":         { "$value": "oklch(0.91 0.012 145)" },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.91 0.012 145) 86%, oklch(0.22 0.008 262))" },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.91 0.012 145) 74%, oklch(0.22 0.008 262))" },
+      "text":       { "$value": "oklch(0.30 0.14 145)" }
+    },
+    "warning": {
+      "bg":         { "$value": "oklch(0.91 0.012 55)" },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.91 0.012 55) 86%, oklch(0.22 0.008 262))" },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.91 0.012 55) 74%, oklch(0.22 0.008 262))" },
+      "text":       { "$value": "oklch(0.30 0.14 55)" }
+    },
+    "danger": {
+      "bg":         { "$value": "oklch(0.91 0.012 29)" },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.91 0.012 29) 86%, oklch(0.22 0.008 262))" },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.91 0.012 29) 74%, oklch(0.22 0.008 262))" },
+      "text":       { "$value": "oklch(0.28 0.18 29)" }
+    },
+    "info": {
+      "bg":         { "$value": "oklch(0.91 0.012 255)" },
+      "bg-hover":   { "$value": "color-mix(in oklch, oklch(0.91 0.012 255) 86%, oklch(0.22 0.008 262))" },
+      "bg-pressed": { "$value": "color-mix(in oklch, oklch(0.91 0.012 255) 74%, oklch(0.22 0.008 262))" },
+      "text":       { "$value": "oklch(0.28 0.15 255)" }
+    }
+  },
+  "focus": {
+    "ring": {
+      "color":  { "$value": "oklch(0.55 0.14 85)" },
+      "width":  { "$value": "2px" },
+      "offset": { "$value": "3px" }
+    }
+  },
+  "spacing": {
+    "tight":   { "$value": "0.25rem" },
+    "snug":    { "$value": "0.5rem" },
+    "default": { "$value": "1rem" },
+    "loose":   { "$value": "1.5rem" },
+    "airy":    { "$value": "2.5rem" }
+  },
+  "radius": {
+    "sharp":  { "$value": "0rem" },
+    "soft":   { "$value": "0.5rem" },
+    "round":  { "$value": "1rem" },
+    "pill":   { "$value": "9999px" },
+    "circle": { "$value": "50%" }
+  },
+  "motion": {
+    "feedback":        { "duration": { "$value": "100ms" }, "easing": { "$value": "cubic-bezier(0, 0, 0.2, 1)" } },
+    "state-change":    { "duration": { "$value": "250ms" }, "easing": { "$value": "cubic-bezier(0.4, 0, 0.2, 1)" } },
+    "enter":           { "duration": { "$value": "450ms" }, "easing": { "$value": "cubic-bezier(0, 0, 0.2, 1)" } },
+    "exit":            { "duration": { "$value": "250ms" }, "easing": { "$value": "cubic-bezier(0.4, 0, 1, 1)" } },
+    "component-enter": { "duration": { "$value": "140ms" }, "easing": { "$value": "cubic-bezier(0, 0, 0.2, 1)" } },
+    "component-exit":  { "duration": { "$value": "320ms" }, "easing": { "$value": "cubic-bezier(0.4, 0, 1, 1)" } }
+  },
+  "icon": {
+    "size": {
+      "sm": { "$value": "1rem" },
+      "md": { "$value": "1.5rem" },
+      "lg": { "$value": "2rem" }
+    }
+  }
+}

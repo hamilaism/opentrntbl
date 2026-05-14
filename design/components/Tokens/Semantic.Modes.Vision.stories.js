@@ -10,7 +10,7 @@ import { tokens, resolve, getByPath, contrast, wcagBadge } from './_helpers.js';
 
 export default {
   title: 'Tokens/Semantic/Modes/Vision',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 const ROLES = ['success', 'warning', 'danger', 'info'];

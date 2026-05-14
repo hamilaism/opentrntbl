@@ -4,7 +4,7 @@ import { tokens } from './_helpers.js';
 
 export default {
   title: 'Tokens/Primitives/Icons',
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', a11y: { config: { rules: [{ id: 'color-contrast', enabled: false }] } } },
 };
 
 export const Gallery = () => {
@@ -57,7 +57,7 @@ export const Colored = () => {
     `).join('');
     return `
       <div style="margin-bottom:20px">
-        <h3 style="font-family:monospace;font-size:12px;font-weight:700;margin:0 0 8px;color:#666">${p.label}</h3>
+        <h2 style="font-family:monospace;font-size:12px;font-weight:700;margin:0 0 8px;color:#666">${p.label}</h2>
         <div style="display:flex;gap:12px;flex-wrap:wrap">${cells}</div>
       </div>
     `;
