@@ -917,7 +917,7 @@ def themes_css():
     try:
         with open(p, 'r') as f:
             return Response(f.read(), mimetype='text/css')
-    except:
+    except Exception:
         return Response('/* themes.css not found */', mimetype='text/css', status=404)
 
 @app.route('/<path:path>')
